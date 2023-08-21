@@ -1,0 +1,39 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4SpbR6yFEvexJuaBpgAU5p"
+    },
+    "followers": {
+        "href": null,
+        "total": 2475305
+    },
+    "href": "https://api.spotify.com/v1/artists/4SpbR6yFEvexJuaBpgAU5p",
+    "id": 427,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5eb510c56f38c9fc97ee80f7256",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174510c56f38c9fc97ee80f7256",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178510c56f38c9fc97ee80f7256",
+            "width": 160
+        }
+    ],
+    "name": "LE SSERAFIM",
+    "popularity": 77,
+    "type": "artist",
+    "uri": "spotify:artist:4SpbR6yFEvexJuaBpgAU5p",
+    "genres_ids": [
+        84,
+        580,
+        696,
+        674,
+        108
+    ]
+}

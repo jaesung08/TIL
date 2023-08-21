@@ -1,0 +1,38 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6RHTUrRF63xao58xh9FXYJ"
+    },
+    "followers": {
+        "href": null,
+        "total": 2389281
+    },
+    "href": "https://api.spotify.com/v1/artists/6RHTUrRF63xao58xh9FXYJ",
+    "id": 325,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebf44daaf3a37f5be9a0721be7",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174f44daaf3a37f5be9a0721be7",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178f44daaf3a37f5be9a0721be7",
+            "width": 160
+        }
+    ],
+    "name": "IVE",
+    "popularity": 74,
+    "type": "artist",
+    "uri": "spotify:artist:6RHTUrRF63xao58xh9FXYJ",
+    "genres_ids": [
+        233,
+        801,
+        253,
+        457
+    ]
+}

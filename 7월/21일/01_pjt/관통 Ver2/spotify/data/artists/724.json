@@ -1,0 +1,38 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6HaGTQPmzraVmaVxvz6EUc"
+    },
+    "followers": {
+        "href": null,
+        "total": 8000368
+    },
+    "href": "https://api.spotify.com/v1/artists/6HaGTQPmzraVmaVxvz6EUc",
+    "id": 724,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebbda88c5ee506aa67c8835d30",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174bda88c5ee506aa67c8835d30",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178bda88c5ee506aa67c8835d30",
+            "width": 160
+        }
+    ],
+    "name": "Jung Kook",
+    "popularity": 94,
+    "type": "artist",
+    "uri": "spotify:artist:6HaGTQPmzraVmaVxvz6EUc",
+    "genres_ids": [
+        247,
+        681,
+        425,
+        11
+    ]
+}

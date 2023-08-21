@@ -1,0 +1,39 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3qNVuliS40BLgXGxhdBdqu"
+    },
+    "followers": {
+        "href": null,
+        "total": 2758828
+    },
+    "href": "https://api.spotify.com/v1/artists/3qNVuliS40BLgXGxhdBdqu",
+    "id": 720,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebb29975f8b42bcba1eae62577",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174b29975f8b42bcba1eae62577",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178b29975f8b42bcba1eae62577",
+            "width": 160
+        }
+    ],
+    "name": "TAEYEON",
+    "popularity": 91,
+    "type": "artist",
+    "uri": "spotify:artist:3qNVuliS40BLgXGxhdBdqu",
+    "genres_ids": [
+        227,
+        755,
+        373,
+        481,
+        723
+    ]
+}

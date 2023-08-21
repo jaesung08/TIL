@@ -1,0 +1,53 @@
+{
+    "title": "시크릿 - 수 세기 동안 단 1%만이 알았던 부와 성공의 비밀",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=927185&amp;partner=openAPI&amp;start=api",
+    "author": "론다 번 (지은이), 김우열 (옮긴이)",
+    "pubDate": "2007-06-22",
+    "description": "2007년 '아마존' 최고의 화제작. 출간하자마자 아마존 베스트셀러 목록에 올랐고, <오프라 윈프리 쇼>에서 소개되었다. 방송 후 시청자들의 폭발적인 반응에 오프라 홈페이지마저 마비되었고, 결국 책은 미국에서 '가장 짧은 시간에 가장 많이 팔린 책'이 되어버렸다.",
+    "isbn": "8952206509",
+    "isbn13": "9788952206503",
+    "itemId": 927185,
+    "priceSales": 15120,
+    "priceStandard": 16800,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 840,
+    "cover": "https://image.aladin.co.kr/product/92/71/coversum/8952206509_2.jpg",
+    "categoryId": [
+        151138,
+        70216
+    ],
+    "publisher": "살림Biz",
+    "salesPoint": 111233,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.7,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 20597491,
+                "isbn": "E895220650",
+                "isbn13": "9788952218858",
+                "priceSales": 9000,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=20597491&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 9,
+                "minPrice": 7100,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=927185&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 1486,
+                "minPrice": 1000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=927185&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 7200,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=927185&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

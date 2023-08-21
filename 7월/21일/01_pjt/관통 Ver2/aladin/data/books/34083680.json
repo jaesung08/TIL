@@ -1,0 +1,55 @@
+{
+    "title": "클린 코드 Clean Code - 애자일 소프트웨어 장인 정신",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34083680&amp;partner=openAPI&amp;start=api",
+    "author": "로버트 C. 마틴 (지은이), 이해영, 박재호 (옮긴이)",
+    "pubDate": "2013-12-24",
+    "description": "로버트 마틴은 이 책에서 혁명적인 패러다임을 제시한다. 그는 오브젝트 멘토(Object Mentor)의 동료들과 힘을 모아 ‘개발하며’ 클린 코드를 만드는 최상의 애자일 기법을 정제해 책 한 권에 담았다.",
+    "isbn": "8966260950",
+    "isbn13": "9788966260959",
+    "itemId": 34083680,
+    "priceSales": 29700,
+    "priceStandard": 33000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 1650,
+    "cover": "https://image.aladin.co.kr/product/3408/36/coversum/8966260950_2.jpg",
+    "categoryId": 2724,
+    "publisher": "인사이트",
+    "salesPoint": 18349,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.3,
+    "seriesInfo": {
+        "seriesId": 15982,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=15982&amp;partner=openAPI",
+        "seriesName": "프로그램 프로그래밍 프로그래머 "
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 248640013,
+                "isbn": "E032537223",
+                "isbn13": "9788966262724",
+                "priceSales": 26400,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=248640013&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=34083680&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 31,
+                "minPrice": 20000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=34083680&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 1,
+                "minPrice": 19500,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=34083680&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

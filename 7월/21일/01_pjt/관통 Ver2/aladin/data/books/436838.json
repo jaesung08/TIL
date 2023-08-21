@@ -1,0 +1,58 @@
+{
+    "title": "오만과 편견",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=436838&amp;partner=openAPI&amp;start=api",
+    "author": "제인 오스틴 (지은이), 윤지관, 전승희 (옮긴이)",
+    "pubDate": "2003-09-20",
+    "description": "제인 오스틴의 대표작 <오만과 편견>이 보다 정확하고 말끔한 번역으로 재출간됐다. 역자인 윤지관과 전승희는 10여 년에 걸친 기간 동안 철저한 원문대조를 통해, 본래의 의미와 문체를 생생하게 되살려내기 위해 노력했다고.",
+    "isbn": "8937460882",
+    "isbn13": "9788937460883",
+    "itemId": 436838,
+    "priceSales": 11700,
+    "priceStandard": 13000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 650,
+    "cover": "https://image.aladin.co.kr/product/43/68/coversum/8937460882_3.jpg",
+    "categoryId": [
+        151128,
+        50919
+    ],
+    "publisher": "민음사",
+    "salesPoint": 47947,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.3,
+    "seriesInfo": {
+        "seriesId": 13679,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=13679&amp;partner=openAPI",
+        "seriesName": "민음사 세계문학전집 88"
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 18094741,
+                "isbn": "E893746088",
+                "isbn13": "9788937493881",
+                "priceSales": 9100,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=18094741&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 2,
+                "minPrice": 5900,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=436838&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 309,
+                "minPrice": 1200,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=436838&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 5700,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=436838&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

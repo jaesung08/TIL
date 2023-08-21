@@ -1,0 +1,37 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0b1sIQumIAsNbqAoIClSpy"
+    },
+    "followers": {
+        "href": null,
+        "total": 15150417
+    },
+    "href": "https://api.spotify.com/v1/artists/0b1sIQumIAsNbqAoIClSpy",
+    "id": 225,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebeb746063d1aafa2817ea11b5",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174eb746063d1aafa2817ea11b5",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178eb746063d1aafa2817ea11b5",
+            "width": 160
+        }
+    ],
+    "name": "j-hope",
+    "popularity": 95,
+    "type": "artist",
+    "uri": "spotify:artist:0b1sIQumIAsNbqAoIClSpy",
+    "genres_ids": [
+        227,
+        663,
+        584
+    ]
+}

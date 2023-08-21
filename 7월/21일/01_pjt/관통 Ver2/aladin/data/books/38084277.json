@@ -1,0 +1,45 @@
+{
+    "title": "건축, 음악처럼 듣고 미술처럼 보다 - 인문적 건축이야기",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=38084277&amp;partner=openAPI&amp;start=api",
+    "author": "서현 (지은이)",
+    "pubDate": "2014-03-20",
+    "description": "1998년 출간된 &lt;건축, 음악처럼 듣고 미술처럼 보다&gt;의 재개정판이다. 서울대학교 미술관, ECCEhwa Culture Complex, 쌈지길 세 곳은 그 훌륭한 가치와 의미를 전달해야 했기에 기꺼이 새로 추가해 서현 특유의 해석법으로 풀어나갔다.",
+    "isbn": "895872126X",
+    "isbn13": "9788958721260",
+    "itemId": 38084277,
+    "priceSales": 16200,
+    "priceStandard": 18000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 900,
+    "cover": "https://image.aladin.co.kr/product/3808/42/coversum/895872126x_1.jpg",
+    "categoryId": [
+        31908,
+        51082
+    ],
+    "publisher": "효형출판",
+    "salesPoint": 4294,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.1,
+    "subInfo": {
+        "ebookList": [],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=38084277&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 26,
+                "minPrice": 11000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=38084277&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 10,
+                "minPrice": 9800,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=38084277&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

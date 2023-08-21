@@ -1,0 +1,35 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6dhfy4ByARPJdPtMyrUYJK"
+    },
+    "followers": {
+        "href": null,
+        "total": 562641
+    },
+    "href": "https://api.spotify.com/v1/artists/6dhfy4ByARPJdPtMyrUYJK",
+    "id": 604,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5eb28f845b9a1c6e8bccb255f0c",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab6761610000517428f845b9a1c6e8bccb255f0c",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f17828f845b9a1c6e8bccb255f0c",
+            "width": 160
+        }
+    ],
+    "name": "Yerin Baek",
+    "popularity": 85,
+    "type": "artist",
+    "uri": "spotify:artist:6dhfy4ByARPJdPtMyrUYJK",
+    "genres_ids": [
+        404
+    ]
+}

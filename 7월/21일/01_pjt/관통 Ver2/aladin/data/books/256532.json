@@ -1,0 +1,58 @@
+{
+    "title": "고도를 기다리며",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=256532&amp;partner=openAPI&amp;start=api",
+    "author": "사뮈엘 베케트 (지은이), 오증자 (옮긴이)",
+    "pubDate": "2000-11-20",
+    "description": "'고도'의 의미는 이 작품을 읽고자 하는 사람들의 상황과 처지에 따라 자유롭게 해석될 수 있는 것으로, 이 점에서 <고도를 기다리며>는 철저하게 관객을 향해 열려있는 작품이라고 할 수 있겠다. 이 때문에 <고도를 기다리며>는 지금까지도 학인들의 연구대상이 될 수 있었으며, 또한 삶의 질곡으로 고통받는 이들에게는 생의 비밀을 깨닫게 하는 계기가 되었던 것이다.",
+    "isbn": "8937460432",
+    "isbn13": "9788937460432",
+    "itemId": 256532,
+    "priceSales": 8100,
+    "priceStandard": 9000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 450,
+    "cover": "https://image.aladin.co.kr/product/25/65/coversum/8937460432_3.jpg",
+    "categoryId": [
+        151128,
+        51260
+    ],
+    "publisher": "민음사",
+    "salesPoint": 22959,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.1,
+    "seriesInfo": {
+        "seriesId": 13679,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=13679&amp;partner=openAPI",
+        "seriesName": "민음사 세계문학전집 43"
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 50295621,
+                "isbn": "E893746043",
+                "isbn13": "9788937493430",
+                "priceSales": 4900,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=50295621&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=256532&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 123,
+                "minPrice": 1500,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=256532&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 3800,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=256532&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

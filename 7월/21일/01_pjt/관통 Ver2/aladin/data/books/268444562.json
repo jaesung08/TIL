@@ -1,0 +1,53 @@
+{
+    "title": "한 권으로 읽는 컴퓨터 구조와 프로그래밍 - 더 나은 소프트웨어 개발을 위한 하드웨어, 자료구조, 필수 알고리즘 등 프로그래머의 비밀 노트",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268444562&amp;partner=openAPI&amp;start=api",
+    "author": "조너선 스타인하트 (지은이), 오현석 (옮긴이)",
+    "pubDate": "2021-04-08",
+    "description": "하드웨어의 토대가 되는 기초 전자회로, 게이트 등을 설명하고, 그 위에서 소프트웨어를 작성하는 방법을 웹과 C 프로그램으로 직접 만들어보며, 개발자라면 반드시 알아야 할 커튼 뒤에 감춰진 컴퓨터 구조와 프로그래밍에 대한 거의 모든 것을 다루는 컴퓨터공학 개론서다.",
+    "isbn": "K942730395",
+    "isbn13": "9791189909284",
+    "itemId": 268444562,
+    "priceSales": 31500,
+    "priceStandard": 35000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 1750,
+    "cover": "https://image.aladin.co.kr/product/26844/45/coversum/k942730395_1.jpg",
+    "categoryId": [
+        31916,
+        2721
+    ],
+    "publisher": "책만",
+    "salesPoint": 5585,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.7,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 273535853,
+                "isbn": "E272538611",
+                "isbn13": "9791189909314",
+                "priceSales": 28000,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=273535853&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=268444562&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 24,
+                "minPrice": 23490,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=268444562&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=268444562&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

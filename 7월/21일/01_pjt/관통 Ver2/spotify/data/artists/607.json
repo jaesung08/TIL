@@ -1,0 +1,38 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE"
+    },
+    "followers": {
+        "href": null,
+        "total": 11770970
+    },
+    "href": "https://api.spotify.com/v1/artists/2dIgFjalVxs4ThymZ67YCE",
+    "id": 607,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebada60ffd7a8ce554fd733fb5",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174ada60ffd7a8ce554fd733fb5",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178ada60ffd7a8ce554fd733fb5",
+            "width": 160
+        }
+    ],
+    "name": "Stray Kids",
+    "popularity": 70,
+    "type": "artist",
+    "uri": "spotify:artist:2dIgFjalVxs4ThymZ67YCE",
+    "genres_ids": [
+        353,
+        801,
+        20,
+        645
+    ]
+}

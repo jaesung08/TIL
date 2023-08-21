@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "새 폴더",
+			"path": "../../../새 폴더"
+		},
+		{
+			"name": "git_commit",
+			"path": "../../../git_commit"
+		},
+		{
+			"name": "수업내용 정리",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gpt-program-problem",
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}

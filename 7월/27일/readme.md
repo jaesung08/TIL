@@ -1,0 +1,302 @@
+# 7.27
+## Classes 상속
+### 상속 ( Inheritance )
+* 기존 클래스의 속성과 메서드를 물려받아 새로운 하위 클래스를 생성하는 것.
+
+#### 상속이 필요한 이유
+* 코드 재사용
+    * 상속을 통해 기존 클래스의 속성과 메서드를 재사용할 수 있음
+    * 새로운 클래스를 작성할 때 기존 클래스의 기능을 그대로 활용할 수 있으며, 중복된 코드를 줄일 수 있음.
+
+* 계층 구조
+    * 상속을 통해 클래스들 간의 계층 구조를 형성할 수 있음
+    * 부모 클래스와 자식 클래스 간의 관계를 표현하고, 더 구체적인 클래스를 만들 수 있음.
+
+* 유지 보수의 용이성
+    * 상속을 통해 기존 클래스의 수정이 필요한 경우, 해당 클래스만 수정하면 되므로 유지 보수가 용이해짐.
+    * 코드의 일관성을 유지하고,  수정이 필요한 범위를 최소화할 수 있음.
+
+#### 클래스 상속 구현
+* ![사진1](<사진1 상속없는 예시.png>)
+* ![사진2](<사진2 상속있는 예시.png>)
+* 상속을 사용한 계층 구조를 변경
+* 중복이 발생했기때문에 이를 막기위해 Person이라는 클래스를 만들고 하위 클래스인 professor과 student에 상속.
+* 정의된 클래스 안에 상위 클래스 작성!
+* ![사진3](<사진3 상속된 예시.png>)
+
+#### super( )
+* 부모클래스의 메서드를 호출하기 위해 사용되는 내장함수
+```py
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age  = age
+
+    def talk(self):
+        print(f"안녕하세요, {self.name} 입니다.")
+
+
+class Professor(Person):
+    def __init__(self, name, age, department):
+        Person.__init__(self,name,age)
+        super().__init__(name, age)
+        self.department = department
+# Person 보다 super가 self를 하나라도 덜 쓴다.
+class Student(Person):
+    def __init__(self, name, age, gpa):
+        self.name = name
+        self.age = age
+        self.gpa = gpa
+# 위의 두개는 같은 의미를 축적하고있다!
+p1 = Professor("박교수", 45 , '컴퓨터공학')
+s1 = Student('김학생', 20, 3.7)
+
+p1.talk()
+s1.talk()
+
+# 다중 상속
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age  = age
+
+    def greeting(self):
+        print(f"안녕하세요, {self.name} 입니다.")
+
+
+class Mom(Person):
+    gene = 'XX'
+
+    # def __init__(self, name):
+    #     super().__init__(name)
+    # 원래는 이렇게 __init__ 을 써서 한번 더 명시해야한다.
+    def swim(self):
+        return "엄마가 수영"
+    
+
+class Dad(Person):
+    gene = "XY"
+
+    def walk(slef):
+        return "아빠가 걷기"
+    
+class FirstChild(Dad, Mom):
+    Mom_gene = 'XX' # 아빠가 아닌 다른 상속자의 정보를 가져오기싶을 땐 이렇게 해야한다.
+   
+    # def __init__(self, name, age):
+    #     super().__init__(name, age)
+    #     Mom.__init__(self, name, age)
+    # 슈퍼를 쓰는게 원칙적이나 Dad가 아닌 Mom을 불러오기위해선 이렇게 직접 해주기도 한다.
+
+    def swim(self):
+        return '첫째가 수영'
+    # def walk(self):
+    #     return '첫째가 걷기'
+    def cry(self):
+        return '첫째가 응애'
+    
+baby1 = FirstChild('아가', 3)
+print(baby1.cry()) # 첫째가 응애
+print(baby1.swim()) #첫째가 수영
+print(baby1.walk()) #아빠가 걷기
+print(baby1.gene) # XY // 아빠가 우선 상속자이기 때문에 아빠의 gene을 가져옴
+print(baby1.Mom_gene) #XX //추가해서 불러줌
+
+print(FirstChild.mro()) # [<class '__main__.FirstChild'>, <class '__main__.Dad'>, <class '__main__.Mom'>, <class '__main__.Person'>, <class 'object'>]
+```
+
+#### mro()
+* Method Resolution Order
+* 해당 인스턴스의 클래스가 어떤 부모 클래스를 가지는지 확인하는 메서드
+* 기존의 인스턴스 -> 클래스 순으로 이름 공간을 탐색하는 과정에서 상속관계에 있으면 인스턴스 -> 자식클래스 -> 부모클래스로 확장
+
+* 실습해보기
+```py
+# 클래스 car 정의, 부모클래스
+class Car:
+    def __init__(self, model, color):
+        self.model = model
+        self.color = color
+
+    def info(self):
+        print(f"Model : {self.model}, color : {self.color}")
+
+# 클래스 CarDrive 정의, 자식클래스
+class CarDrive(Car):
+    def speedchange(self, speed):
+        self.speed = speed
+        print(f'speedchage : {self.speed}')
+
+hyundai = CarDrive('Sonata', 'White')
+#1. info 메서드 호출
+hyundai.info()
+#2. speedchanhe 메서드 호출
+hyundai.speedchange(88)
+
+
+
+
+
+# 클래스 상속? 자식 클래스 괄호안에 부모 클래스를 포함하면 클래스 상속
+# 자식클래스는 모든 클래스와 변수를 따로 선언하지 않아도 그대로 사용가능하다는 이점 존재
+class Car:
+    def __init__(self, model, color):
+        self.model = model
+        self.color = color
+
+class CarDrive(Car):
+    def __init__(self, model, color, speed):
+        super().__init__(model, color)
+        self.speed = speed
+        #실습1. super() 내장함수 사용
+    
+
+    def info(self):
+        print(f'Model : {self.model}, color : {self.color}, speed : {self.speed}')
+#실습2. info 메서드 호출
+Kia = CarDrive('sonata', 'white', '88')
+Kia.info()
+# super()함수 : 부모클래스의 메서드를 호출하기 위해 사용
+
+
+
+
+
+class Car:
+    def __init__(self, model):
+        self.model = model
+
+class Hyundai(Car):
+    color = 'white'
+    def speed(self):
+        return '80km/h'
+    
+class Kia(Car):
+    color = 'black'
+    def engine(self):
+        return '1.6turbo'
+    
+class CarDrive(Hyundai,Kia):
+    def speed(self):
+        return '100km/h'
+    def power(self):
+        return '1.999cc'
+
+mycar = CarDrive('sonata')
+#speed 메서드 호출 -> 출력
+print(mycar.speed())
+#engine 메서드 호출 -> 출력
+print(mycar.engine())
+#power 메서드 호출 -> 출력
+print(mycar.power()) 
+#color 클래스 변수 접근 -> 출력 -> 속성의 경우 상속 순서에 의해 결정
+print(mycar.color) # white
+
+
+
+
+# 오버라이딩 : 부모클래스의 메서드를 자식클래스에서 재정의 하는 것.
+class Car:
+    def __init__(self, model, color):
+        self.model = model
+        self.color = color
+
+    def info(self):
+        print (f'Model : {self.model}, color : {self.color}')
+              
+class CarDrive(Car):
+    #실습1. info 메서드를 오버라이딩
+    def info(self):
+        print(f'The model of the car is {self.model}')
+        print(f'The color is {self.color}')
+#실습2. info메서드 호출
+Kia = CarDrive('sonata', 'black')
+Kia.info()
+
+# 상속 관련 함수 mro() - > 메소드 결정 순서 -> 어떤 부모클래스를 가지는지
+print(CarDrive.mro()) # [<class '__main__.CarDrive'>, <class '__main__.Car'>, <class 'object'>]
+```
+
+
+
+## 에러와 예외
+### 버그 bug
+* 소프트웨어에서 발생하는 오류 또는 결함, 프로그램의 예상된 동작과 실제동작사이의 불일치
+* 최초의 버그는 1945년 코볼(프로그래밍 언어) 발명자 그레이스 호퍼가 컴퓨터 회로에 나방이 들어가 합선을 일으켜 비정상적으로 동작한 것을 기록한것.
+* 이 계기로 컴퓨터 시스템에서의 오류 결함을 버그라고 칭함.
+#### 디버그 (Debugging)
+* 발생한 버그를 찾아내고 수정하는 과정 / 프로그램의 오작동 원인을 식별하여 수정하는 작업.
+* 디버깅 방법
+    * print함수 활용 // 특정 함수 결과, 반복/조건 결과등 나눠서 생각, 코드를 bisection으로 나눠서 생각
+    * 개발환경(text editor, IDE)등에서 제공하는 기능 활용 // breakpoint, 변수 조회 등
+    * Python tutor 활용 ( 단순 파이썬 코드인 경우)
+    * 뇌 컴파일, 눈 디버깅 등
+
+### 에러 ( Error)
+* 프로그램 실행 중에 발생하는 예외 상황
+* 파이썬의 에러 유형
+    * 문법 에러 (Syntax Error) = 프로그램의 구문이 올바르지 않은 경우(오타, 괄호 콜론 누락 등)
+    * 예외 (Exception) = 프로그램 실행 중에 감지되는 에러
+
+#### 문법에러 예시
+* Invalid syntax ( 문법오류)
+* assign to literal (잘못된 할당)
+* EOL (End of Line) 
+* EOF (End of File)
+
+### 예외 (Exception)
+* 프로그램 실행 중에 감지되는 에러
+#### 내장예외 (Built -in Exceptions)
+* 예외 상황을 나타내는 예외 클래스들 
+    * 파이썬에서 이미 정의되어 있으며, 특정 예외 상황에 대한 처리를 위해 사용.
+* ZeroDivisionError : 나누기 또는 모듈로 연산의 두번째 인자가 0일때 발생
+* NameError : 지역 또는 전역 이름을 찾을 수 없을 때 발생
+* TypeError : 타입 불일치 or 인자누락 or 인자초과 or 인자타입 불일치
+* ValueError : 연산이나 함수에 문제가 없지만 부적절한 값을 가진 인자를 받고, 상황이 IndexError처럼 더 구체적인 예외로 설명되지않는 경우 발생
+* IndexError : 시퀸스 인덱스가 범위를 벗어날 때 발생.
+* KeyError : 딕셔너리에 해당 키가 존재하지 않는 경우
+* ModuleNotFoundError : 모듈을 찾을 수 없을 때 발생.
+* ImportError : 임포트 하려는 이름을 찾을 수 없을 때 발생
+* KeyboardInterrput : 사용자가 Control-c 또는 Delete를 누를때 발생.
+    * 무한루프 시 강제 종료
+* IndentationError - 잘못된 들여쓰기와 관련된 문법 오류
+
+```py
+# NameError, TypeError, IndexError
+def calculate_sum(a, b):
+    return a + b
+
+numbers = [1, 2, 3, 4, 5]
+total_sum = 0   # 없을때 NameError 1번 # []가 되있으면 TypeError 2번
+
+for i in range(len(numbers)):
+    total_sum = calculate_sum(total_sum, numbers[i])
+
+print(f"종합 : {total_sum}")
+```
+
+
+### 예외 처리
+* try문과 except절을 사용해서 예외처리
+#### try-except 구조
+* try 블록 안에 예외가 발생할 수 있는 코드 작성
+* except 블록 안에는 예외가 발생했을 때 처리할 코드를 작성
+* 예외가 발생하면 프로그램 흐름은 try블록을 빠져나와 해당 예외에 대응하는 except블록으로 이동
+* ![사진4](<사진4 예외처리.png>)
+
+#### 복수 예외 처리 연습
+* 먼저 발생 가능한 에러가 무엇인지 예상해보기
+* 발생가능한 에러를 모두 명시하거나, 별도로 작성하기
+    * 내장 예외 클래스는 상속 계층구조를 가지기 때문에 except 절로 분기 시 반드시 하위클래스를 먼저 확인할 수 있도록 작성해야함.
+
+### EAFP & LBLY
+* EAFP = Easier to Ask for Forgiveness than Permission
+    * 예외처리를 중심으로 코드를 작성하는 접근 방식 ( try - except ) // 이 친구를 좀더 씀?
+* LBLY = Look Before You Leap
+    * 값 검사를 중심으로 코드를 작성하는 접근 방식 ( if -else ) 
+* ![사진5](<사진5 EAFP, LBLY 차이.png>)
+
+### 참고
+* as 키워드 
+    * as키워드를 활용하여 에러메세지를 except 블록에서 사용할 수 있음.
+* ![사진6](<사진6 참고 as키워드.png>)

@@ -1,0 +1,622 @@
+[
+    {
+        "id": 178,
+        "name": "Jimin",
+        "type": "artist",
+        "uri": "spotify:artist:1oSPZhvZMIrWW5I41kPkkY",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb59f8cfc8e71dcaf8c6ec4bde",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab6761610000517459f8cfc8e71dcaf8c6ec4bde",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f17859f8cfc8e71dcaf8c6ec4bde",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1oSPZhvZMIrWW5I41kPkkY"
+        },
+        "genres_ids": [
+            651,
+            816
+        ]
+    },
+    {
+        "id": 451,
+        "name": "BTS",
+        "type": "artist",
+        "uri": "spotify:artist:3Nrfpe0tUJi4K4DXYWgMUX",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebd642648235ebf3460d2d1f6a",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174d642648235ebf3460d2d1f6a",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178d642648235ebf3460d2d1f6a",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX"
+        },
+        "genres_ids": [
+            339,
+            25,
+            760
+        ]
+    },
+    {
+        "id": 116,
+        "name": "NewJeans",
+        "type": "artist",
+        "uri": "spotify:artist:6HvZYsbFfjnjFrWF950C9d",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6199c3c2f414880e2b9077a9",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab676161000051746199c3c2f414880e2b9077a9",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f1786199c3c2f414880e2b9077a9",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6HvZYsbFfjnjFrWF950C9d"
+        },
+        "genres_ids": [
+            226
+        ]
+    },
+    {
+        "id": 427,
+        "name": "LE SSERAFIM",
+        "type": "artist",
+        "uri": "spotify:artist:4SpbR6yFEvexJuaBpgAU5p",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb510c56f38c9fc97ee80f7256",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174510c56f38c9fc97ee80f7256",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178510c56f38c9fc97ee80f7256",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4SpbR6yFEvexJuaBpgAU5p"
+        },
+        "genres_ids": [
+            84,
+            580,
+            696,
+            674,
+            108
+        ]
+    },
+    {
+        "id": 832,
+        "name": "SEVENTEEN",
+        "type": "artist",
+        "uri": "spotify:artist:7nqOGRxlXj7N2JYbgNEjYH",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb95f5142b421466cf22028f6f",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab6761610000517495f5142b421466cf22028f6f",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f17895f5142b421466cf22028f6f",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7nqOGRxlXj7N2JYbgNEjYH"
+        },
+        "genres_ids": [
+            73,
+            692,
+            425
+        ]
+    },
+    {
+        "id": 523,
+        "name": "aespa",
+        "type": "artist",
+        "uri": "spotify:artist:6YVMFz59CuY7ngCxTxjpxE",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebb29c20ae1a1435066fe26f35",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174b29c20ae1a1435066fe26f35",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178b29c20ae1a1435066fe26f35",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6YVMFz59CuY7ngCxTxjpxE"
+        },
+        "genres_ids": [
+            723,
+            979
+        ]
+    },
+    {
+        "id": 325,
+        "name": "IVE",
+        "type": "artist",
+        "uri": "spotify:artist:6RHTUrRF63xao58xh9FXYJ",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebf44daaf3a37f5be9a0721be7",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174f44daaf3a37f5be9a0721be7",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178f44daaf3a37f5be9a0721be7",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6RHTUrRF63xao58xh9FXYJ"
+        },
+        "genres_ids": [
+            233,
+            801,
+            253,
+            457
+        ]
+    },
+    {
+        "id": 157,
+        "name": "IU",
+        "type": "artist",
+        "uri": "spotify:artist:3HqSLMAZ3g3d5poNaI7GOU",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb006ff3c0136a71bfb9928d34",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174006ff3c0136a71bfb9928d34",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178006ff3c0136a71bfb9928d34",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3HqSLMAZ3g3d5poNaI7GOU"
+        },
+        "genres_ids": [
+            873,
+            172,
+            190,
+            329,
+            831
+        ]
+    },
+    {
+        "id": 724,
+        "name": "Jung Kook",
+        "type": "artist",
+        "uri": "spotify:artist:6HaGTQPmzraVmaVxvz6EUc",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebbda88c5ee506aa67c8835d30",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174bda88c5ee506aa67c8835d30",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178bda88c5ee506aa67c8835d30",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6HaGTQPmzraVmaVxvz6EUc"
+        },
+        "genres_ids": [
+            247,
+            681,
+            425,
+            11
+        ]
+    },
+    {
+        "id": 638,
+        "name": "(G)I-DLE",
+        "type": "artist",
+        "uri": "spotify:artist:2AfmfGFbe0A0WsTYm0SDTx",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb8abd5f97fc52561939ebbc89",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab676161000051748abd5f97fc52561939ebbc89",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f1788abd5f97fc52561939ebbc89",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2AfmfGFbe0A0WsTYm0SDTx"
+        },
+        "genres_ids": [
+            600
+        ]
+    },
+    {
+        "id": 318,
+        "name": "KANGDANIEL",
+        "type": "artist",
+        "uri": "spotify:artist:5vGoWnZO65NBgiZYBmi3iW",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebad8d9e3053d1abb9b3cee811",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174ad8d9e3053d1abb9b3cee811",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178ad8d9e3053d1abb9b3cee811",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5vGoWnZO65NBgiZYBmi3iW"
+        },
+        "genres_ids": [
+            800,
+            361,
+            692
+        ]
+    },
+    {
+        "id": 396,
+        "name": "BLACKPINK",
+        "type": "artist",
+        "uri": "spotify:artist:41MozSoPIsD1dJM0CLPjZF",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebc9690bc711d04b3d4fd4b87c",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174c9690bc711d04b3d4fd4b87c",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178c9690bc711d04b3d4fd4b87c",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/41MozSoPIsD1dJM0CLPjZF"
+        },
+        "genres_ids": [
+            117,
+            458
+        ]
+    },
+    {
+        "id": 962,
+        "name": "Jay Park",
+        "type": "artist",
+        "uri": "spotify:artist:4XDi67ZENZcbfKnvMnTYsI",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebb6ba89aff53eea0b5f0444e8",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174b6ba89aff53eea0b5f0444e8",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178b6ba89aff53eea0b5f0444e8",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4XDi67ZENZcbfKnvMnTYsI"
+        },
+        "genres_ids": [
+            799
+        ]
+    },
+    {
+        "id": 607,
+        "name": "Stray Kids",
+        "type": "artist",
+        "uri": "spotify:artist:2dIgFjalVxs4ThymZ67YCE",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebada60ffd7a8ce554fd733fb5",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174ada60ffd7a8ce554fd733fb5",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178ada60ffd7a8ce554fd733fb5",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE"
+        },
+        "genres_ids": [
+            353,
+            801,
+            20,
+            645
+        ]
+    },
+    {
+        "id": 604,
+        "name": "Yerin Baek",
+        "type": "artist",
+        "uri": "spotify:artist:6dhfy4ByARPJdPtMyrUYJK",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb28f845b9a1c6e8bccb255f0c",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab6761610000517428f845b9a1c6e8bccb255f0c",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f17828f845b9a1c6e8bccb255f0c",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6dhfy4ByARPJdPtMyrUYJK"
+        },
+        "genres_ids": [
+            404
+        ]
+    },
+    {
+        "id": 246,
+        "name": "10cm",
+        "type": "artist",
+        "uri": "spotify:artist:6zn0ihyAApAYV51zpXxdEp",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb4e5b278c1cc511598b96423c",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab676161000051744e5b278c1cc511598b96423c",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f1784e5b278c1cc511598b96423c",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6zn0ihyAApAYV51zpXxdEp"
+        },
+        "genres_ids": [
+            788,
+            616
+        ]
+    },
+    {
+        "id": 208,
+        "name": "NCT DREAM",
+        "type": "artist",
+        "uri": "spotify:artist:1gBUSTR3TyDdTVFIaQnc02",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6293e0df5b516d366ae8394d",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab676161000051746293e0df5b516d366ae8394d",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f1786293e0df5b516d366ae8394d",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1gBUSTR3TyDdTVFIaQnc02"
+        },
+        "genres_ids": [
+            254,
+            699,
+            11,
+            423,
+            619
+        ]
+    },
+    {
+        "id": 225,
+        "name": "j-hope",
+        "type": "artist",
+        "uri": "spotify:artist:0b1sIQumIAsNbqAoIClSpy",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebeb746063d1aafa2817ea11b5",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174eb746063d1aafa2817ea11b5",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178eb746063d1aafa2817ea11b5",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0b1sIQumIAsNbqAoIClSpy"
+        },
+        "genres_ids": [
+            227,
+            663,
+            584
+        ]
+    },
+    {
+        "id": 720,
+        "name": "TAEYEON",
+        "type": "artist",
+        "uri": "spotify:artist:3qNVuliS40BLgXGxhdBdqu",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5ebb29975f8b42bcba1eae62577",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab67616100005174b29975f8b42bcba1eae62577",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f178b29975f8b42bcba1eae62577",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3qNVuliS40BLgXGxhdBdqu"
+        },
+        "genres_ids": [
+            227,
+            755,
+            373,
+            481,
+            723
+        ]
+    },
+    {
+        "id": 573,
+        "name": "FIFTY FIFTY",
+        "type": "artist",
+        "uri": "spotify:artist:4GJ6xDCF5jaUqD6avOuQT6",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1193a00caa638c135ffc60ec",
+                "width": 640
+            },
+            {
+                "height": 320,
+                "url": "https://i.scdn.co/image/ab676161000051741193a00caa638c135ffc60ec",
+                "width": 320
+            },
+            {
+                "height": 160,
+                "url": "https://i.scdn.co/image/ab6761610000f1781193a00caa638c135ffc60ec",
+                "width": 160
+            }
+        ],
+        "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4GJ6xDCF5jaUqD6avOuQT6"
+        },
+        "genres_ids": [
+            593,
+            979,
+            788,
+            97
+        ]
+    }
+]

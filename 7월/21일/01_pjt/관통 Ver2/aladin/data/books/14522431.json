@@ -1,0 +1,65 @@
+{
+    "title": "노인과 바다",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=14522431&amp;partner=openAPI&amp;start=api",
+    "author": "어니스트 헤밍웨이 (지은이), 김욱동 (옮긴이)",
+    "pubDate": "2012-01-02",
+    "description": "노벨 문학상, 퓰리처상 수상 작가, 20세기 미국 문학을 개척한 작가 어니스트 헤밍웨이의 대표작. 미국 현대 문학의 개척자라 불리는 헤밍웨이는 제1차 세계대전 후 삶의 좌표를 잃어버린 '길 잃은 세대'를 대표하는 작가이다. '민음사 세계문학전집' 278권으로 출간된 &lt;노인과 바다&gt;는 헤밍웨이의 마지막 소설로, 작가 고유의 소설 수법과 실존 철학이 짧은 분량 안에 집약되어 있다.",
+    "isbn": "8937462788",
+    "isbn13": "9788937462788",
+    "itemId": 14522431,
+    "priceSales": 7200,
+    "priceStandard": 8000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 400,
+    "cover": "https://image.aladin.co.kr/product/1452/24/coversum/8937462788_2.jpg",
+    "categoryId": [
+        151128,
+        50919
+    ],
+    "publisher": "민음사",
+    "salesPoint": 32482,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.1,
+    "seriesInfo": {
+        "seriesId": 13679,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=13679&amp;partner=openAPI",
+        "seriesName": "민음사 세계문학전집 278"
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 311092622,
+                "isbn": "E422531784",
+                "isbn13": "9788937419218",
+                "priceSales": 9000,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=311092622&amp;partner=openAPI"
+            },
+            {
+                "itemId": 18094765,
+                "isbn": "E893746278",
+                "isbn13": "9788937495786",
+                "priceSales": 5600,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=18094765&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=14522431&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 78,
+                "minPrice": 4400,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=14522431&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 8,
+                "minPrice": 5000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=14522431&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

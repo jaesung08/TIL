@@ -1,0 +1,53 @@
+{
+  "title": "이기적 유전자",
+  "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170482558&amp;partner=openAPI&amp;start=api",
+  "author": "리처드 도킨스 (지은이), 홍영남, 이상임 (옮긴이)",
+  "pubDate": "2018-10-20",
+  "description": "과학을 넘어선 우리 시대의 고전, 『이기적 유전자』 40주년 기념판. 진화론의 새로운 패러다임을 제시한 이 책은 다윈의 ‘적자생존과 자연선택’이라는 개념을 유전자 단위로 끌어내려 진화를 설명한다.",
+  "isbn": "8932473900",
+  "isbn13": "9788932473901",
+  "itemId": 170482558,
+  "priceSales": 18000,
+  "priceStandard": 20000,
+  "mallType": "BOOK",
+  "stockStatus": "",
+  "mileage": 1000,
+  "cover": "https://image.aladin.co.kr/product/17048/25/coversum/8932473900_1.jpg",
+  "categoryId": [
+    51545,
+    51205
+  ],
+  "publisher": "을유문화사",
+  "salesPoint": 87079,
+  "adult": false,
+  "fixedPrice": true,
+  "customerReviewRank": 8.9,
+  "subInfo": {
+    "ebookList": [
+      {
+        "itemId": 181909639,
+        "isbn": "E893247390",
+        "isbn13": "9788932421278",
+        "priceSales": 14000,
+        "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=181909639&amp;partner=openAPI"
+      }
+    ],
+    "usedList": {
+      "aladinUsed": {
+        "itemCount": 0,
+        "minPrice": 0,
+        "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=170482558&amp;TabType=2&amp;partner=openAPI"
+      },
+      "userUsed": {
+        "itemCount": 115,
+        "minPrice": 11000,
+        "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=170482558&amp;TabType=1&amp;partner=openAPI"
+      },
+      "spaceUsed": {
+        "itemCount": 15,
+        "minPrice": 13000,
+        "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=170482558&amp;TabType=3&amp;partner=openAPI"
+      }
+    }
+  }
+}

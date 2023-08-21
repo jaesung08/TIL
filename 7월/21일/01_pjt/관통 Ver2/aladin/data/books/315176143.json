@@ -1,0 +1,50 @@
+{
+    "title": "정의란 무엇인가",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=315176143&amp;partner=openAPI&amp;start=api",
+    "author": "마이클 샌델 (지은이), 김명철 (옮긴이), 김선욱 (감수)",
+    "pubDate": "2014-11-20",
+    "description": "마이클 샌델은 구제 금융, 대리 출산, 동성 결혼, 과거사 공개 사과 등 현대 사회에서 우리가 흔히 부딪히는 문제를 통해 ‘무엇이 정의로운가’에 대한 해답을 탐구했다. 이 책은 탁월한 정치 철학자들이 남긴 시대를 초월한 철학적인 질문을 알기 쉽게 소개한다.",
+    "isbn": "8937834790",
+    "isbn13": "9788937834790",
+    "id": 315176143,
+    "priceSales": 13500,
+    "priceStandard": 15000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 750,
+    "cover": "https://image.aladin.co.kr/product/31517/61/coversum/k102832536_1.jpg",
+    "categoryId": 51449,
+    "publisher": "와이즈베리",
+    "salesPoint": 68126,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.7,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 49297462,
+                "isbn": "E893783479",
+                "isbn13": "9788937836367",
+                "priceSales": 10500,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49297462&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=315176143&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 5,
+                "minPrice": 6890,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=315176143&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=315176143&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

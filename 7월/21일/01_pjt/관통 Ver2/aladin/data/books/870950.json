@@ -1,0 +1,45 @@
+{
+  "title": "코스모스",
+  "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=870950&amp;partner=openAPI&amp;start=api",
+  "author": "칼 세이건 (지은이), 홍승수 (옮긴이)",
+  "pubDate": "2006-12-20",
+  "description": "칼 세이건의 <코스모스> 특별판이 세이건의 서거 10주기를 기념하여 출간되었다. 이 특별판은 지난 2004년 12월에 출간된 <코스모스>(양장본)의 텍스트 전문과 도판 일부를 사용하고 판형을 휴대하기 쉬운 신국판으로 바꿔 출간한 책으로, 독자들이 좀 더 쉽게 칼 세이건의 메시지를 만날 수 있도록 배려한 책이다.",
+  "isbn": "8983711892",
+  "isbn13": "9788983711892",
+  "itemId": 870950,
+  "priceSales": 17910,
+  "priceStandard": 19900,
+  "mallType": "BOOK",
+  "stockStatus": "",
+  "mileage": 990,
+  "cover": "https://image.aladin.co.kr/product/87/9/coversum/s922637499_3.jpg",
+  "categoryId": [
+    31908,
+    51310
+  ],
+  "publisher": "사이언스북스",
+  "salesPoint": 130518,
+  "adult": false,
+  "fixedPrice": true,
+  "customerReviewRank": 9,
+  "subInfo": {
+    "ebookList": [],
+    "usedList": {
+      "aladinUsed": {
+        "itemCount": 0,
+        "minPrice": 0,
+        "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=870950&amp;TabType=2&amp;partner=openAPI"
+      },
+      "userUsed": {
+        "itemCount": 123,
+        "minPrice": 11000,
+        "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=870950&amp;TabType=1&amp;partner=openAPI"
+      },
+      "spaceUsed": {
+        "itemCount": 14,
+        "minPrice": 12100,
+        "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=870950&amp;TabType=3&amp;partner=openAPI"
+      }
+    }
+  }
+}

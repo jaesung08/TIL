@@ -1,0 +1,58 @@
+{
+    "title": "몰입 : 인생을 바꾸는 자기 혁명 - Think Hard!",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1020939&amp;partner=openAPI&amp;start=api",
+    "author": "황농문 (지은이)",
+    "pubDate": "2007-12-10",
+    "description": "'몰입'은 잠재된 우리의 두뇌 능력을 일깨워 능력을 극대화하고 삶의 만족도를 최고로 끌어올리는 방법이다. 책은 '왜 우리가 몰입적 사고를 해야 하는지', '어떻게 몰입으로 천재성을 끄집어낼 수 있는지'에 대해 구체적인 해답을 제시한다.",
+    "isbn": "8925514826",
+    "isbn13": "9788925514826",
+    "itemId": 1020939,
+    "priceSales": 16200,
+    "priceStandard": 18000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 900,
+    "cover": "https://image.aladin.co.kr/product/102/9/coversum/s552832633_2.jpg",
+    "categoryId": [
+        151138,
+        70216
+    ],
+    "publisher": "랜덤하우스코리아",
+    "salesPoint": 58541,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.6,
+    "seriesInfo": {
+        "seriesId": 22986,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=22986&amp;partner=openAPI",
+        "seriesName": "몰입 "
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 11827354,
+                "isbn": "E892551482",
+                "isbn13": "9788925594262",
+                "priceSales": 12600,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11827354&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=1020939&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 22,
+                "minPrice": 12000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=1020939&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=1020939&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

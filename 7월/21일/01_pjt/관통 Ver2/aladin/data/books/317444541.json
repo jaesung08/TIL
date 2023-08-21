@@ -1,0 +1,53 @@
+{
+    "title": "회복탄력성의 힘 - 쉽게 포기하지 않고 결국 해내는 아이의 비밀",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317444541&amp;partner=openAPI&amp;start=api",
+    "author": "지니 킴 (지은이)",
+    "pubDate": "2023-06-15",
+    "description": "아동발달 전문가이자 교육자인 지니 킴(Jeanie Kim) 박사는 회복탄력성은 모두 갖고 태어나고, 어려서부터 반복과 연습을 통해 누구나 기를 수 있다고 강조하며, 긍정성, 자기 신뢰, 자기조절능력 같은 회복탄력성의 자원을 아이의 삶에 뿌리내리게 하는 방법들을 구체적으로 안내한다.",
+    "isbn": "K862833807",
+    "isbn13": "9791191825978",
+    "itemId": 317444541,
+    "priceSales": 16020,
+    "priceStandard": 17800,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 890,
+    "cover": "https://image.aladin.co.kr/product/31744/45/coversum/k862833807_1.jpg",
+    "categoryId": [
+        151138,
+        51786
+    ],
+    "publisher": "빅피시",
+    "salesPoint": 13185,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.8,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 318161289,
+                "isbn": "E052531839",
+                "isbn13": "9791193128039",
+                "priceSales": 12460,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318161289&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=317444541&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=317444541&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=317444541&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

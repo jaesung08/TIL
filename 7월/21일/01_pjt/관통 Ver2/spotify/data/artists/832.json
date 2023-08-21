@@ -1,0 +1,37 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7nqOGRxlXj7N2JYbgNEjYH"
+    },
+    "followers": {
+        "href": null,
+        "total": 9571638
+    },
+    "href": "https://api.spotify.com/v1/artists/7nqOGRxlXj7N2JYbgNEjYH",
+    "id": 832,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5eb95f5142b421466cf22028f6f",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab6761610000517495f5142b421466cf22028f6f",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f17895f5142b421466cf22028f6f",
+            "width": 160
+        }
+    ],
+    "name": "SEVENTEEN",
+    "popularity": 80,
+    "type": "artist",
+    "uri": "spotify:artist:7nqOGRxlXj7N2JYbgNEjYH",
+    "genres_ids": [
+        73,
+        692,
+        425
+    ]
+}

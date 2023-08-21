@@ -1,0 +1,58 @@
+{
+    "title": "이방인",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=212246612&amp;partner=openAPI&amp;start=api",
+    "author": "알베르 카뮈 (지은이), 김화영 (옮긴이)",
+    "pubDate": "2019-09-02",
+    "description": "'민음사 세계문학전집' 266권. 20세기의 지성이자 실존주의 문학의 대표 작가, 알베르 카뮈의 대표작. 1942년 &lt;이방인&gt;이 처음 발표되었을 때, 카뮈는 젊은 무명작가에 불과했다. 낯선 인물과 독창적인 형식으로 현대 프랑스 문단에 이방인처럼 나타난 이 소설은 출간 이후 한순간도 프랑스 베스트셀러 목록에서 빠진 적이 없는 걸작이 되었다.",
+    "isbn": "8937443848",
+    "isbn13": "9788937443848",
+    "itemId": 212246612,
+    "priceSales": 9000,
+    "priceStandard": 10000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 500,
+    "cover": "https://image.aladin.co.kr/product/21224/66/coversum/8937443848_1.jpg",
+    "categoryId": [
+        151128,
+        50921
+    ],
+    "publisher": "민음사",
+    "salesPoint": 49376,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.7,
+    "seriesInfo": {
+        "seriesId": 13679,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=13679&amp;partner=openAPI",
+        "seriesName": "민음사 세계문학전집 266"
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 268141150,
+                "isbn": "E332538890",
+                "isbn13": "9788937419010",
+                "priceSales": 9000,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268141150&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=212246612&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 64,
+                "minPrice": 6500,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=212246612&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 1,
+                "minPrice": 6400,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=212246612&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "title": "수레바퀴 아래서",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=98708362&amp;partner=openAPI&amp;start=api",
+    "author": "헤르만 헤세 (지은이), 박지희 (옮긴이), 김선형 (해설)",
+    "pubDate": "2017-01-01",
+    "description": "성적 위주의 교육 속에서 경쟁에 지쳐 자신을 잃어버린 모든 이들에게 공감과 위로를 전하는 &lt;수레바퀴 아래서&gt;는 헤르만 헤세 자신의 청소년기를 반영한 자전적 소설이다. 이제 &lt;수레바퀴 아래서&gt;를 1906년 오리지널 초판본 표지로 만나 보자.",
+    "isbn": "K822535559",
+    "isbn13": "9791187011606",
+    "itemId": 98708362,
+    "priceSales": 2970,
+    "priceStandard": 3300,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 160,
+    "cover": "https://image.aladin.co.kr/product/9870/83/coversum/k822535559_2.jpg",
+    "categoryId": 50922,
+    "publisher": "코너스톤",
+    "salesPoint": 38360,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.1,
+    "seriesInfo": {
+        "seriesId": 1077972,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1077972&amp;partner=openAPI",
+        "seriesName": "코너스톤 착한 고전 시리즈 2"
+    },
+    "subInfo": {
+        "ebookList": [],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=98708362&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 14,
+                "minPrice": 2200,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=98708362&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=98708362&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

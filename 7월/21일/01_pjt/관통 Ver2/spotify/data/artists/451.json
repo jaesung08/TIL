@@ -1,0 +1,37 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX"
+    },
+    "followers": {
+        "href": null,
+        "total": 66752935
+    },
+    "href": "https://api.spotify.com/v1/artists/3Nrfpe0tUJi4K4DXYWgMUX",
+    "id": 451,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebd642648235ebf3460d2d1f6a",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174d642648235ebf3460d2d1f6a",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178d642648235ebf3460d2d1f6a",
+            "width": 160
+        }
+    ],
+    "name": "BTS",
+    "popularity": 79,
+    "type": "artist",
+    "uri": "spotify:artist:3Nrfpe0tUJi4K4DXYWgMUX",
+    "genres_ids": [
+        339,
+        25,
+        760
+    ]
+}

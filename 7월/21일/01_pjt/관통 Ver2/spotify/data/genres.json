@@ -1,0 +1,506 @@
+[
+    {
+        "id": 339,
+        "name": "acoustic"
+    },
+    {
+        "id": 745,
+        "name": "afrobeat"
+    },
+    {
+        "id": 364,
+        "name": "alt-rock"
+    },
+    {
+        "id": 94,
+        "name": "alternative"
+    },
+    {
+        "id": 737,
+        "name": "ambient"
+    },
+    {
+        "id": 816,
+        "name": "anime"
+    },
+    {
+        "id": 382,
+        "name": "black-metal"
+    },
+    {
+        "id": 894,
+        "name": "bluegrass"
+    },
+    {
+        "id": 196,
+        "name": "blues"
+    },
+    {
+        "id": 10,
+        "name": "bossanova"
+    },
+    {
+        "id": 97,
+        "name": "brazil"
+    },
+    {
+        "id": 99,
+        "name": "breakbeat"
+    },
+    {
+        "id": 373,
+        "name": "british"
+    },
+    {
+        "id": 878,
+        "name": "cantopop"
+    },
+    {
+        "id": 254,
+        "name": "chicago-house"
+    },
+    {
+        "id": 593,
+        "name": "children"
+    },
+    {
+        "id": 897,
+        "name": "chill"
+    },
+    {
+        "id": 600,
+        "name": "classical"
+    },
+    {
+        "id": 706,
+        "name": "club"
+    },
+    {
+        "id": 633,
+        "name": "comedy"
+    },
+    {
+        "id": 692,
+        "name": "country"
+    },
+    {
+        "id": 979,
+        "name": "dance"
+    },
+    {
+        "id": 388,
+        "name": "dancehall"
+    },
+    {
+        "id": 272,
+        "name": "death-metal"
+    },
+    {
+        "id": 194,
+        "name": "deep-house"
+    },
+    {
+        "id": 405,
+        "name": "detroit-techno"
+    },
+    {
+        "id": 360,
+        "name": "disco"
+    },
+    {
+        "id": 51,
+        "name": "disney"
+    },
+    {
+        "id": 681,
+        "name": "drum-and-bass"
+    },
+    {
+        "id": 359,
+        "name": "dub"
+    },
+    {
+        "id": 710,
+        "name": "dubstep"
+    },
+    {
+        "id": 226,
+        "name": "edm"
+    },
+    {
+        "id": 25,
+        "name": "electro"
+    },
+    {
+        "id": 973,
+        "name": "electronic"
+    },
+    {
+        "id": 429,
+        "name": "emo"
+    },
+    {
+        "id": 857,
+        "name": "folk"
+    },
+    {
+        "id": 605,
+        "name": "forro"
+    },
+    {
+        "id": 20,
+        "name": "french"
+    },
+    {
+        "id": 602,
+        "name": "funk"
+    },
+    {
+        "id": 773,
+        "name": "garage"
+    },
+    {
+        "id": 988,
+        "name": "german"
+    },
+    {
+        "id": 217,
+        "name": "gospel"
+    },
+    {
+        "id": 457,
+        "name": "goth"
+    },
+    {
+        "id": 927,
+        "name": "grindcore"
+    },
+    {
+        "id": 307,
+        "name": "groove"
+    },
+    {
+        "id": 755,
+        "name": "grunge"
+    },
+    {
+        "id": 564,
+        "name": "guitar"
+    },
+    {
+        "id": 108,
+        "name": "happy"
+    },
+    {
+        "id": 614,
+        "name": "hard-rock"
+    },
+    {
+        "id": 801,
+        "name": "hardcore"
+    },
+    {
+        "id": 580,
+        "name": "hardstyle"
+    },
+    {
+        "id": 841,
+        "name": "heavy-metal"
+    },
+    {
+        "id": 117,
+        "name": "hip-hop"
+    },
+    {
+        "id": 619,
+        "name": "holidays"
+    },
+    {
+        "id": 503,
+        "name": "honky-tonk"
+    },
+    {
+        "id": 943,
+        "name": "house"
+    },
+    {
+        "id": 162,
+        "name": "idm"
+    },
+    {
+        "id": 73,
+        "name": "indian"
+    },
+    {
+        "id": 289,
+        "name": "indie"
+    },
+    {
+        "id": 247,
+        "name": "indie-pop"
+    },
+    {
+        "id": 581,
+        "name": "industrial"
+    },
+    {
+        "id": 468,
+        "name": "iranian"
+    },
+    {
+        "id": 873,
+        "name": "j-dance"
+    },
+    {
+        "id": 646,
+        "name": "j-idol"
+    },
+    {
+        "id": 481,
+        "name": "j-pop"
+    },
+    {
+        "id": 760,
+        "name": "j-rock"
+    },
+    {
+        "id": 363,
+        "name": "jazz"
+    },
+    {
+        "id": 11,
+        "name": "k-pop"
+    },
+    {
+        "id": 723,
+        "name": "kids"
+    },
+    {
+        "id": 584,
+        "name": "latin"
+    },
+    {
+        "id": 214,
+        "name": "latino"
+    },
+    {
+        "id": 84,
+        "name": "malay"
+    },
+    {
+        "id": 482,
+        "name": "mandopop"
+    },
+    {
+        "id": 142,
+        "name": "metal"
+    },
+    {
+        "id": 425,
+        "name": "metal-misc"
+    },
+    {
+        "id": 800,
+        "name": "metalcore"
+    },
+    {
+        "id": 253,
+        "name": "minimal-techno"
+    },
+    {
+        "id": 865,
+        "name": "movies"
+    },
+    {
+        "id": 420,
+        "name": "mpb"
+    },
+    {
+        "id": 353,
+        "name": "new-age"
+    },
+    {
+        "id": 358,
+        "name": "new-release"
+    },
+    {
+        "id": 227,
+        "name": "opera"
+    },
+    {
+        "id": 886,
+        "name": "pagode"
+    },
+    {
+        "id": 883,
+        "name": "party"
+    },
+    {
+        "id": 274,
+        "name": "philippines-opm"
+    },
+    {
+        "id": 896,
+        "name": "piano"
+    },
+    {
+        "id": 53,
+        "name": "pop"
+    },
+    {
+        "id": 976,
+        "name": "pop-film"
+    },
+    {
+        "id": 663,
+        "name": "post-dubstep"
+    },
+    {
+        "id": 423,
+        "name": "power-pop"
+    },
+    {
+        "id": 616,
+        "name": "progressive-house"
+    },
+    {
+        "id": 806,
+        "name": "psych-rock"
+    },
+    {
+        "id": 522,
+        "name": "punk"
+    },
+    {
+        "id": 651,
+        "name": "punk-rock"
+    },
+    {
+        "id": 207,
+        "name": "r-n-b"
+    },
+    {
+        "id": 831,
+        "name": "rainy-day"
+    },
+    {
+        "id": 779,
+        "name": "reggae"
+    },
+    {
+        "id": 919,
+        "name": "reggaeton"
+    },
+    {
+        "id": 107,
+        "name": "road-trip"
+    },
+    {
+        "id": 498,
+        "name": "rock"
+    },
+    {
+        "id": 198,
+        "name": "rock-n-roll"
+    },
+    {
+        "id": 118,
+        "name": "rockabilly"
+    },
+    {
+        "id": 799,
+        "name": "romance"
+    },
+    {
+        "id": 818,
+        "name": "sad"
+    },
+    {
+        "id": 788,
+        "name": "salsa"
+    },
+    {
+        "id": 219,
+        "name": "samba"
+    },
+    {
+        "id": 64,
+        "name": "sertanejo"
+    },
+    {
+        "id": 460,
+        "name": "show-tunes"
+    },
+    {
+        "id": 317,
+        "name": "singer-songwriter"
+    },
+    {
+        "id": 664,
+        "name": "ska"
+    },
+    {
+        "id": 361,
+        "name": "sleep"
+    },
+    {
+        "id": 472,
+        "name": "songwriter"
+    },
+    {
+        "id": 311,
+        "name": "soul"
+    },
+    {
+        "id": 465,
+        "name": "soundtracks"
+    },
+    {
+        "id": 329,
+        "name": "spanish"
+    },
+    {
+        "id": 645,
+        "name": "study"
+    },
+    {
+        "id": 172,
+        "name": "summer"
+    },
+    {
+        "id": 233,
+        "name": "swedish"
+    },
+    {
+        "id": 696,
+        "name": "synth-pop"
+    },
+    {
+        "id": 458,
+        "name": "tango"
+    },
+    {
+        "id": 404,
+        "name": "techno"
+    },
+    {
+        "id": 190,
+        "name": "trance"
+    },
+    {
+        "id": 112,
+        "name": "trip-hop"
+    },
+    {
+        "id": 699,
+        "name": "turkish"
+    },
+    {
+        "id": 674,
+        "name": "work-out"
+    },
+    {
+        "id": 98,
+        "name": "world-music"
+    }
+]

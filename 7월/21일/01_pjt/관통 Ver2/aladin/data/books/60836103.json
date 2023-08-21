@@ -1,0 +1,50 @@
+{
+    "title": "멋진 신세계",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=60836103&amp;partner=openAPI&amp;start=api",
+    "author": "올더스 헉슬리 (지은이), 안정효 (옮긴이)",
+    "pubDate": "2015-06-12",
+    "description": "올더스 헉슬리는 명문 집안 출신의 영국 작가로서 광범위한 지식뿐 아니라 예리한 지성과 우아한 문체, 그리고 때로는 냉소적인 유머 감각으로 유명하다. 그가 1932년에 발표한 작품 &lt;멋진 신세계&gt;는 금세기에 미래를 가장 깊이 있고 날카롭게 파헤친 작품 중의 하나로 평가받는다.",
+    "isbn": "8973814729",
+    "isbn13": "9788973814725",
+    "itemId": 60836103,
+    "priceSales": 12420,
+    "priceStandard": 13800,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 690,
+    "cover": "https://image.aladin.co.kr/product/6083/61/coversum/8973814729_2.jpg",
+    "categoryId": 89481,
+    "publisher": "(주)태일소담출판사",
+    "salesPoint": 44834,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.9,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 152632119,
+                "isbn": "E897381472",
+                "isbn13": "9791160271430",
+                "priceSales": 8280,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=152632119&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 1,
+                "minPrice": 8500,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=60836103&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 83,
+                "minPrice": 8000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=60836103&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 8100,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=60836103&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

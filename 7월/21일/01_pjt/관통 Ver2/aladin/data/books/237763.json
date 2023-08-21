@@ -1,0 +1,55 @@
+{
+    "title": "달과 6펜스",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=237763&amp;partner=openAPI&amp;start=api",
+    "author": "서머싯 몸 (지은이), 송무 (옮긴이)",
+    "pubDate": "2000-06-20",
+    "description": "<달과 6펜스>는 15종에 이르는 번역본이 이미 소개되어 있을 만큼 국내에서 크게 환영받는 작품이다. 이 작품은 서머싯 몸을 전세계에 널리 알린 결정적인 작품으로 제1차 세계대전이 끝난 이듬해인 1919년에 출판되어 대단한 인기를 끌었다.",
+    "isbn": "8937460386",
+    "isbn13": "9788937460388",
+    "itemId": 237763,
+    "priceSales": 9000,
+    "priceStandard": 10000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 500,
+    "cover": "https://image.aladin.co.kr/product/23/77/coversum/s692639624_1.jpg",
+    "categoryId": 50919,
+    "publisher": "민음사",
+    "salesPoint": 39579,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.5,
+    "seriesInfo": {
+        "seriesId": 13679,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=13679&amp;partner=openAPI",
+        "seriesName": "민음사 세계문학전집 38"
+    },
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 24672205,
+                "isbn": "E893746038",
+                "isbn13": "9788937493386",
+                "priceSales": 7000,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=24672205&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=237763&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 118,
+                "minPrice": 3500,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=237763&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 4800,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=237763&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

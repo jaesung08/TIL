@@ -1,0 +1,124 @@
+문자열 : ' ' 불변 시퀸스 자료형 -> 알고리즘 IM형 문자형 파싱(인덱싱, 슬라이싱 등)
+리스트 : [ ] 가변 시퀸스 자료형 -> 알고리즘 IM형 방향배열 등 ,,, A형 DFS,BFS
+튜플 : ( ) 불변 시퀸스 자료형 -> 알고리즘 방향배열 
+레인지 : 생성형 불변 시퀀스 자료형
+딕셔너리 : {key:value} 가변 비시퀸스 자료형-> ket : value -> DB의 Json 형식과 비슷
+세트 : 가변 비시퀸스 자료형 -> 중복을 허용하지 않음 -> 집합
+
+행- 가로 한줄을 뜻함
+열 -세로 한줄을 뜻함
+1행     1열 2열 3열 4열
+2행
+3행
+4행
+
+```python
+# 2차원리스트를 입력받는 방법
+rows = int(input("행의 개수를 입력하세요."))
+matrix = []
+
+for i in range(rows):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+matrix = [list(map(int, input().split()))for _ in range(rows)] # 위의 3줄이 이거 한줄과 똑같다.
+
+for row in matrix :
+    print(row)    
+```
+
+
+튜플 예시
+```python
+# 2차원리스트를 입력받는 방법
+rows = int(input("행의 개수를 입력하세요."))
+matrix = []
+
+for i in range(rows):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+matrix = [list(map(int, input().split()))for _ in range(rows)] # 위의 3줄이 이거 한줄과 똑같다.
+
+for row in matrix :
+    print(row)    
+```
+prunt(int( '3.5' ) )
+
+
+---------------------------------------------------------------------------------------------------------
+## Type Conversion = 형변환
+### lmplicit Type Conversion = 암시적 형 변환
+* 파이썬이 자동으로 형변환 하는 것
+* Boolean과 Numeric Type에서만 가능 
+정수 -> False = 0
+실수 -> False = 0.0
+문자열 -> False = "" (공백아니고 아예 없어야함)
+* 사진 13
+* 때문에 더했을때 값이 나올 수 있게됌
+* 정수 + 실수= 실수
+
+### Explicit Type Conversion = 명시적 형변환
+* 개발자가 직접 형변환 시키는 것
+* str(문자열) -> integer : 형식에 맞는 숫자만 가능
+* integer -> str : 모두 가능
+```python
+print(int('1')) #1
+print(str(1)+'등' #1등
+print(float( '3.5' )) # 3.5
+print(int( 3.5 ) ) #3 // 형변환할때는 버림이 된다.
+prunt(int( '3.5' ) ) # 에러발생
+=> print( int( float('3.5') ) )  # 3
+```
+* 사진14
+
+## 연산자
+### 산술 연산자
+* 사진15
+### 복합연산자
+* 사진16
+### 비교 연산자
+* 사진17
+* 항상 부등호가 먼저 사용되어야함
+* ==, !=은 동등성을 띄고 값을 확인하나 is와 is not은 식별성을 띄고 레퍼런스(주소)를 비교한다.
+* is 연산자는 되도록이면 None, True, False 등을 비교할 때 사용!
+```python
+print(2.0 == 2) # True
+print(2,0 is 2) #False
+
+a=3
+b=3
+print(a==b) #True
+print(a is b) #False
+```
+### 논리연산자
+* and(논리곱) = 모두 다 참이여야 True
+* or(논리합) = 하나 만 참이여도 True
+* not(논리부정) = True-> False // False->True
+* 비교 연산자와 함께 사용가능하다
+
+단축평가예시
+* 사진18
+* and
+    * 첫번째 피연산자가 False라면 전체표현식은 False이며 두번째 피연산자는 무시
+    * 첫번째 피연산자가 True라면 두번째 피연산자에 의해 결정되며, 두번째 피연산자가 결과로 반환
+* or
+    * 첫번째 피연산자가 True라면 전체표현식은 True이며 두번째 피연산자는 무시
+    * 첫번째 피연산자가 False라면 두번째 피연산자에 의해 결정되며, 두번째 피연산자가 결과로 반환
+* a와b가 공백이 아니기때문에 true이며 두번째 연산자인 b가 포함되지않기에 false
+* a와b가 공백이 아니기때문에 true이며 두번째 연산자인 a가 포함되기때문에 True
+#### 단축평가는 코드실행을 최적화하여, 불필요한 연산을 줄이기 위해 시행.
+
+### 멤버쉽 연산자 
+* in = 왼쪽 피연산자가 오른쪽 피연산자의 시퀸스에 속하는지를 확인!
+* not in = 왼쪽 피연산자가 오른쪽 피연산자의 시퀸스에 속하지않는지를 확인!
+* 사진19
+
+### 시퀸스형 연산자
+* 시퀸스 간 연산에서 사용될 때 다른 역할을 가짐
+* + 결합 연산자
+* * 반복 연산자
+* 사진20
+
+### 연산자 우선순위
+* 사진21

@@ -1,0 +1,15 @@
+T = int(input())
+for tc in range(1, T+1):
+    N = int(input())
+    arr = list(map(int, input().split()))
+    max_v = arr[0] # 어차피 찾을 것이기 때문에 리스트의 처음값으로 시작
+    min_v = arr[0] # or 1000000 이라는 최대값도 입력가능
+
+    for i in range(1, N):
+        if max_v < arr[i]:
+            max_v = arr[i]
+        if min_v > arr[i]:
+            min_v = arr[i]
+
+    ans = max_v - min_v
+    print(f'#{tc} {ans}')

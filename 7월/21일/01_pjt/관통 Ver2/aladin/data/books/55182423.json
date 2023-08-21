@@ -1,0 +1,53 @@
+{
+    "title": "도시는 무엇으로 사는가 - 도시를 보는 열다섯 가지 인문적 시선",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=55182423&amp;partner=openAPI&amp;start=api",
+    "author": "유현준 (지은이)",
+    "pubDate": "2015-03-25",
+    "description": "도시는 단순히 건축물이나 공간들을 모아 놓은 곳이 아니다. 도시는 인간의 삶이 반영되기 때문에 인간이 추구하는 것과 욕망이 드러난다. 이 책은 자신들이 만든 도시에 인간의 삶이 어떻게 영향을 받는지, 과연 더 행복해지는지 아니면 피폐해지고 있는지 도시의 답변을 들려준다.",
+    "isbn": "8932472955",
+    "isbn13": "9788932472959",
+    "itemId": 55182423,
+    "priceSales": 13500,
+    "priceStandard": 15000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 750,
+    "cover": "https://image.aladin.co.kr/product/5518/24/coversum/8932472955_1.jpg",
+    "categoryId": [
+        31908,
+        51082
+    ],
+    "publisher": "을유문화사",
+    "salesPoint": 18763,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.5,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 60508313,
+                "isbn": "E893247295",
+                "isbn13": "9788932473055",
+                "priceSales": 9000,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=60508313&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=55182423&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 106,
+                "minPrice": 5200,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=55182423&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 9000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=55182423&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

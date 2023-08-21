@@ -1,0 +1,60 @@
+{
+    "title": "웰씽킹 WEALTHINKING (양장) - 부를 창조하는 생각의 뿌리",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=282733777&amp;partner=openAPI&amp;start=api",
+    "author": "켈리 최 (지은이)",
+    "pubDate": "2021-11-10",
+    "description": "부를 창조한 사람들이 갖고 있는 생각의 뿌리를 이해하고 체득하기 위해 ‘풍요의 생각’을 이야기하는 책이다. 풍요의 생각은 결핍의 생각과 반대되는 개념이다. 풍요의 생각이나 결핍의 생각이나 모두 에너지이지만, 그 방향성은 정반대다.",
+    "isbn": "K852835990",
+    "isbn13": "9791130677774",
+    "itemId": 282733777,
+    "priceSales": 14400,
+    "priceStandard": 16000,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 800,
+    "cover": "https://image.aladin.co.kr/product/28273/37/coversum/s242836112_3.jpg",
+    "categoryId": [
+        151138,
+        70216
+    ],
+    "publisher": "다산북스",
+    "salesPoint": 84428,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 8.6,
+    "subInfo": {
+        "ebookList": [
+            {
+                "itemId": 283745948,
+                "isbn": "E472539297",
+                "isbn13": "9791130678269",
+                "priceSales": 16200,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283745948&amp;partner=openAPI"
+            },
+            {
+                "itemId": 283139937,
+                "isbn": "E922539995",
+                "isbn13": "9791130678092",
+                "priceSales": 11200,
+                "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283139937&amp;partner=openAPI"
+            }
+        ],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=282733777&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 19,
+                "minPrice": 7000,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=282733777&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 15,
+                "minPrice": 10500,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=282733777&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}

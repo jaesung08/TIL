@@ -1,0 +1,37 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5vGoWnZO65NBgiZYBmi3iW"
+    },
+    "followers": {
+        "href": null,
+        "total": 860039
+    },
+    "href": "https://api.spotify.com/v1/artists/5vGoWnZO65NBgiZYBmi3iW",
+    "id": 318,
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebad8d9e3053d1abb9b3cee811",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174ad8d9e3053d1abb9b3cee811",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178ad8d9e3053d1abb9b3cee811",
+            "width": 160
+        }
+    ],
+    "name": "KANGDANIEL",
+    "popularity": 71,
+    "type": "artist",
+    "uri": "spotify:artist:5vGoWnZO65NBgiZYBmi3iW",
+    "genres_ids": [
+        800,
+        361,
+        692
+    ]
+}

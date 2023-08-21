@@ -1,0 +1,50 @@
+{
+    "title": "사피엔스 - 유인원에서 사이보그까지, 인간 역사의 대담하고 위대한 질문",
+    "link": "http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314240466&amp;partner=openAPI&amp;start=api",
+    "author": "유발 하라리 (지은이), 조현욱 (옮긴이), 이태수 (감수)",
+    "pubDate": "2023-04-01",
+    "description": "2011년 원서 출간 이후 10년을 돌아보고 위기 상황을 맞은 인류에게 건네는 제언이 특별 서문으로 수록되었다. 현재 인류는 그 어느 때보다 어려운 상황을 맞고 있다. 난국을 헤쳐나가기 위해 무엇을 해야 할까? 저자는 더 나은 세상을 위한 키워드로 ‘인간 이해’를 강조한다.",
+    "isbn": "8934972467",
+    "isbn13": "9788934972464",
+    "itemId": 314240466,
+    "priceSales": 24120,
+    "priceStandard": 26800,
+    "mallType": "BOOK",
+    "stockStatus": "",
+    "mileage": 1340,
+    "cover": "https://image.aladin.co.kr/product/31424/4/coversum/k482832219_1.jpg",
+    "categoryId": [
+        31908,
+        51545
+    ],
+    "publisher": "김영사",
+    "salesPoint": 125633,
+    "adult": false,
+    "fixedPrice": true,
+    "customerReviewRank": 9.6,
+    "seriesInfo": {
+        "seriesId": 643800,
+        "seriesLink": "http://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=643800&amp;partner=openAPI",
+        "seriesName": "인류 3부작 시리즈 "
+    },
+    "subInfo": {
+        "ebookList": [],
+        "usedList": {
+            "aladinUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=314240466&amp;TabType=2&amp;partner=openAPI"
+            },
+            "userUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=314240466&amp;TabType=1&amp;partner=openAPI"
+            },
+            "spaceUsed": {
+                "itemCount": 0,
+                "minPrice": 0,
+                "link": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=314240466&amp;TabType=3&amp;partner=openAPI"
+            }
+        }
+    }
+}
