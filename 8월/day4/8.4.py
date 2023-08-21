@@ -150,43 +150,43 @@ for tc in range(1, T+1):
     N = int(input())
     arr = [list(map(int, input().split())) for _ in range(N)]
 
-    def game(y, x):
-        max_area = 0
-        cnt = 0
-        cur = arr[y][x]
-        for ny in range(y, N):
-            for nx in range(x, N):
-                if arr[ny][nx] == cur:
-                    area = (ny - y + 1) * (nx - x + 1)
-                    if area > max_area:
-                        max_area = area
-                        cnt = 1
-                    elif area == max_area:
-                        cnt += 1
-        return cnt
-    result_list = []
-    for i in range(N):
-        for j in range(N):
-            result_list.append(game(i, j))
+    # def game(y, x):
+    #     max_area = 0
+    #     cnt = 0
+    #     cur = arr[y][x]
+    #     for ny in range(y, N):
+    #         for nx in range(x, N):
+    #             if arr[ny][nx] == cur:
+    #                 area = (ny - y + 1) * (nx - x + 1)
+    #                 if area > max_area:
+    #                     max_area = area
+    #                     cnt = 1
+    #                 elif area == max_area:
+    #                     cnt += 1
+    #     return cnt
+    # result_list = []
+    # for i in range(N):
+    #     for j in range(N):
+    #         result_list.append(game(i, j))
 
-    print(f'#{tc} {max(result_list)}')
+    # print(f'#{tc} {max(result_list)}')
 
-    # max_area = 0
-    # cnt = 0
-    # for y in range(N):
-    #     for x in range(N):
-    #         cur = arr[y][x] # 왼쪽 위 좌표의 값
-    #         # 현재위치에서 오른쪽아래로 탐색
-    #         for ny in range(y, N):
-    #             for nx in range(x,N):
-    #                 # 동일한 숫자값을 만나면
-    #                 if arr[ny][nx] == cur:
-    #                     # 면적계산
-    #                     area = (ny-y +1)* (nx - x +1)
-    #                     # 최댓값이라면 갱신
-    #                     if  area > max_area:
-    #                         max_area = area
-    #                         cnt = 1    # 새롭게 만든 큰 면적 사각형 1개
-    #                     elif area ==max_area:
-    #                         cnt += 1    # 같은 크기 면적이면 누적
-    # print(f'#{tc} {cnt}')
+    max_area = 0
+    cnt = 0
+    for y in range(N):
+        for x in range(N):
+            cur = arr[y][x]  # 왼쪽 위 좌표의 값
+            # 현재위치에서 오른쪽아래로 탐색
+            for ny in range(y, N):
+                for nx in range(x, N):
+                    # 동일한 숫자값을 만나면
+                    if arr[ny][nx] == cur:
+                        # 면적계산
+                        area = (ny-y + 1) * (nx - x + 1)
+                        # 최댓값이라면 갱신
+                        if area > max_area:
+                            max_area = area
+                            cnt = 1    # 새롭게 만든 큰 면적 사각형 1개
+                        elif area == max_area:
+                            cnt += 1    # 같은 크기 면적이면 누적
+    print(f'#{tc} {cnt}')
