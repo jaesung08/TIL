@@ -46,10 +46,10 @@
 # N = int(input())
 # arr = list(map(int, input().split()))
 # line = []
-# 
+#
 # for i in range(N):
 #     line.insert((i-arr[i]), (i+1))
-# 
+#
 # print(*line)
 
 
@@ -150,7 +150,6 @@
 #     c_length.append((c[j+1] - c[j]))
 #
 # print(max(r_length) * max(c_length))
-
 
 
 # # 2578 빙고  // 중요하니 꼭 보고 외우기
@@ -259,30 +258,141 @@
 #         print()
 #         cnt = 0
 
-# 2477 참외밭
-K = int(input())
-r = []
-c = []
-s = []
-for _ in range(6):
-    a, b = map(int, input().split())
-    s.append(a)
-    if a == 1 or a == 2:
-        c.append(b)
-    else:
-        r.append(b)
+# # 2477 참외밭
+# K = int(input())
+# s = []
+# c = []
+# r = []
+# for _ in range(6):
+#     a, b = map(int, input().split())
+#     s.append((a, b))
+#     if a == 1 or a == 2:
+#         c.append(b)
+#     else:
+#         r.append(b)
+#
+# area = max(r) * max(c)
+#
+# for i in range(6):
+#     for j in range(2):
+#         if s[i][1] == max(c):
+#             i1 = i
+#         if s[i][1] == max(r):
+#             i2 = i
+# a = i1 - 1
+# b = i1 + 1
+#
+# c = i2 - 1
+# d = i2 + 1
+# if i1 == 0:
+#     a = 5
+# elif i1 == 5:
+#     b = 0
+# if i2 == 0:
+#     c = 5
+# elif i2 == 5:
+#     d = 0
+#
+# r_length = abs(s[a][1] - s[b][1])
+# l_length = abs(s[c][1] - s[d][1])
+#
+# total_area = area -(r_length * l_length)
+# print(total_area * K)
 
-area = max(r) * max(c)
+
+# # 10157 자리배정
+# # 가로 C, 세로 R의 좌석 0 없이 1,1 부터 C,R까지
+# # 대기순서 K
+# c, r = map(int, input().split())
+# k = int(input())
+# c2, r2 = c, r
+# c0, r0 = 2, 1
+#
+# c1, r1 = 1, 1
+# k -= 1
+# # if c * r < k:
+# #     print(0)
+# #     exit()
+#
+# while k > 0:
+#     while k > 0:
+#         if r1 == r2:
+#             r2 -= 1
+#             break
+#         r1 += 1
+#         k -= 1
+#     while k > 0:
+#         if c1 == c2:
+#             c2 -= 1
+#             break
+#         c1 += 1
+#         k -= 1
+#     while k > 0:
+#         if r1 == r0:
+#             r0 += 1
+#             break
+#         r1 -= 1
+#         k -= 1
+#     while k > 0:
+#         if c1 == c0:
+#             c0 += 1
+#             break
+#         c1 -= 1
+#         k -= 1
+#
+# if r1 < 0 or c1 < 0:
+#     print(0)
+# elif r0 > r or c0 > c or c2 < 0 or r2 < 0:
+#     print(0)
+# else:
+#     print(c1, r1)
 
 
+# # 10158 개미
+# # 가로 w 세로 h  (0,0) ,(w,h)
+# # 개미의 좌표 (p,q)
+# # t 시간 후의 x,y 의 좌표
+# w, h = map(int, input().split())
+# p, q = map(int, input().split())
+# t = int(input())
+# a = (p + t) // w    # 반복된 횟수를 구해 홀수면 -1 중, 짝수면 +1 중
+# b = (q + t) // h    # w,h 값 만큼 도달하지 못했을땐 나눠도 0 인것을 생각하면 이해됌.
+#
+# if a % 2 == 0:  # 짝수이면 + 중이기에 남은 값 그대로 반환
+#     x = (p + t) % w
+# else:           # 홀수이면 - 중이기에 남은 값을 최댓값에서 빼기
+#     x = w - (p + t) % w
+#
+# if b % 2 == 0:
+#     y = (q + t) % h
+# else:
+#     y = h - (q + t) % h
+#
+# print(x, y)
 
-K = int(input())
-s = []
-l = []
-for _ in range(6):
-    a, b = map(int, input().split())
-    s.append((a, b))
 
-for i in range(6):
-    for j in range(2):
-        if s[i][j]:
+# # 2559 수열
+# N, K = map(int, input().split())    # N: 날짜의수, K: 연속적인 날짜의 수
+# arr = list(map(int, input().split()))   # 측정한 온도 / N일 만큼
+# result = []
+# result.append(sum(arr[:K]))
+#
+# for i in range(N - K):
+#     result.append(result[i] - arr[i] + arr[i + K])
+#
+# print(max(result))
+
+
+# 2491 수열  // DP
+n = int(input())
+num = list(map(int, input().split()))
+
+# dp: i번째까지 왔을때 수열의 최대 길이-증가할때/감소할때를 고려하여 2줄로 생성
+d = [[1]*n for _ in range(2)]
+
+for i in range(1, n):
+    if num[i-1] <= num[i]:  # 증가할경우
+        d[0][i] = d[0][i-1]+1
+    if num[i-1] >= num[i]:  # 감소할경우
+        d[1][i] = d[1][i-1]+1
+print(max(map(max, d)))
