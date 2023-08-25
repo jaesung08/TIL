@@ -383,16 +383,118 @@
 # print(max(result))
 
 
-# 2491 수열  // DP
+# # 2491 수열  // DP
+# n = int(input())
+# num = list(map(int,input().split()))
+#
+# #dp: i번째까지 왔을때 수열의 최대 길이-증가할때/감소할때를 고려하여 2줄로 생성
+# d = [[1]*n for _ in range(2)]
+#
+# for i in range(1,n):
+#     if num[i-1]<=num[i]: #증가할경우
+#         d[0][i] = d[0][i-1]+1
+#     if num[i-1]>=num[i]: #감소할경우
+#         d[1][i] = d[1][i-1]+1
+# print(max(map(max, d)))
+
+
+# # 2527 직사각형  //  ㅋㅋ ㅋㅋ ㅋ못풀어
+# # 직사각형 a, 선분b, 점c
+# for _ in range(4):
+#     x1, y1, p1, q1, x2, y2, p2, q2 = map(int, input().split())
+#
+#     # case (d)
+#     if p1 < x2 or p2 < x1 or y1 > q2 or q1 < y2:    # 범위가 겹치지 않을때
+#         print('d')
+#         continue
+#
+#     elif x1 == p2 or x2 == p1:      # 한쪽 끝의 길이가 같을때
+#         # case (c)
+#         if q1 == y2 or q2 == y1:       # 점에서 만나는 경우
+#             print('c')
+#             continue
+#         # case (b)
+#         else:               # 아닌경우/점에서 만나는거 제외 전부 선으로 만남
+#             print('b')
+#             continue
+#     elif q1 == y2 or q2 == y1:      # 반대로 y축 끝의 길이가 같을때
+#         print('b')
+#         continue
+#
+#     # case (a)
+#     else:               # 벗어나는것도 선만 겹치는것도 아닐때
+#         print('a')
+#         continue
+
+
+# 2564 경비원
+r, c = map(int, input().split())
+arr = [[0] * r for _ in range(c)]
 n = int(input())
-num = list(map(int, input().split()))
+# (a,l) a = 북1, 남2, 서3, 동4
+# 북이면 y=c 남이면 y=0 서면 x=0 동이면 x=r
+lst = [list(map(int, input().split())) for _ in range(n)]
+dx, dy = map(int, input().split())
+length = []
+for i in range(n):
+    if lst[i][0] == 1:
+        y, x = c, lst[i][1]
+    elif lst[i][0] == 2:
+        y, x = 0, lst[i][1]
+    elif lst[i][9] == 3:
+        y, x = lst[i][1], 0
+    else:
+        y, x = lst[i][1], r
+    arr[y][x] = 1
+    length.append((y.x))
 
-# dp: i번째까지 왔을때 수열의 최대 길이-증가할때/감소할때를 고려하여 2줄로 생성
-d = [[1]*n for _ in range(2)]
+if dx == 1:
+    y, x = c, dy
+elif dx == 2:
+    y, x = 0, dy
+elif dx == 3:
+    y, x = dy, 0
+else:
+    y, x = dy, r
+arr[y][x] = 2
 
-for i in range(1, n):
-    if num[i-1] <= num[i]:  # 증가할경우
-        d[0][i] = d[0][i-1]+1
-    if num[i-1] >= num[i]:  # 감소할경우
-        d[1][i] = d[1][i-1]+1
-print(max(map(max, d)))
+
+# 2116 주사위 쌓기
+'''
+두 개의 주사위에서 아래에 있는 주사위의 윗면에 적혀있는 숫자는 위에 있는 주사위의 아랫면에 적혀있는 숫자와 같아야 한다.
+1번 주사위 윗면의 숫자는 2번 주사위 아랫면의 숫자와 같고, 2번 주사위 윗면의 숫자는 3번 주사위 아랫면의 숫자와 같아야 한다
+
+
+이렇게 쌓아 놓으면 긴 사각 기둥이 된다. 이 사각 기둥에는 4개의 긴 옆면이 있다.
+이 4개의 옆면 중에서 어느 한 면의 숫자의 합이 최대가 되도록 주사위를 쌓고자 한다.
+이렇게 하기 위하여 각 주사위를 위 아래를 고정한 채 옆으로 90도, 180도, 또는 270도 돌릴 수 있다.
+한 옆면의 숫자의 합의 최댓값을 구하는 프로그램을 작성하시오.
+'''
+
+T = int(input())
+square = [list(map(int, input().split())) for _ in range(T)]
+# 0-5 1-3 2-4 마주보는 인덱스\
+result = []
+for j in range(6):
+    sum_s = 0
+    start = square[0][j]
+    for i in range(T):
+        tb_list = []  # 각 바닥의 숫자를 담을 리스트 생성
+        index = square[i].index(start)  # 바닥의 수의 인덱스를 구함
+        tb_list.append(start)   # 바닥의 수 리스트에 담기
+        if index == 0 or index == 5:    # 마주보는 면(윗면)의 인덱스 선택 후
+            start = square[i][5 - index]    # 새로운 바닥의 수 선언
+            tb_list.append(start)           # 윗면이자 새로운 바닥의 수 리스트에 담기
+        elif index == 1 or index == 3:
+            start = square[i][4 - index]
+            tb_list.append(start)
+        elif index == 2 or index == 4:
+            start = square[i][6 - index]
+            tb_list.append(start)
+        side = list(set(square[i]) - set(tb_list))  # 6개의 수 중에서 위아래면 제거
+        sum_s += max(side)  # 남은 옆면 중 가장 큰 값 더하기
+
+    result.append(sum_s)  # 주사위 높이만큼 반복이 끝나면 결과값 리스트에 더해두기
+result.sort(reverse=True)   # 내림차순으로 정렬
+
+print(result[0])
