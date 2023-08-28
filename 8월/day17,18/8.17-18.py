@@ -324,35 +324,35 @@
 # #
 # # print(arr[2], arr[1], arr[3], arr[0])
 
-# # swea 5099 피자굽기 / 뒤지게 어려움
-# T = int(input())
-# for tc in range(1, T+1):
-#     N, M = map(int, input().split())    # 화덕 크기 및 피자 양
-#     pizza_chz = list(map(int, input().split()))   # 피자의 치즈양
-#     cheeze = []  #치즈
-#
-#
-#     def pizza(N, M):
-#         global cheeze
-#         for i in range(M):
-#             cheeze.append([i + 1, pizza_chz[i]])
-#         #print(cheeze)   #[[1, 7], [2, 2], [3, 6], [4, 5], [5, 3]]
-#         oven = cheeze[:N]
-#         #print(oven)    # [[1, 7], [2, 2], [3, 6]]
-#         remain_pizza = cheeze[N:]
-#
-#         while len(oven) > 1:  # 하나 남으면 중단
-#             check = oven.pop(0)  # 맨 앞의 피자를 꺼냄  [1,7]
-#             check[1] //= 2  # check[0]은 인덱스 7//2
-#             # check[1](남은 치즈양)이 0이면,
-#             if check[1] == 0:
-#                 if remain_pizza:  # 남은 피자가 있다면 넣는다
-#                     oven.append(remain_pizza.pop(0))
-#             else:  # 치즈가 다 안녹았으면 다시 맨뒤로 넣는다.
-#                 oven.append(check)
-#                 # 화덕에 마지막 남은 피자 출력
-#         return oven[0][0]
-#     print(f'#{tc} {pizza(N, M)}')
+# swea 5099 피자굽기 / 뒤지게 어려움
+T = int(input())
+for tc in range(1, T+1):
+    N, M = map(int, input().split())    # 화덕 크기 및 피자 양
+    pizza_chz = list(map(int, input().split()))   # 피자의 치즈양
+    cheeze = []  #치즈
+
+
+    def pizza(N, M):
+        global cheeze
+        for i in range(M):
+            cheeze.append([i + 1, pizza_chz[i]])
+        #print(cheeze)   #[[1, 7], [2, 2], [3, 6], [4, 5], [5, 3]]
+        oven = cheeze[:N]
+        #print(oven)    # [[1, 7], [2, 2], [3, 6]]
+        remain_pizza = cheeze[N:]
+
+        while len(oven) > 1:  # 하나 남으면 중단
+            check = oven.pop(0)  # 맨 앞의 피자를 꺼냄  [1,7]
+            check[1] //= 2  # check[0]은 인덱스 7//2
+            # check[1](남은 치즈양)이 0이면,
+            if check[1] == 0:
+                if remain_pizza:  # 남은 피자가 있다면 넣는다
+                    oven.append(remain_pizza.pop(0))
+            else:  # 치즈가 다 안녹았으면 다시 맨뒤로 넣는다.
+                oven.append(check)
+                # 화덕에 마지막 남은 피자 출력
+        return oven[0][0]
+    print(f'#{tc} {pizza(N, M)}')
 
 
 # #  강사님풀이
