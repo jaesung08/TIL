@@ -498,3 +498,133 @@ for j in range(6):
 result.sort(reverse=True)   # 내림차순으로 정렬
 
 print(result[0])
+
+
+# # 1149 rgb 거리 // 미완성
+# n = int(input())
+# arr = [list(map(int, input().split())) for _ in range(n)]
+# result = 0
+# '''
+# 1번집은 2번집과 색이 달라야함
+# n번집은 n-1번집과 색이 달라야함
+# i번집은 i-1, i+1번집과 색이 달라야함
+#
+# 빨강 초록 파랑 각각의 비용
+# 1    2    3
+#
+# 각 비용의 최솟값 출력
+# '''
+# k = -1
+# for i in range(n):
+#     small = 21e8
+#     for j in range(3):
+#         if j == k:
+#             continue
+#         if arr[i][j] <= small:
+#             small = arr[i][j]
+#             k = j
+#
+#     result += small
+#
+# print(result)
+
+
+# 1463 1로 만들기  // dp 문제
+# # 내풀이
+# n = int(input())
+# cnt = 0
+# while n != 1:
+#     cnt += 1
+#     if (n - 1) % 3 == 0:
+#         n -= 1
+#     elif n % 3 == 0:
+#         n //= 3
+#     elif n % 2 == 0:
+#         n //= 2
+#     else:
+#         n -= 1
+# print(cnt)
+
+# # dp - bottom up 풀이 / for문
+# n = int(input())
+# d = [0] * (n + 1)	## d에 계산된 값을 저장해둔다. n + 1이라고 한 이유는, 1번째 수는 사실 d[1]이 아니고 d[2]이기 때문에, 계산하기 편하게 d[1]을 1번째 인 것 처럼 만들어준다.
+#
+# for i in range(2, n + 1):
+# ## 여기서 왜 if 1빼는 방법, 2 나누기, 3 나누기 동등하게 하지 않고 처음에 1을 빼고 시작하는지 의아해 할 수 있다.
+# ## 1을 빼고 시작하는 이유는 다음에 계산할 나누기가 1을 뺀 값보다 작거나 큼에 따라 어차피 교체되기 때문이다.
+# ## 즉 셋 다 시도하는 방법이 맞다.
+#
+# ## 여기서 if elif else를 사용하면 안된다. if만 이용해야 세 연산을 다 거칠 수 있다, 가끔 if continue, else continue를 쓰는 분도 계신데, 난 이게 편한듯.
+#     d[i] = d[i - 1] + 1
+#     if i % 3 == 0:
+#         d[i] = min(d[i], d[i // 3] + 1)	## 1을 더하는 것은 d는 결과가 아닌 계산한 횟수를 저장하는 것 이기 때문이다. d[i]에는 더하지 않는 이유는 이미 1을 뺄 때 1을 더해준 이력이 있기 때문이다.
+#     if i % 2 == 0:
+#         d[i] = min(d[i], d[i // 2] + 1)
+# print(d[n])
+#
+# # dp - top down 풀이 / 재귀 사용
+# x=int(input())
+# dp={1:0}
+# def rec(n):
+#     if n in dp.keys():
+#         return dp[n]
+#     if (n%3==0) and (n%2==0):
+#         dp[n]=min(rec(n//3)+1, rec(n//2)+1)
+#     elif n%3==0:
+#         dp[n]=min(rec(n//3)+1, rec(n-1)+1)
+#     elif n%2==0:
+#         dp[n]=min(rec(n//2)+1, rec(n-1)+1)
+#     else:
+#         dp[n]=rec(n-1)+1
+#     return dp[n]
+# print(rec(x))
+#
+# # bfs풀이
+# x=int(input())
+# Q=[x]
+# visited=[0]*(x+1)
+# while Q:
+#     c=Q.pop(0)
+#     if c==1:
+#         break
+#     if c%3==0 and visited[c//3]==0:
+#         Q.append(c//3)
+#         visited[c//3]=visited[c]+1
+#     if c%2==0 and visited[c//2]==0:
+#         Q.append(c//2)
+#         visited[c//2]=visited[c]+1
+#     if visited[c-1]==0:
+#         Q.append(c-1)
+#         visited[c-1]=visited[c]+1
+# print(visited[1])
+
+
+# 1620 포켓몬 마스터 이다솜
+# 시간 초과 때문에 딕셔너리 사용해야함
+# N, M = map(int, input().split())
+# arr = (input() for _ in range(N))
+# answer = [input() for _ in range(M)]
+#
+# for ans in answer:
+#     if ans.isdigit():
+#         ans = int(ans)
+#         A = arr[ans-1]
+#         print(A)
+#     else:
+#         for i in range(N):
+#             if arr[i] == ans:
+#                 print(i+1)
+
+N, M = map(int, input().split())
+dict = {}
+for i in range(1, N + 1):
+    a = input()
+    dict[i] = a
+    dict[a] = i
+
+for j in range(M):
+    answer = input()
+    if answer.isdigit():
+        print(dict[int(answer)])
+    else:
+        print(dict[answer])
