@@ -885,3 +885,71 @@ while True:
     if (num == N):
         break
 print(cnt)
+
+ # 1652 누울자리를 찾아라
+# N = int(input())
+# arr = [list(input()) for _ in range(N)]
+# result_r = 0
+# result_l = 0
+#
+# for i in range(N):
+#     cnt = 0
+#     cnt2 = 0
+#     for j in range(N):
+#         if arr[i][j] == '.':
+#             cnt += 1
+#         elif arr[i][j] == 'X':
+#             if cnt >= 2:
+#                 result_r += 1
+#             cnt = 0
+#
+#         if arr[j][i] == '.':
+#             cnt2 += 1
+#         elif arr[j][i] == 'X':
+#             if cnt2 >= 2:
+#                 result_l += 1
+#             cnt2 = 0
+#
+#         if j == N-1:
+#             if cnt >= 2:
+#                 result_r += 1
+#             if cnt2 >= 2:
+#                 result_l += 1
+#
+# print(result_r, result_l)
+
+# # 1100 하얀 칸
+# arr = [list(input()) for _ in range(8)]
+# #0 2 4 6 8 하얀칸 0번째 줄
+# #1 3 5 7 9 하얀칸 1번쨰 줄
+# cnt = 0
+# for i in range(8):
+#     for j in range(8):
+#         if arr[i][j] == 'F':
+#             if i % 2 == 0 or i == 0:
+#                 if j % 2 == 0 or j == 0:
+#                     cnt += 1
+#             if i % 2 == 1:
+#                 if j % 2 == 1:
+#                     cnt += 1
+# print(cnt)
+
+#
+# # 1145 적어도 대부분의 배수
+# nums = list(map(int,input().split()))
+# n = 1
+# while True:
+#     cnt = 0
+#     for i in nums:
+#         if n % i ==0:
+#             cnt += 1
+#     if cnt>=3:
+#         print(n)
+#         break
+#     n+=1
+
+# # 1152 단어의 개수
+# string = input().split()
+# cnt = len(string)
+# 
+# print(cnt)
