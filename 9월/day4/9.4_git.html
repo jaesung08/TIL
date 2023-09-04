@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>겹치는 사각형</title>
+    <style>
+        .container {
+            position: relative; /* 컨테이너에 상대적 위치 설정 */
+            width: 400px;
+            height: 400px;
+        }
+
+        .large-box {
+            position: absolute; /* 절대 위치 설정 */
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            z-index: 3; /* 가장 위에 배치 */
+        }
+
+        .medium-box {
+            position: absolute; /* 절대 위치 설정 */
+            top: 2px;
+            left: 2px;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed red;
+            z-index: 2; /* 중간에 배치 */
+        }
+
+        .small-box {
+            position: absolute; /* 절대 위치 설정 */
+            top: 5px;
+            left: 5px;
+            width: 100px;
+            height: 100px;
+            border: 2px dotted blue;
+            z-index: 1; /* 가장 아래에 배치 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="large-box"></div>
+        <div class="medium-box"></div>
+        <div class="small-box"></div>
+    </div>
+</body>
+</html>
+
+
+
+style tag를 활용해서 3개의 사각형을 만든다.
+가장 큰 div 
+= > large-box 클래스를 가진다.
+= > 가로, 세로는 400px 이다.
+= > 2px의 검정색 solid 테두리를 가진다.
+중간 div
+= > medium-box 클래스를 가진다.
+= > 가로, 세로는 200px 이다.
+= > 2px의 빨간색 dashed 테두리를 가진다.
+작은 div 
+= > small-box 클래스를 가진다.
+= > 가로, 세로는 100px 이다.
+= > 2px의 파란색 dotted 테두리를 가진다.
