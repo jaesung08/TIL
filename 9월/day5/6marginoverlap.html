@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 마진과 마진이 서로 만나서 겹치면 어떻게 될까 */
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 30px;
+        }
+        #box1 { background: red;}
+        #box2 { background-color: aqua;}
+        #box3 { background-color: aquamarine;}
+    </style>
+    <!-- 마진 상쇄 or 마진 중첩이라고 하며 마진이 겹쳐서 30px만 나타나는것을 뜻한다. -->
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

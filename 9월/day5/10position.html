@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 500px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+
+        }
+        /* absolute : 웹브라우저 기준 */
+        #absolute{
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        /* relative : 부모 요소를 기준으로 */
+        #relative{
+            position: relative;
+            left: 100px;
+            top: 200px;
+        }
+        /* fixed : 화면의 움직임과 상관없이 고정된 표시 */
+        #fixed{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            position: fixed;
+            right: 30px;
+            bottom: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="absolute"> aasdasdasdad </p>
+    <p id="relative">가나다라마</p>
+    <p id="fixed">고정핀</p>
+</body>
+</html>

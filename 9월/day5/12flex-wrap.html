@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* width: 700px; */
+            /* 플렉스 컨테이너 지정 */
+            display: flex;
+            background-color: aliceblue;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+        .box{
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            background-color: black;
+        }
+        #op1{
+            /* 한줄에 표시 */
+            flex-wrap: nowrap;
+        }
+        #opt2{
+            /* 여러줄에 표시 */
+            flex-wrap: wrap;
+        }
+        #opt3{
+            /* 시작점과 끝점 바꿔 여러줄에 표시 */
+            flex-wrap: wrap-reverse;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+
+</body>
+</html>

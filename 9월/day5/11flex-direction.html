@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 700px;
+            /* 플렉스 컨테이너 지정 */
+            display: flex;
+            background-color: aliceblue;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+        .box{
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            background-color: black;
+        }
+        #op1{
+            /* 주축 방향 -> 왼쪽에서 오른쪽으로 */
+            flex-direction: row;
+        }
+        #opt2{
+            /* 오른쪽에서 왼쪽으로 */
+            flex-direction: row-reverse;
+        }
+        #opt3{
+            /* 교차축 방향 -> 위에서 아래로 */
+            flex-direction: column;
+        }
+        #opt4{
+            /* 아래에서 위로 */
+            flex-direction: column-reverse;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+</body>
+</html>

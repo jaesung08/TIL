@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 700px;
+            height: 150px;
+            background-color: aliceblue;
+            border: 1px solid black;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .box{
+            padding: 5px 45px;
+            margin: 5px;
+            /* width: 80px; */
+            background-color: black;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+        #opt1{
+            /* 교차축의 시작점에 배치 */
+            align-self: flex-start;
+        }
+        #opt2{
+            align-self: flex-end;
+        }
+        #opt5{
+            /* 항목을 늘려 교차축에 가득차게 배치 */
+            align-self: stretch;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="box" id="opt1"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box" id="opt5"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box" id="opt2"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+</body>
+</html>

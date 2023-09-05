@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 20px;
+            margin: 10px;
+            /* margin 주석처리하면 박스 끼리 간격이 없이 다 붙는다 */
+        }
+        #box1{
+            background: yellow;
+            /* 왼쪽으로 플로팅 => 기본 마진과 패딩이 없다 */
+            float: left;
+        }
+        #box2{
+            background: blue;
+            /* 왼쪽으로 플로팅 */
+            float: left;
+        }
+        #box3{
+            background-color: green;
+        }
+        #box4{
+            background: purple;
+            /* 플로팅 해제 */
+            clear: left
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+</body>
+</html>

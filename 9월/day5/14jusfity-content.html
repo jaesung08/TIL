@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* width: 700px; */
+            /* 플렉스 컨테이너 지정 */
+            display: flex;
+            background-color: aliceblue;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+        .box{
+            padding: 5px 45px;
+            margin: 5px;
+            /* width: 80px; */
+            background-color: black;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+        #opt1{
+            /* 주축의 시작점 기준으로 정렬 = > 왼쪽 정렬 */
+            justify-content: flex-start;
+        }
+        #opt2{
+            /* 주축의 끝점 기준으로 정렬 => 오른쪽 정렬 */
+            justify-content: flex-end;
+        }
+        #opt3{
+            /* 주축 중앙 기준 => 가운데 정렬 */
+            justify-content: center;
+        }
+        #opt4{
+            /* 시작점과 끝점 배치후 중간항목은 같은 간격으로 배치 */
+            justify-content: space-between;
+        }
+        #opt5{
+            /* 전체항목을 같은 간격으로 */
+            justify-content: space-around;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+        <div class="box"><p>6</p></div>
+    </div>
+</body>
+</html>

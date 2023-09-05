@@ -301,3 +301,108 @@
 + 속성은 되도록 'class'만 사용하기
   + id, 요소 선택자등 여러 선택자들과 사용할 경우 우선순위 규칙에 따라 예기치 못한 스타일 규칙이 적용되기 때문에 전반적인 유지보수가 어려워짐.
   + 문서에서 단 한번 유일하게 적용될 스타일의 경우에만 id 선택자 사용 고려
+```HTML
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 연습하기</title>
+    <style>
+
+        .가디건{
+            border : 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img class = '가디건' src="https://shopping-phinf.pstatic.net/main_8403111/84031112187.9.jpg?type=f300" alt="가디건" width="550">
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 연습하기2</title>
+    <style>
+        p{
+            font-style: italic; /* 이탤릭체*/
+        }
+        .accent{
+            border : 1px solid black;
+            padding: 5px;
+        }
+        .bg{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = "bg"> 레드향 </h1>
+    <p> 껍질에 붉은 빛이 돌아 <span class = "accent">레드향</span>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것</p>
+    <p>비티만 C와 비타민이 풍부하다.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 연습하기3</title>
+    <style>
+        h1{
+            display: inline-block;
+            font-size: 1.4em; /*1em = 16px*/
+            background-color: black;
+            color: white;
+        }
+        li{
+            font-size: 1em;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 기술 - 기본</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>javascript</li>
+    </ul>
+</body>
+</html>
+
+<!-- 아이디 셀렉터가 우선순위가 더 높다는 것을 기억하도록 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 연습하기4</title>
+    <style>
+        p{
+            color: black;
+        }
+        h1{
+            color: brown !important; /*important가 가장 우선순위*/
+        }
+        p{
+            color: blue;   /* 가장 마지막에 있는 조건이 설정됌*/
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: green;">가장 빛나는 너에게</h1> <!-- 인라인은 사용을 자제하도록-->
+    <p>집에 가고싶어</p>
+</body>
+</html>
+```
