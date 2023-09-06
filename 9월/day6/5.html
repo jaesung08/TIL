@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .navbar {
+            width: 70%;
+            display: flex;
+            background-color: rgb(0, 104, 0);
+        }
+
+        .navbar__logo {
+            width: 20%;
+            height: 100%;
+        }
+
+        .navbar__lists {
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 1rem;
+        }
+
+        .navbar__lists__list {
+            list-style: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+
+        .section__contents {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section__contents__image {
+            width: 35%;
+            border-radius: 1rem;
+            height: 220px;
+        }
+        
+        .section__contents__infos {
+            margin-left: 1rem;
+            width: 55%;
+            line-height: 2.5;
+        }
+        .section__contents__infos > div > p {
+            margin: 0;
+        }
+        .section__contents__infos > div > p:first-child {
+            font-weight: bold;
+        }
+        h4 {
+            margin: .5rem 0;
+        }
+
+        footer {
+            margin: 1rem auto;
+            width: 70%;
+            border-top: 1px solid black;
+            display: flex;
+        }
+
+        footer li {
+            list-style: none;
+            margin: 1rem 1rem;
+            padding: 0 2rem;
+            color: gray;
+        }
+
+        footer li:nth-child(2) {
+            border-right: 1px solid gray;
+            border-left: 1px solid gray;
+        }
+
+        footer li:nth-child(3) {
+            border-right: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="navbar__logo" src="./dream_tower.png" alt="dream jeju">
+            <div class="navbar__lists">
+                <li class="navbar__lists__list">단체 여행</li>
+                <li class="navbar__lists__list">맞춤 여행</li>
+                <li class="navbar__lists__list">갤러리</li>
+                <li class="navbar__lists__list">문의하기</li>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h3>몸과 마음이 치유되는 섬</h3>
+            <div class="section__contents">
+                <img class="section__contents__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2EOcVWV7Gw4_h1GAsHoytuwrg1k4TTwy_Q&usqp=CAU" alt="">
+                <div class="section__contents__infos">
+                    <div>
+                        <p>쉼(Healing)의 공간으로 안내합니다</p>
+                        <p>탁 트인 바다, 시원한 바람에 몸을 맡기고 뚜벅뚜벅 오름을 오르고 올렛길을 걷다보면 온전히 나에게 집중할 수 있습니다.</p>
+                    </div>
+                    <div>
+                        <h4>상세 일정</h4>
+                        <p>여행 기간 : 2박 3일</p>
+                        <p>여행 일정 : (여행 일정은 상담을 통해 결정 및 조정 가능합니다)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h3>다양한 액티비티가 기다리는 섬</h3>
+            <div class="section__contents">
+                <img class="section__contents__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD5RLS8SaRPmaOjYldwZ2fKvZqSPmghYzgVLyFrDWPvnex3m6om2ZItAei3CW5MExRdVo&usqp=CAU" alt="">
+                <div class="section__contents__infos">
+                    <div>
+                        <p>모험과 스릴이 넘치는 레저의 천국으로 안내합니다.</p>
+                        <p>둘러보기만 하는 여행을 하셨나요?</p>
+                        <p>하늘을 날며 시원한 바다를 내려다보는 패러글라이등과 투명한 물빛 속을 여행하는 스킨스쿠버... 아름다운 제주 해안도로를 씽씽 전동바이크나 전동킥보드로 달려보세요. 시원한 바다를 가까이에서 느낄 수 있는 요트 체험과 배낚시도 빼놓을 수 없겠죠?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <li>회사 소개</li>
+        <li>개인정보처리방침</li>
+        <li>여행약관</li>
+        <li>사이트맵</li>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!--
+        시멘틱(semantil) 태그가 뭘까?
+        => HTML태그 그 태그의 이름만 봐도 의미를 알 수 있기때문에 시멘틱 태그라 한다?
+        1. 헤더<header>
+        맨위쪽이나 왼쪽에 위치, 검색창이나 사이트 메뉴 삽입
+            1-1. 네비게이션 <nav></nav>
+            다른 위치나 다른 웹문서로 연결하는 링크
+        2. 메인 <main></main>
+        가장 핵심이 되는 내용
+            2-1. 섹션 <section></section>
+            독립된 콘텐츠 또는 여러개의 콘텐츠를 묶는 용도
+            아티클 <article></article>
+            신문기사 또는 잡지처럼 웹에서 보여주고 싶은 내용
+        3. 어사이드<aside></aside>
+        사이드바는 필수 요소는 아님, 주로 왼쪽이나 오른쪽에 배치
+        4. 푸터
+        맨 아래쪽에 제작정보나 저작권 정보, 연락처 등,, 
+    -->
+    <style>
+        /* 헤더 스타일 설정 */
+        header {
+        height: 150px;
+          background-color: #4b746a; /* 배경 색상 설정 */
+          color: white; /* 텍스트 색상 설정 */
+          padding: 20px; /* 내부 여백 설정 */
+          text-align: center; /* 텍스트 가운데 정렬 */
+          display: flex;
+        }
+    
+        h1 {
+          margin: 0; /* 제목의 위아래 여백 제거 */
+          font-size: 80px;
+          float: left;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        p{
+            font-size: 25px;
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dream jeju</h1>
+            <nav>
+                <p>단체 여행</p>
+                <p>맞춤 여행</p>
+                <p>갤러리</p>
+                <p>문의하기</p>
+            </nav>
+    </header>
+    <main>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>

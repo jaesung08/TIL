@@ -1,4 +1,4 @@
-# 9.5 CSS Layout
+# 0905 CSS Layout
 ## CSS Box Model
 + 모든 HTML 요소를 사각형 박스로 표현하는 개념
 + 모든 요소는 네모박스를 깎아쓰는것
