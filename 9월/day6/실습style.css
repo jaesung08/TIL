@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* 박스 영역이 테두리까지 */
+    box-sizing: border-box;
+}
+
+#container{
+    margin: 0 auto;
+    width: 1200px;
+    background-color: white;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: darkslateblue;
+}
+
+#logo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    /* 세로로 중간에 맞춤 => 줄 간격을 높이값과 같도록 */
+    line-height: 100px;
+    padding-left: 20px;
+}
+
+#logo h1{
+    font-family: 'Merienda' cirsive ;
+    font-weight: 700px;
+    font-size: 40px;
+    color: white;
+}
+
+nav{
+    float: right;
+    width: 900px;
+    height: 100px;
+    /* 메뉴를 아래로 내리기 위해 top에 패딩 */
+    padding-top: 40px;
+    display: flex;
+}
+
+#opt{
+    justify-content: space-around;
+}
+
+div > a{
+    display: block;
+    font-size: 17px;
+    color: white;
+    font-weight: 600px;
+    padding: 20px 60px;
+}
