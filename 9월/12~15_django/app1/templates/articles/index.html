@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% comment %} extends : index.html이 base.html을 상속받겠다 {% endcomment %}
+
+{% block content %}
+    {% comment %} DTL : 변수 {% endcomment %}
+    <h1> Hello, {{name}} </h1>
+    <a href="{%url 'articles:search' %}"> search </a>
+    <a href="{%url 'articles:throw' %}"> throw </a>
+    <a href="{%url 'articles:dinner' %}"> dinner </a>
+
+{% endblock content %}
+

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% comment %} DTL : dajango 템플릿은 html에 로직을 추가할 수 있게 도와주는 도구  {% endcomment %}
+{% block content %}
+    <p>{{picked}} 메뉴는 {{ picked|length}} 글자 입니다.</p>
+    <h2>메뉴판</h2>
+    <ul>
+        {% for food in foods %}
+        <li> {{ food }} </li>
+        {% endfor %}
+    </ul>
+
+    {% if foods|length == 0 %}
+        <p>메뉴가 소진 되었습니다.</p>
+    {% else %}
+        <p> 아직 메뉴가 남았습니다. </p>
+    {% endif %}
+    
+{% endblock content %}
+    
+

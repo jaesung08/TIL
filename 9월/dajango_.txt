@@ -1,0 +1,123 @@
+장고 1일
+개발자의 마인드로 항상 왜? 라는 질문을 던져보기
+1. Django를 배웠는데 프레임워크는 뭘까?
+=> 
+프레임워크란, 반복적으로 사용되는 특정 기술을 모아 같은 기능을 하는 코드들을 말한다. 이는 웹 애플리케이션을 빠르게 개발할 수 있도록 도와주는 도구이다.
+
+2. 가상환경은 왜 만들고, 의존성 파일은 왜 만들까? 
+=> 
+가상환경은 일단 팁 프로젝트 협업을 위해서 많이 쓰인다; 
+모든 팀원이 동일한 환경과 의존성 위에서 작업하게 되어 버전간의 충돌을 방지할 수 있고 또 의존성 관리 때문에 쓰인다.; 
+라이브러리 및 패키지를 각 프로젝트마다 독립적으로 사용할 수 있기 때문이다.
+
+3. urls.py, settings.py, views.py 의 각각의 역할은 무엇인가? MTV패턴과 연관지어 생각해보기
+=>
+urls.py를 통해 요청을 보내면 여기서 views모듈의 index view 함수를 호출한다.
+views.py는 특정 경로에 있는 template과 request 객체를 결합해서 응답 객체를 반환하는 index view 함수를 정의한다.
+MTV(MTC) 패턴과 같은 패턴을 만든 이유는 뭘까?
+M : models.py => 데이터와 관련된 로직
+T : templates.py => 보여지는 것 (화면)
+V : views.py => 모델과 템플릿과 관련된 로직 
+
+4. git 사용할때 git ignore은 왜 필요할까?
+=>
+
+
+
+기본적인 설정 세팅 / 개발환경 세팅!! 
+1. venv venv 생성 + 가상환경 실행
+python -m venv venv
+source venv/Scripts/activate or  . venv/Scripts/activate
+pip list 확인해서 장고가 없으면 설치
+pip install Django
+
+pip freeze > requirement.txt ( 이건 필수는 아니고 다른 곳에서도 할 때 txt파일로 사용한 장고 및 프로젝트 들의 버전을 작성하게 하는 명령)
+pip install -r requirement.txt ( 그 작성한 txt파일 실행해서 파일을 설치하는 명령)
+
+2. 프로젝트 생성 django-admin startproject (프로젝트이름) (경로(현재면 .)
+
+3. 앱 생성 python manage.py startapp (이름)
+
+4. 프로젝트 세팅 파일에 앱 등록 ( installed_apps 밑에 이름 추가)
+
+5. 앱내에 Templates 생성 후 홈페이지내 기능에 맞는 폴더 생성
+
+6. 생성한 폴더 내에 html 파일 생성
+
+7. view파일에 생성한 html 파일 실행 함수 생성
+def index(request):
+    return render(request, "action/index.html")
+
+8. 프로젝트 폴더 내 urls에 경로 생성
+from app1 import views
+
+9. urlpatterns 안에 path 추가
+path("index/", views.index)
+
+10. 만든 html 파일 실행
+python manage.py runserver
+후에 주소 뒤에 만든 html 이름 추가
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/index/
+( gitignore 해야 하기때문에 인터넷에 gitignore을 검색해서 사이트에서 python, django를 검색해서 나온 파일을 .gitignore이라는 파일을 만들어서 생성
+
+
+
+장고 2일차
+1. 템플릿 상속 + DTL
+템플리 상속을 하는 이유는 무엇일까?
+=>
+중복을 피하기 위해서 상속
+
+html에는 로직이 들어갈 수 없다고 했는데 DTL은 어떻게 사용할 수 있는가?
+=> 
+DTL : dajango 템플릿은 html에 로직을 추가할 수 있게 도와주는 도구 
+
+2. form 태그
+form 태그에서 query란 무엇인가? 데이터 베이스의 query와의 차이는 무엇인가?
+=>
+기존 데이터 베이스에선
+클라이언트에서 서버로, 서버에서 DB로 요청하는 것이 query
+form 태그의 query : 서버에 데이터를 전달, url에 붙는 추가 정보
+쿼리 스트링 파라미터 : key=value 쌍으로 구성, key=value & key=value
+
+GET방식과 POST 방식의 차이
+=>
+get 방식과 post방식의 차이 : 보안성(post가 좀 더 우수함)
+http://www.naver.com/?key=value
+GET방식을 쓰는 이유는 key=value형식으로 간편 간단
+
+3. app과 url
+url mapping은 왜 사용하는 걸까?
+=>
+어플리케이션(app)이 여러개 이기 때문이다.
+
+
+
+폴더내에서
+firstpjt 가 실행되면서 
+app1 과 pages 등 각각의 어플들로 연결
+
+base.html을 최상단폴더에서 templates으로 바꿔 여러 어플에 똑같이 적용시킨다면 
+기본 firstpjt의 setting 에서 TEMPLATES에서 DIRS에 BASE_DIR : 'temlplates'를 추가하여 firstpjt에 해당하는 모든 어플이 base를 저걸 참조하도록 만든다.
+
+
+
+@@html 명령어 사용 세팅 @@
+파일 우클릭 settings
+emmet가서 
+include languages에서
+django-html의 value를 html로 변경해서 사용
+다른방법2
+https://integer-ji.tistory.com/358 
+
+
+
+
+
+
+
+
+
+
+

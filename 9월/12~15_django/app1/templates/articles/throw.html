@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Throw</h1>
+    {% comment %} 로컬끼리 보내기 때문에 url 생략가능 {% endcomment %}
+    <form action="/articles/catch/" method="GET">
+        {% comment %} {% url 'articles:catch' %} 로도 주소를 넣어도 되나
+        사용할 시 함수 선언시 name을 catch라고 선언해주어야함 {% endcomment %}
+        <input type="text" id = "message" name = "message">
+    {% comment %} submit은 제출하는 버튼 {% endcomment %}
+    <input type="submit" name="" id="">
+    </form>
+
+{% endblock content %}

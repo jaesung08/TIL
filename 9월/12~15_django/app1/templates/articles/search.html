@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %} 
+{% comment %} form 태그는 언제 사용하는가?
+=> 웹브라우저(클라이언트)에서 서버로 데이터를 전송하기 위해 사용한다. {% endcomment %}
+
+
+{% comment %} {% if names %}
+    <p>{{ names }}</p>
+{% endif %} {% endcomment %}
+
+
+<form action="https://search.naver.com/search.naver/" method="GET"> 
+    {% comment %} https://search.naver.com/search.naver/ {% endcomment %}
+    {% comment %} get 방식과 post방식의 차이 : 보안성(post가 좀 더 우수함)
+    http://www.naver.com/?key=value
+    GET방식을 쓰는 이유는 key=value형식으로 간편 간단 {% endcomment %}
+    <label for="message">검색어</label>
+
+    {% comment %} 클라이언트에서 서버로, 서버에서 DB로 요청하는 것이 query
+    form 태그의 query : 서버에 데이터를 전달, url에 붙는 추가 정보{% endcomment %}
+    <input type="text" name="query" id="message">
+    {% comment %} 이름은 쿼리라 썼지만 내가 쓰고싶은대로 수정가능 {% endcomment %}
+    <input type="submit" value="submit">
+    {% comment %} 쿼리 스트링 파라미터 : key=value 쌍으로 구성, key=value & key=value {% endcomment %}
+</form>
+
+
+
+{% endblock content %}
