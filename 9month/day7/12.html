@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    /* CSS 적용 우선순위 -> 선택자 우선순위 -> 등장을 가장 나중에 */
+    nav {
+      width: 100%; /*
+      fixed position 시 block 요소도 본인의 실제 내용만큼만
+      가로 길이를 기본을 가지기 때문에
+      브라우저의 가로 길이를 받아오려면 width 100% */
+      height: 80px;
+      /* 이미지에 별다른 옵션을 안주면... 이미지가 영역 밖으로 배치 */
+      z-index: 9999; /* 뒤에 등장하는 relative와 겹치는 걸 방지 */
+    }
+
+    nav img {
+      height: 100%; /* 80px의 100% */
+      /* nav 안에 있는 img 태그는 직속 부모의 높이를 100% 상속받는다 */
+    }
+
+    header {
+      padding-top: 80px;
+    }
+
+    header > div > div {
+      width: 100%; height: 100%
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <!--
+    1. 각 요소 (nav, header, section, footer)는 주어진 코드의 주석에 맞춰 작성합니다.
+    2. 모든 이미지 요소는 주어진 이미지 파일을 활용합니다.
+    3. 모든 구성 요소 배치는 flexbox를 활용합니다.
+    4. 모든 텍스트 스타일은 공식 문서의 typography를 참고하여 작성합니다.
+   -->
+
+  <!-- 1. Nav -->
+  <!--
+  1. 네비게이션 바는 항상 브라우저 화면 최상단에 고정되어 있습니다.
+  https://getbootstrap.com/docs/5.3/utilities/position/
+  https://getbootstrap.com/docs/5.3/layout/containers/#fluid-containers
+  2. 네비게이션 바의 배경색은 공식 문서의 background color를 참고하여 작성합니다.
+  https://getbootstrap.com/docs/5.3/utilities/background/#background-color
+  3. 로고 이미지와 네비게이션 리스트는 각각 네비게이션 바 양 끝에 배치합니다.
+  https://getbootstrap.com/docs/5.3/utilities/flex/  
+  https://getbootstrap.com/docs/5.3/components/navbar
+  4. 리스트의 항목 간 간격은 `2rem`입니다. 
+  부트스트랩 공식 문서의 spacing 부분을 참고하여 작성합니다.
+  https://getbootstrap.com/docs/5.3/utilities/spacing/
+  5. 리스트의 각 항목들은 마우스를 올렸을 때 밑줄이 나오지 않아야합니다.
+  -->
+  <nav
+    class="position-fixed bg-dark
+    d-flex justify-content-between
+    navbar navbar-expand">
+    <img class="" src="./images/logo.png">
+    <ul class="navbar-nav">
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="#">Home</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="#">Link</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="#">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 2. Header -->
+  <!-- 
+  1. Header 내부의 요소(글, 버튼)는 수직 그리고 수평 중앙에 배치합니다.
+  https://getbootstrap.com/docs/5.3/utilities/position/  
+  https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment
+  https://getbootstrap.com/docs/5.3/utilities/flex/  
+  2. Header 내부의 글씨 색상은 흰색이며 굵기는 bold입니다.
+  https://getbootstrap.com/docs/5.3/utilities/colors/#colors
+  https://getbootstrap.com/docs/5.3/utilities/text/#font-weight-and-italics
+  3. Header 내부의 글씨 크기는 부트스트랩 공식 문서의 display heading 부분을 활용합니다.
+  https://getbootstrap.com/docs/5.3/content/typography/#display-headings
+  4. Header 내부의 버튼의 색상은 파란색이며, 크기는 크게 설정합니다.
+  https://getbootstrap.com/docs/5.3/components/buttons/
+  -->
+
+  <header>
+    <div class="position-relative">
+      <img class="img-fluid" src="./images/header.jpg">
+      <div
+        class="position-absolute top-0
+        d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <div class="text-center fw-bold text-white display-3">
+            Cinema<br>Community
+          </div>
+          <button class="btn btn-primary btn-lg m-2">
+            Let's Go
+          </button>  
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Section -->
+  <!-- 
+  1. Section 내부의 요소(글, 이미지)는 수평 중앙에 배치합니다.
+  https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment
+  2. Section 내부의 3개의 이미지는 수평으로 나열되어 있습니다.
+  3. Section 내부의 이미지간 간격은 동일합니다.
+  https://getbootstrap.com/docs/5.3/utilities/flex/  
+  4. Section 내부의 이미지 아래에는 이미지를 설명하는 간단한 글이 있습니다.
+
+  -->
+
+  <section class="">
+    <div class="">Used Skills</div>
+    <div class="">
+      <div>
+        <img src="./images/web.png" alt="WEB">
+        <p>Web</p>
+      </div>
+      <div>
+        <img src="./images/html5.png" alt="HTML5">
+        <p>HTML5</p>
+      </div>
+      <div>
+        <img src="./images/css3.png" alt="CSS">
+        <p>CSS3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Footer -->
+  <!-- 
+  1. Footer는 항상 브라우저 화면 최하단에 고정되어 있습니다.
+  https://getbootstrap.com/docs/5.3/utilities/position/
+  2. Footer의 배경색은 파란색입니다.
+  https://getbootstrap.com/docs/5.3/utilities/background/#background-color
+  https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment
+  3. Footer에 작성된 내용은 수직 그리고 수평 중앙에 배치합니다.
+  https://getbootstrap.com/docs/5.3/layout/containers/#fluid-containers
+  https://getbootstrap.com/docs/5.3/utilities/flex/  
+  4. Footer에 작성된 내용의 빈 부분 `( ___ )`은 본인의 이름을 작성합니다.    
+  -->
+
+  <footer class="">
+    <div>
+      HTML & CSS proejct. Created by <u>SSAFY</u>
+    </div>
+  </footer>
+
+</body>
+</html>

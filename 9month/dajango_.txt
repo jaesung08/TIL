@@ -1,0 +1,202 @@
+장고 1일
+개발자의 마인드로 항상 왜? 라는 질문을 던져보기
+1. Django를 배웠는데 프레임워크는 뭘까?
+=> 
+프레임워크란, 반복적으로 사용되는 특정 기술을 모아 같은 기능을 하는 코드들을 말한다. 이는 웹 애플리케이션을 빠르게 개발할 수 있도록 도와주는 도구이다.
+Django는 웹 개발을 위한 파이썬 기반의 프레임워크입니다. 프레임워크는 개발을 보다 효율적으로 진행하기 위해 필요한 도구와 라이브러리의 집합체입니다.
+
+2. 가상환경은 왜 만들고, 의존성 파일은 왜 만들까? 
+=> 
+가상환경은 프로젝트마다 독립된 파이썬 환경을 구성하여 의존성 충돌을 방지하고, 프로젝트에 필요한 패키지를 관리하는데 사용됩니다. 의존성 파일은 해당 프로젝트에서 사용하는 외부 패키지와 버전 정보를 기록하여 다른 환경에서도 동일한 패키지 버전을 사용할 수 있도록 합니다.
+
+3. urls.py, settings.py, views.py 의 각각의 역할은 무엇인가? MTV패턴과 연관지어 생각해보기
+=>
+urls.py 파일은 URL 매핑을 담당하고, settings.py 파일은 Django 설정과 관련된 정보를 포함합니다. views.py 파일은 클라이언트 요청에 대한 처리 로직과 데이터베이스 조작 등의 역할을 담당합니다. 이들은 MTV(Model-Template-View) 패턴에서 각각 URL 매핑, 설정 및 모델 정의, 그리고 클라이언트에게 보여질 결과물 생성 등의 역할과 연관되어 있습니다.
+M : models.py => 데이터와 관련된 로직
+T : templates.py => 보여지는 것 (화면)
+V : views.py => 모델과 템플릿과 관련된 로직 
+
+4. git 사용할때 git ignore은 왜 필요할까?
+=>
+ git ignore 파일은 Git 저장소에 포함시키지 않아야 할 파일들을 지정하는데 사용됩니다. 이는 보안 정보나 임시/중간 파일 등 저장소에 올라가면 안 되는 내용들을 제외하기 위해 필요합니다.
+
+
+기본적인 설정 세팅 / 개발환경 세팅!! 
+1. venv venv 생성 + 가상환경 실행
+python -m venv venv
+source venv/Scripts/activate or  . venv/Scripts/activate
+pip list 확인해서 장고가 없으면 설치
+pip install Django
+
+pip freeze > requirement.txt ( 이건 필수는 아니고 다른 곳에서도 할 때 txt파일로 사용한 장고 및 프로젝트 들의 버전을 작성하게 하는 명령)
+pip install -r requirement.txt ( 그 작성한 txt파일 실행해서 파일을 설치하는 명령)
+
+2. 프로젝트 생성 django-admin startproject (프로젝트이름) (경로(현재면 .)
+
+3. 앱 생성 python manage.py startapp (이름)
+
+4. 프로젝트 세팅 파일에 앱 등록 ( installed_apps 밑에 이름 추가)
+
+5. 앱내에 Templates 생성 후 홈페이지내 기능에 맞는 폴더 생성
+
+6. 생성한 폴더 내에 html 파일 생성
+
+7. view파일에 생성한 html 파일 실행 함수 생성
+def index(request):
+    return render(request, "action/index.html")
+
+8. 프로젝트 폴더내 urls에 경로 생성
+
+9. urlpatterns 안에 path 추가
+path("index/", views.index)
+
+10. 만든 html 파일 실행
+python manage.py runserver
+후에 주소 뒤에 만든 html 이름 추가
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/index/
+( gitignore 해야 하기때문에 인터넷에 gitignore을 검색해서 사이트에서 python, django를 검색해서 나온 파일을 .gitignore이라는 파일을 만들어서 생성
+
+
+
+장고 2일차
+1. 템플릿 상속 + DTL
+템플리 상속을 하는 이유는 무엇일까?
+=>
+템플릿 상속은 코드 재사용과 유지보수를 용이하게 하기 위해 사용됩니다. 공통된 부분(레이아웃, 헤더 등)을 부모 템플릿으로 정의하여 중복을 피하고, 자식 템플릿에서 해당 부분만 추가 또는 수정하여 사용할 수 있습니다.
+
+html에는 로직이 들어갈 수 없다고 했는데 DTL은 어떻게 사용할 수 있는가?
+=> 
+HTML에서 로직 처리를 할 수 없는 것은 웹 애플리케이션의 구조상 서버 사이드에서 처리되어야 하기 때문입니다. DTL(Django Template Language)은 Django가 제공하는 템플릿 언어로, HTML 문서 내에서 서버 사이드 로직(조건문, 반복문 등)을 실행하거나 변수 값을 출력하는 등의 작업을 할 수 있도록 도와주는 도구입니다.
+
+2. form 태그
+form 태그에서 query란 무엇인가? 데이터 베이스의 query와의 차이는 무엇인가?
+=>
+form 태그에서 query란 입력 데이터를 전달하기 위한 매개변수 이름입니다. 데이터베이스의 query와는 다르며, 여기서는 클라이언트가 서버로 전송하는 요청 데이터를 의미합니다.
+
+기존 데이터 베이스에선
+클라이언트에서 서버로, 서버에서 DB로 요청하는 데이터가 query
+form 태그의 query : 서버에 데이터를 전달, url에 붙는 추가 정보
+쿼리 스트링 파라미터 : key=value 쌍으로 구성, key=value & key=value
+
+GET방식과 POST 방식의 차이
+=>
+get 방식과 post방식의 차이 : 보안성(post가 좀 더 우수함)
+http://www.naver.com/?key=value
+GET방식을 쓰는 이유는 key=value형식으로 간편 간단
+
+GET 방식과 POST 방식 모두 HTTP 요청 메서드 중 일부입니다. GET 방식은 주소창에 데이터가 노출되며 주로 조회나 검색과 같은 요청에 사용됩니다. POST 방식은 HTTP body에 데이터를 담아 전송하므로 주소창에 데이터가 노출되지 않으며 주로 생성/수정/삭제와 같은 변경 작업에 사용됩니다.
+
+
+3. app과 url
+url mapping은 왜 사용하는 걸까?
+=>
+어플리케이션(app)이 여러개 이기 때문에 연결해 주기 위해서 사용한다.
+url mapping(혹은 URL 리팩터링)은 URL 경로와 해당 경로를 처리할 뷰 함수 혹은 컨트롤러 간의 연결 작업입니다.
+
+Urlmapping을 위해서 만든 각 앱내에서 urls.py를 만들고
+from django.urls import path
+from . import views
+
+app_name = "practice1"
+
+urlpatterns = [
+    # path("입력하게 만들 주소명", views.(보여줄 html명), name="별칭명") 
+    path("throw/", views.calculation, name="throw"), 
+    path("catch/", views.result, name="catch"),
+]
+과 같이 작성해주어야한다.
+from app1 import views
+
+폴더내에서
+firstpjt 가 실행되면서 
+app1 과 pages 등 각각의 어플들로 연결
+
+
+base.html을 최상단폴더에서 templates으로 바꿔 여러 어플에 똑같이 적용시킨다면 
+기본 firstpjt의 setting 에서 TEMPLATES에서 DIRS에 BASE_DIR : 'temlplates'를 추가하여 firstpjt에 해당하는 모든 어플이 base를 저걸 참조하도록 만든다.
+
+
+
+
+장고 3일차
+1. naming url patterns는 왜 사용하는걸까?
+=>
+naming url patterns(혹인 URL 패턴 명명 규칙)는 가독성 및 유지보수 측면에서 중요합니다. 명확하고 일관된 이름 규칙으로 URL 패턴들을 명명함으로써 코드 이해도와 협업 시 발생할 수 있는 오류 예방 및 디버깅 시 용이성 증대 등 다양한 이점을 얻게 됩니다.
+
+MTV패턴
+Model : model.py => 데이터와 관련된 로직 - 데이터베이스(SQLite)와 관련
+Template : templates => 보여지는 부분( xxx.html)
+View : views.py => Model과 Temlplate와 관련된 로직이 들어가는 곳(중계자 역할)
+
+템플릿이나 다른뷰에서 해당 URL을 참조할때 실제 경로 대신에 지정한 name을 사용할 수 있어서 유용하다.
+
+2. 왜 title은 최대길이를 10으로 지정할까?
+=>
+일반적으로 제목(title) 필드 길이 제한 설정 시 너무 긴 제목으로 인해 UI 디자인 상 깨짐 현상 및 가독성 저하 문제 예방, 데이터베이스 성능 최적화 차원 (넉넉하지만 너무 큰 문자열 칼럼 비용 절감), + 악성 사용자로 인한 문제 발생 예방 등의 다양한 이유
+
+3. db.splite3 : DB는 무엇인가? 스키마 구조(테이블 구조)인 엑셀도 DB인가?
+=>
+데이터 일관성과 참조 무결성을 유지하기 위해서입니다. 삭제된 ID는 재사용하지 않고 새로운 ID를 할당하여 데이터 일관성과 참조 무결성을 유지. 
+
+4. django sqlite는 왜 ID의 데이터를 지웠을 때, 그 번호를 다시 사용하지 않을까?
+=>
+그 id관련되어서 문제가 한 번 있었을 수도 있으니까 그 id를 다시 사용하지 않는 것이 안전하다고 생각해서 
+
+5. CRUD란 무엇인가?
+=>
+소프트웨어가 가지는 기본적인 데이터 처리 기능으로 Create, Read, Update, Delete이다
+
+
+model을 이용해 DB Field 만들기!!!
+1. 생성된 프로젝트내에서 앱의 models.py에서 class를 선언하여 
+class Article(models.Model):
+    # 데이터 베이스에서 열(column) => 필드, 행(row) => 레코드
+    # 엑셀도 DB? 스키마구조, 테이블구조로 형식은 같으나 보안성이 없기때문에 DB라 할수 없다.
+    # CharField: 길이 제한이 있는 문자열을 저장하는 필드를 생성 
+    # TextField: 글자수가 많을 때 사용 = > 긴 텍스트 정보를 저장하는 필드를 생성
+    title = models.CharField(max_length=10)
+    content = models.TextField()
+    # DateTimeField: 날짜와 시간정보를 함께 저장하는 필드를 생성
+    # auto_now_add: 처음 데이터가 생성될 때의 날짜와 시간을 자동으로 저장
+    # auto_now: 데이터가 수정될 때 마다 날짜와 시간을 자동으로 업데이트하여 저장
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+다음과 비슷하게 작성
+2. 작성 후 저장이 완료되었다면
+python manage.py migrations 하여 migrations가 생성되는 것을 확인 
+
+3. 확인 되었다면
+python manage.py migrate 하여 db.sqlite3에 생성한 DB Field가 생성되었는지 확인!
+
+admin슈퍼유저 계정 만들기!!!
+1. $ python manage.py createsuperuser 입력하면 밑에 내용 나타나면 작성
+Username (leave blank to use 'ssafy'): 
+Email address:  
+Password: 
+Password (again):
+
+2. admin페이지에서 DB를 보기위해 하는 작업
+admin.py에서 
+from .models import Article 을 통해 Article이라고 명명한 DB 필드를 모델에서 불러온 후
+admin.site.register(Article) 을 밑에 작성하여 Article을 등록한다.
+
+@@html 명령어 사용 세팅 @@
+파일 우클릭 settings
+emmet가서 
+include languages에서
+django-html의 value를 html로 변경해서 사용
+다른방법2
+https://integer-ji.tistory.com/358 
+
+
+
+
+
+
+
+
+
+
+

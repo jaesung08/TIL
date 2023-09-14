@@ -1,0 +1,79 @@
+<!-- https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance -->
+<!-- https://poiemaweb.com/css3-inheritance-cascading -->
+<!--
+    상속과 선택자를 잘 구분해야함.
+    상속은 굳이 지정하지 않았는데도 부모 요소(현재 요소를 감싸고 있는 상위 태그)의 영향을 받는 것.
+    선택자를 통한 지정은 상속처럼 보일 수는 있는데, 상속되지 않는 property(width 등)가 적용된다면 선택자 지정임.
+-->
+<!-- 
+    - 오직 style 태그의 내용만 수정 가능합니다.
+    - inherit, border, text-align, color 를 활용합니다.
+    - .outer-box 의 width, height 는 자식에게 상속되지 않습니다.
+    - .inner-box 의 border 는 .outer-box의 속성을 상속받습니다.
+    - '첫 번째' span 의 색상과 정렬은 .outer-box의 속성을 상속받아 빨간색, 중앙 정렬이 됩니다.
+    - '두 번째' span 은 색상과 정렬 두 속성 모두 .outer-box로부터 상속받지 않습니다.
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+     .outer-box {
+       width : 400px;
+       height: 200px;
+       border: 2px solid black; /* inherit을 통해서 강제로 상속받을 수 있음 */
+       /* 첫번째 -> 빨간색, 중앙정렬 */
+       color: red;
+       text-align: center;
+       /* outbox에 주게 되면? 상속. */
+     }
+ 
+         /* 추가 css 코드 작성 1 */
+         
+     
+     .inner-box {
+       width : 200px;
+       height: 100px;
+             /* 추가 css 코드 작성 2 */
+             /*
+       1. 외곽선 추가 (border 상속)
+       2. 텍스트 관련 상속 X
+       */
+       border: inherit; /* (기본값과 상관없이) 강제로 상속받겠다 */
+       /* (부모, 조상의 속성을) 상속받지 않고 body의 설정값을 가져가는게 initial */
+       color: initial;
+       text-align: initial;
+     }
+ 
+     /* 참고! */
+     .inner-box span {
+       /* 이 안에 text-align관련 설정을 넣으면
+         span 안의 텍스트에 영향을 미치는데...
+         span 자체가 텍스트 취급을 받으므로 span은 이미 가운데 정렬이 되어 있음.
+       */
+       color: initial; /* 색상은 잘 초기화가 되는데 */
+       text-align: initial; /* 정렬은 적용이 안되요 */
+       /* block? inline? */
+       /* inline =>
+         그 태그가 가지고 있는 텍스트 혹은 컨텐츠만큼의 크기를 가지고 있는
+         **문자 취급**을 받는 태그.
+         -> span -> text-align의 영향을 받는다.
+       */
+     }
+ 
+   </style>
+ </head>
+ <body>
+   <div class="outer-box">
+     <div>
+       <span>첫 번째</span>
+     </div>
+     <div class="inner-box">
+       <span>두 번째</span>
+     </div>
+   </div>
+ </body>
+ </html>

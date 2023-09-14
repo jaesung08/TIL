@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- HTML 주석 -->
+    <style> 
+    /* CSS 주석 */
+    /* style -> 선택자와 선언부를 사용해서 HTML 파일에 CSS 서식을 적용하는 태그 */
+        h2 {
+            /* h2 -> 태그(요소) -> 태그(요소) 선택자 */
+            /* id 선택자보다도 약하고 class 선택자보다도 약함 */
+            /* important */
+            color: darkviolet!important;
+            /* 왠만한 선택자를 모두 이긴다 */
+            /* inline 도 이긴다! */
+        }
+
+        p { /* .p? #p? */
+            /* p -> 태그 선택자  */
+            color: orange;
+            /* 태그 선택자는 상속 받은 속성 정도보다만 강함 */
+        }
+
+        .blue {
+            /* . -> .? -> .클래스이름 -> 클래스 선택자 */
+            /* <태그명 class=클래스이름></> */
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+
+        #red { /* .red? */
+        /* # -> id -> 아이디 선택자 -> id는 일반적으로는 1개만 권장되므로 가능하면 1개만 선택 */
+        /* <태그명 id=아이디이름></> */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>1</p> <!-- 1 -->
+    <!-- p 태그만 있는 경우에는 orange 색 -->
+    <p class="blue">2</p> <!-- 2 -->
+    <!-- 나머지 애들은 모두 class를 가지고 있기 때문에 -->
+    <!-- 해당 클래스 선택자를 통해서 태그 선택자를 덮어씌우기할 있음 -->
+    <p class="blue green">3</p> <!-- 3 -->
+    <p class="green blue">4</p> <!-- 4 -->
+    <!-- 3, 4번? 왜 다 green임? -->
+    <!-- class 내부에 등장 순서는 의미 없고, 
+        style에서 얼마나 나중에 등장했는지가 우선순위를 가져감.
+        green이 style 태그에서 나중에 정의되었기 때문에 우선순위 적용
+    -->
+    <p id="red" class="blue">5</p> <!-- 5 -->
+    <!-- class가 지정되었기 때문에 이 css를 이기려면? id선택자 -->
+    <!-- h2는 어떻게 하지? -->
+    <h2 id="red" class="blue">6</h2> <!-- 6 -->
+    <!-- 7번은 인라인이 다 우선순위를 가져감 -->
+    <p id="red" class="blue" style="color: yellow;">7</p> <!-- 7 -->
+    <!-- 8번은 h2에 달린 important가 작동하면서 우선순위를 가져감 -->
+    <h2 id="red" class="blue" style="color: yellow;">8</h2> <!-- 8 -->
+</body>
+</html>

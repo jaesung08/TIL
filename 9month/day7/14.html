@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 
+    * 카드의 크기는 자유롭게 구성한다.
+    * 이미지의 크기는 부모 너비와 같은 크기가 되도록 한다.
+      * 부모의 범위를 벗어나서는 안된다.
+    * 이름은 이미지의 위에 겹쳐보이도록 위치를 수정한다.
+      * 부모를 기준으로 아랫쪽 0px에 위치한다.
+    * 그 외 속성은 자유롭게 구성한다.
+   -->
+   <style>
+    body > div {
+      width: 50%;
+      border: 1px solid black;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    div > div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    div > div > p {
+      /* absolute는 가장 가까운 (내가 기준으로 삼고 싶은)
+        position relative 프로퍼티값을 가진 부모/조상 요소
+      */
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      width: 90%;
+      /* opacity: 0.5; */
+      /* background-color: orange; */
+      background-color: rgba(255, 165, 0, 0.5);
+      text-align: center;
+      padding: 10px 0; 
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    body > div > p {
+      padding: 10px 20px;
+    }
+
+   </style>
+</head>
+<body>
+  <div>
+    <div>
+      <img src="profile.jpg" alt="Profile Image">
+      <p>Name</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde officiis ad nostrum. Laboriosam mollitia similique provident fuga tenetur saepe sit, amet eaque neque eius quaerat expedita ea illum veniam.</p>
+  </div>
+</body>
+</html>

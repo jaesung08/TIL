@@ -1,0 +1,8 @@
+{% extends "base_practice5.html" %}
+
+{% block content %}
+{% for food in foods %}
+    <p>{{ food }}</p>
+{% endfor %}
+{% include "./_order.html" %}
+{% endblock content %}

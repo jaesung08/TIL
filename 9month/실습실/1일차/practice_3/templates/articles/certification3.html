@@ -1,0 +1,7 @@
+{% extends "base_practice3.html" %}
+
+{% block content %}
+<p> 이름 : {{ name }}</p>
+<p> 나이 : {{ age|random }}</p>
+<p> 등급 : {{ grade|random |upper }}</p>
+{% endblock content %}

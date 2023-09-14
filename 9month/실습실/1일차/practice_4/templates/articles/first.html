@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if infos %}
+<p>catch! I catch {{ infos|random }}</p>
+{% else %}
+<p>catch! I catch nothing!</p>
+{% endif %}
+<form action="{% url "practice4:second" %}">
+    <label for="infos">throw! </label>
+    <input type="text" name="infos" id="infos">
+    <button type="submit">휙</button>
+</form>
+{% endblock content %}
