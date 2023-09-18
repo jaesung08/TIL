@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if result %}
+    <p>{{ thing }} {{ cnt }}개의 가격은 {{ result }} 입니다.</p>
+    {% else %}
+    <p>{{ thing }}은/는 없어용</p>
+    {% endif %}
+{% endblock content %}
