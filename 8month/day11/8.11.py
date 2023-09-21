@@ -45,7 +45,7 @@
 #
 # dfs(0, 0)
 
-# # stackㅇ로 풀리
+# # stack으로 풀기
 # n = int(input())
 # arr = [list(map(int, input().split())) for _ in range(n)]
 #
