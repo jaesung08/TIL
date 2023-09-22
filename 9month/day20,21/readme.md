@@ -370,7 +370,7 @@ for node in graph.keys():
 
 # graph2 (리스트)
 for node in range(n):
-    for nxt, coin in graph[node]:
+    for nxt, coin in graph2[node]:
         print(f'{node}에 {nxt}가 인접, 가중치는{coin}')
 ```
 
