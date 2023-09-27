@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'articles:update' article.pk %}" method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {% comment %} <div>
+            <label for="title"> Title </label>
+            <input type="text" name="title" id="title" value= {{article.title}}>
+        </div>
+        <div>
+            <label for="content"> Content : </label>
+            <textarea name="content" id="content" >
+                {{ article.content }}
+
+            </textarea>
+        </div> {% endcomment %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+    <hr>
+    <a href="{% url 'articles:index' %}"> [back] </a>
+</body>
+</html>

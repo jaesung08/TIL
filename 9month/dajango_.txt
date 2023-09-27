@@ -185,7 +185,7 @@ class Article(models.Model):
 
 다음과 비슷하게 작성
 2. 작성 후 저장이 완료되었다면
-python manage.py migrations 하여 migrations가 생성되는 것을 확인 
+python manage.py makemigrations 하여 migrations가 생성되는 것을 확인 
 
 3. 확인 되었다면
 python manage.py migrate 하여 db.sqlite3에 생성한 DB Field가 생성되었는지 확인!
@@ -196,6 +196,7 @@ Username (leave blank to use 'ssafy'):
 Email address:  
 Password: 
 Password (again):
+# 비밀번호는 입력해도 보이지 않으니 주의
 
 2. admin페이지에서 DB를 보기위해 하는 작업
 admin.py에서 
@@ -219,9 +220,9 @@ query란 서버에서 DB에 데이터를 요청하는 코드소스
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 OMR API 사용하기
-1. python install ipython 설치
+1. pip install ipython 설치
 
-2. python install django-extensions 설치
+2. pip install django-extensions 설치
 
 3. pip freeze > requirements.txt 로 설치한 앱 버전들 저장
 
@@ -275,7 +276,7 @@ for article in articles:
     ...:     print(article.title)
 
 8.
-CRUD reda
+CRUD read
 항상 조회가 먼저 이루어져야한다!
 조회 => 인스턴스에서 수정 => save()
 article= Articles.objects.jet(pk=4)	# 조회
@@ -292,6 +293,7 @@ article.delete()
 https://docs.djangoproject.com/en/4.2/ref/models/querysets/
 장고 라이브러리로 여기서 이외의 함수 확인 
 
+10. exit()으로 shell 종료 
 
 @@html 명령어 사용 세팅 @@
 파일 우클릭 settings
@@ -302,7 +304,8 @@ django-html의 value를 html로 변경해서 사용
 https://integer-ji.tistory.com/358 
 
 
-
+---------------------------------------------------------------------------------------------------------- 
+장고 5일차
 
 
 
