@@ -1,4 +1,4 @@
-# 0904 Django Model
+# 0914 Django Model
 ## Model
 + Model을 통한 DB(데이터베이스) 관리
 + ![1](pict1.png)

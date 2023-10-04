@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>CREATE</h1>
+  <form action="{% url "articles:create" %}" method="POST">
+    {% csrf_token %}
+    <!--
+      form 인스턴스를 쪼개고 싶다면
+      - https://docs.djangoproject.com/en/4.2/topics/forms/#rendering-fields-manually
+    -->
+    {{ form.as_p }}
+    {% comment %} <div>
+      <label for="title">제목 : </label>
+      <input type="text" id="title" name="title">
+    </div>
+    <div>
+      <label for="content">내용 : </label>
+      <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    </div> {% endcomment %}
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'articles:index' %}">[back]</a>
+</body>
+</html>

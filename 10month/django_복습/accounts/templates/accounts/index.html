@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>메인 페이지</h1>
+
+
+{% if user.is_authenticated %}
+<p>{{ user }}</p>
+<form action="{% url "accounts:logout" %}" method = 'POST'>
+    {% csrf_token %}
+    <input type="submit" value = '로그아웃'>
+</form>
+{% else %}
+    <p>로그인 하세요</p>
+    <a href="{% url "accounts:login" %}"> 로그인 </a>   
+{% endif %}
+
+
+{% endblock content %}
