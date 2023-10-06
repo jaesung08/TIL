@@ -1,0 +1,70 @@
+/* default */
+* {
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+.navbar {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#frontpage,
+#my-intro,
+#skills,
+#project,
+#contact {
+	/* cause of the fixed header */
+	padding-top: 4rem;
+}
+
+.frontpage {
+	height: 300px;
+	background-color: lightgray;
+}
+
+.intro {
+	height: 300px;
+}
+
+.skills {
+	height: 300px;
+	background-color: lightgray;
+}
+
+.project {
+	height: 300px;
+}
+
+.contact {
+	height: 300px;
+	background-color: lightgray;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	height: 50px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#not-provided {
+	display: none;
+}
+
+@media (max-width: 575px) {
+	header,
+	main,
+	article,
+	footer {
+		display: none !important;
+	}
+
+	#not-provided {
+		display: block;
+	}
+}

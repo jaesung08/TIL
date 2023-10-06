@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>메인페이지</h1>
+
+{% comment %} <img src="이미지 경로" alt=""> {% endcomment %}
+<img src="{{chart_image }}" alt="">
+
+
+<a href="{% url "firstapp:examples" %}">examples</a>
+{% endblock content %}
+
+

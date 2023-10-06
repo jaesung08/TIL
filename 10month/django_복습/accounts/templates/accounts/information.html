@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>회원정보</h1>
+<p>유저 id : {{ user.username }}</p>
+<p>유저 pw : {{ user.password }} </p>
+<p>유저 email : {{ user.email }} </p>
+<p>유저 nickname : {{ user.nickname }} </p>
+<p>유저 first name : {{ user.first_name }} </p>
+<p>유저 last name : {{ user.last_name }} </p>
+<hr>
+<a href="{% url "articles:index" %}"> 뒤로가기 </a>
+{% endblock content %}

@@ -32,8 +32,8 @@ deactivated
 pip list 확인해서 장고가 없으면 설치
 pip install Django
 
-pip freeze > requirement.txt ( 이건 필수는 아니고 다른 곳에서도 할 때 txt파일로 사용한 장고 및 프로젝트 들의 버전을 작성하게 하는 명령)
-pip install -r requirement.txt ( 그 작성한 txt파일 실행해서 파일을 설치하는 명령)
+pip freeze > requirements.txt ( 이건 필수는 아니고 다른 곳에서도 할 때 txt파일로 사용한 장고 및 프로젝트 들의 버전을 작성하게 하는 명령)
+pip install -r requirements.txt ( 그 작성한 txt파일 실행해서 파일을 설치하는 명령)
 
 2. 프로젝트 생성 django-admin startproject (프로젝트이름) (경로(현재면 .)
 

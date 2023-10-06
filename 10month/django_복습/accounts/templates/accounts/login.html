@@ -4,12 +4,14 @@
 <h1>로그인 페이지</h1>
 <form action="{% url "accounts:login" %}" method = 'POST'>
     {% csrf_token %}
+
+    <input type="hidden" name="next" value="{{ request.GET.next }}">
     {{form.as_p}}
     <input type="submit" value = '로그인'>
     
 </form>
 
 <br>
-<a href="{% url "accounts:index" %}"> 뒤로가기 </a>
+<a href="{% url "articles:index" %}"> 뒤로가기 </a>
 
 {% endblock content %}
