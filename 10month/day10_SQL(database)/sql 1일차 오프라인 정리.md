@@ -128,6 +128,12 @@
   - SQL문의 구문 구조를 완성하기 위해 사용됨
   - ex) FROM, WHERE, GROUP BY, ORDER BY 등
 
+
+- syntax (구문) (내가 추가 한 것)
+  - 언어의 문법 규칙과 구조
+  - 올바른 코드를 작성하기 위한 규칙의 집합
+
+
 ### 심화(나중에 공부하세요)
 - 트랜잭션(Transction)
   - 하나 이상의 SQL문을 포함하는 논리적 작업 단위
@@ -136,3 +142,18 @@
   - 중간에 실패 -> 전체 작업을 취소(undo)하는 과정을 롤백(rollback)이라고 한다.
   - 트랜잭션의 성질(ACID)
     - 원자성(Atomicity), 일관성(Consistency), 격리성(Isolation), 영속성(Durability)
+
+---------------------- 0. csv 파일 sqlite 로 읽기
+
+-- 1. sqlite3 파일 열기
+-- $ sqlite3 superhero.sqlite3
+
+-- 2. csv 모드로 변경하기
+-- $ sqlite> .mode csv
+
+-- 3. 파일 read 하기
+-- // 명령어: .import <파일명> <테이블명>
+-- $ sqlite> .import superheroes.csv superhero
+
+-- 4. 확인하기
+-- $ sqlite> select * from superhero;

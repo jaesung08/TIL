@@ -26,7 +26,7 @@
 
 + 스프레드 시트를 이용한 데이터 관리
   + 테이블의 열과 행을 사용해 데이터를 구조적으로 관리 가능
-  + ![1](pict1.png)
+  + ![1](sql1/pict1.png)
   
   + 스프레드 시트의 한계
     + 크기 - 일반적으로 약 100만행 까지만 저장가능
@@ -48,7 +48,7 @@
   + 이 관계로 인해 두 테이블을 사용하여 데이터를 다양한 형식으로 조회할 수 있음
     + 특정 날짜에 구매한 모든 고객 조회
     + 지난 달에 배송일이 지연된 고객 조회
-    + ![2](pict2.png)
+    + ![2](sql1/pict2.png)
     + 고객 ID와 같이 연결된 연결고리가 중요함
 
 + 관계
@@ -57,11 +57,11 @@
 + 관계형 데이터 베이스의 예시
   + 다음과 같이 고객 데이터가 테이블에 저장되어 있다고 가정
   + 고객 데이터 간 비교를 위해서는 어떤 값을 활용해야 할까?
-    + ![3](pict3.png)![4](pict4.png)
+    + ![3](sql1/pict3.png)![4](sql1/pict4.png)
     + 각 데이터에 고유한 식별 값을 부여하기(기본 키, primary key)
   + 누가 어떤 주문을 했는지 어떻게 식별할 수 있을까?
     + 고객의 고유한 식별 값을 저장하자(외래 키, Foreign key)
-    + ![5](pict5.png)
+    + ![5](sql1/pict5.png)
 
 + 관계형 데이터베이스 관련 키워드
   1. Table - 데이터를 기록하는 곳 (Relation)
@@ -109,7 +109,7 @@
   + => 관계형 데이터베이스와의 대화를 위해 사용하는 프로그래밍 언어
 
 + SQL Syntax
-  + ![6](pict6.png)
+  + ![6](sql1/pict6.png)
   + SQL 키워드는 대소문자를 구분하지 않음
     + 하지만 대문자로 작성하는 것을 권장(명시적 구분)
   + 각 SQL statements의 끝에는 세미콜론(;)이 필요
@@ -118,7 +118,7 @@
 + SQL statements 
   + SQL을 구성하는 가장 기본적인 코드 블록
   + 예시
-    + ![7](pict7.png)
+    + ![7](sql1/pict7.png)
     + 해당 예시 코드는 SELECT Statement라 부름
     + 이 Statement는 SELECT, From 2개의 keyword로 구성됨
 
@@ -135,7 +135,7 @@
   + DCL - 데이터 제어
     + 데이터 및 작업에 대한 사용자 권한 제어
     + SQL 키워드 - COMMIT, ROLLBACK, GRANT, REVOKE
-  + ![9](pict9.png)
+  + ![9](sql1/pict9.png)
 
 ### 참고
 + Query
@@ -154,7 +154,7 @@
   + 테이블에서 데이터를 조회
 
 + SELECT syntax
-  + ![8](pict8.png)
+  + ![8](sql1/pict8.png)
     + SELECT 키워드 이후 데이터를 선택하려는 필드를 하나 이상 지정
     + FROM 키워드 이후 데이터를 선택하려는 테이블의 이름을 지정
 
@@ -207,7 +207,7 @@
   + 조회 결과의 레코드를 정렬
 
 + ORDER BY syntax
-  + ![10](pict10.png)
+  + ![10](sql1/pict10.png)
   + FROM clause 뒤에 위치
   + 하나 이상의 커럼을 기준으로 결과를
   + 오름차순(ASC, 기본값)
@@ -255,7 +255,7 @@
 
 + 정렬에서의 NULL
   + NULL값이 존재할 경우 오름차순 정렬 시 결과에 NULL이 먼저 출력
-  + ![11](pict11.png)
+  + ![11](sql1/pict11.png)
 
 + SELECT statement 실행 순서
   + FROM -> SELECT -> ORDER BY
@@ -282,7 +282,7 @@
   + 조회 결과에서 중복된 레코드를 제거
 
 + DISTINCT syntax
-  + ![12](pict12.png)
+  + ![12](sql1/pict12.png)
   + SELECT 키워드 바로 뒤에 작성해야 함
   + SELECT DISTINCT 키워드 다음에 고유한 값을 선택하려는 하나 이상의 필드를 지정
 
@@ -311,7 +311,7 @@
   + 조회 시 특정 검색 조건을 지정
 
 + WHERE syntax
-  + ![13](pict13.png)
+  + ![13](sql1/pict13.png)
   + FROM clause 뒤에 위치
   + search_condition은 비교연산자 및 논리연산자(AND, OR, NOT 등)를 사용하는 구문이 사용됨
 
@@ -455,12 +455,12 @@
   + 조회하는 레코드의 수를 제한
 
 + LIMIT syntax
-  + ![14](pict14.png)
+  + ![14](sql1/pict14.png)
   + 하나 또는 두 개의 인자를 사용(0 또는 양의 정수)
   + row_count 는 조회하는 최대 레코드 수를 지정
 
 + LIMIT & OFFSET 예시
-  + ![15](pict15.png)
+  + ![15](sql1/pict15.png)
 
 + LIMIT 활용
   + 테이블 tracks에서 TrackId, Name, Bytes 필드 데이터를 Bytes 기준 내림차순으로 7개만 조회
@@ -494,15 +494,15 @@
   + SUM, AVG, MAX, MIN, COUNT
 
 + GROUP BY syntax
-  + ![16](pict16.png)
+  + ![16](sql1/pict16.png)
   + FROM 및 WHERE 절 뒤에 배치
   + GROUP BY 절 뒤에 그룹화 할 필드 목록을 작성
 
 + GROUP BY 예시
   + Country 필드를 그룹화
-    + ![17](pict17.png)
+    + ![17](sql1/pict17.png)
   + COUNT 함수가 각 그룹에 대한 집계된 값을 계산
-    + ![18](pict18.png)
+    + ![18](sql1/pict18.png)
 
 + GROUP BY 활용
   + 테이블 tracks에서 Composer필드를 그룹화하여 각 그룹에 대한 Bytes 평균 값을 내림차순 조회
@@ -571,3 +571,496 @@
   6. 정렬하고 (ORDER BY)
   7. 특정위치의 값을 가져옴 (LIMIT)
 
+https://gist.github.com/yts0275/33692ef95e622b7d5cfd02cd77a4b7e6
+
+# SQL2
+## Managing Tables
+- SQL Statements 유형
+![1](sql2/sql1/pict1.png)
+### Create a table
+- CREATE TABLE statement
+  - 테이블 생성
+
+- CREATE TABLE syntax
+  - 각 필드에 적용할 데이터 타입 작성
+  - 테이블 및 필드에 대한 제약조건(constraints)작성
+  - ![2](sql2/sql1/pict2.png)
+
++ CREATE TABLE 활용
+  1. examples 테이블 생성 및 확인
+    - ```sql
+      CREATE TABLE examples(
+        ExamID INTERGER PRIMARY KEY AUTOINCREMENT,
+        LastName VARCHAR(50) NOT NULL,
+        FirstNAME VARCHAR(50) NOT NULL
+      );
+      ```
+    - ![3](sql2/pict3.png)
+
+
+  2. 테이블 스키마(구조) 확인
+    - ```sql
+      PRAGMA table_info('examples');
+      ```
+    - ![4](sql2/pict4.png)
+
+  - 데이터 타입
+    - ![5](sql2/pict5.png)
+
+  - 제약 조건
+    - ![6](sql2/pict6.png)
+
+  - AUOTOINCREMENT 키워드
+    - ![7](sql2/pict7.png)
+
+- SQLite 데이터 타입
+  1. NULL : 아무런 값도 포함하지 않음을 나타냄 
+  2. INTEGER : 정수
+  3. REAL : 부동 소수점
+  4. TEXT : 문자열
+  5. BLOB : 이미지, 동영상, 문서 등 바이너리 데이터
+
+- Constraints ( 제약 조건 )
+  - 테이블의 필드에 적용되는 규칙 또는 제한 사항
+  - 데이터의 무결성을 유지하고 데이터베이스의 일관성을 보장
+
+- 대표적인 제약조건
+  - PRIMARY KEY
+    - 해당 필드를 기존 키로 지정
+    - INTEGER타입에만 적용되며, INT, BIGINT등과 같은 정수 유형은 적용되지 않음
+  - NOT NULL
+    - 해당 필드에 NULL값을 허용하지 않도록 지정
+  - FOREIGN KEY
+    - 다른 테이블과의 외래 키 관계를 정의
+
+- AUTOINCREMENT keyword
+  - 자동으로 고유한 정수 값을 생성하고 할당하는 필드 속성
+  - 특징
+    - 필드의 자동 증가를 나타내는 특수한 키워드
+    - 주로 primary key필드에 적용
+    - INTEGER PRIMARY KEY AUTOINCREMENT가 작성된 필드는 항상 새로운 레코드에 대해 이전 최대 값보다 큰 값을 할당
+    - 삭제된 값은 무시되며 재사용할 수 없게 됨.
+
+## Modifying table fields
+### ALTER TABLE
+
+- ALTER TABLE statement
+  - 테이블 및 필드 조작
+
+- ALTER TABLE 역할
+  - ![8](sql2/pict8.png)
+
+<hr>
+
+#### - ALTER TABLE ADD COLUMN syntax
+  - ADD COLUMN 키워드 이후 추가하고자 하는 새 필드 이름과 데이터타입 및 제약 조건 작성
+  -   ```sql
+      ALTER TABLE
+        table_name
+      ADD COLUMN
+        column_definition;
+      ```
+
+- ALTER TABLE ADD COLUMN 활용
+  1. examples 테이블에 다음 조건에 맞는 Country 필드 추가
+     - ![9](sql2/pict9.png)
+      ```sql
+      ALTER TABLE
+        examples
+      ADD COLUMN
+        Country VARCHAR(100) NOT NULL;
+      ```
+
+  2. examples 테이블에 다음 조건에 맞는 Age, Address 필드 추가
+     - ![10](sql2/pict10.png)
+     - SQLite는 단일 문을 사용하여 한번에 여러 필드를 추가할 수 없음
+
+      ```sql
+      ALTER TABLE examples
+      ADD COLUMN Age INTEGER NOT NULL;
+
+      ALTER TABLE examples
+      ADD COLUMN Address VARCHAR(100) NOT NULL;
+      ```
+
+<hr>
+
+#### - ALTER TABLE RENAME COLUMN syntax
+  - RENAME COLUMN 키워드 뒤에 이름을 바꾸려는 필드의 이름을 지정하고 TO 키워드 뒤에 새 이름을 지정
+  ```sql
+  ALTER TABLE
+    table_name
+  RENAME COLUMN
+    current_name TO new_name
+  ``` 
+
+- ALTER TABLE RENAME COLUMN 활용
+  1. examples 테이블 Address 필드의 이름을 PostCode로 변경
+     - ![11](sql2/pict11.png)
+       ```sql
+       ALTER TABLE examples
+       RENAME COLUMN Address TO PostCode;
+       ```
+
+<hr>
+
+#### - ALTER TABLE DROP COLUMN syntax
+  - DROP COLUMN 키워드 뒤에 삭제하려는 필드의 이름을 지정
+  - 삭제하는 필드가 다른 부분에서 참조되지 않고 PRIMARY KEY가 아니며 UNIQUE 제약 조건이 없는 경우에만 작동
+    ```sql
+    ALTER TABLE
+      table_name
+    DROP COLUMN
+      current_name
+    ```
+
+- ALTER TABLE DROP COLUMN 활용
+  1. examples 테이블의 PostCode 필드를 삭제  
+    ```sql
+    ALTER TABLE
+      examples
+    DROP COLUMN
+      PostCode;
+    ``` 
+
+<hr>
+
+#### - ALTER TABLE RENAME TO syntax
+  - Rename To 키워드 뒤에 새로운 테이블 이름 지정\
+  ```sql
+  ALTER TABLE
+    table_name
+  RENAME TO
+    new_table_name
+  ``` 
+
+- ALTER TABLE RENAME TO 활용
+  1. examples 테이블 이름을 new_examples로 변경
+    - ![!2](sql2/pict12.png)
+    ```sql
+    ALTER TABLE
+      examples
+    RENAME TO
+      new_examples;
+    ``` 
+
+## Delete a Table
+### DROP TABLE 
+- DROP TABLE statement
+  - 테이블 삭제
+
+- DROP TABLE syntax
+  - DROP TABLE statement 이후 삭제할 테이블 이름 작성
+  ```sql
+  DROP TABLE table_name;
+  ``` 
+  
+- DROP TABLE 활용
+  1. examples 테이블 삭제
+    ```sql
+    DROP TABLE examples
+    ```
+## 참고
+![13](sql2/pict13.png)![14](sql2/pict14.png)![15](sql2/pict15.png)
+
+## Modifying Data
+![16](sql2/pict16.png)
+
+### Insert data
+#### INSERT
+- INSERT statement
+  - 테이블 레코드 삽입
+
+- INSERT syntax
+  - INSERT INTO 절 다음에 테이블 이름과 괄호 안에 필드 목록 작성
+  - VALUES 키워드 다음 괄호 안에 해당 필드에 삽입할 값 목록 작성
+  ```sql
+  INSERT INTO table_name (c1, c2, ...)
+  VALUES (v1, v2, ...);
+  ```  
+
+- 실습 테이블 작성
+  ```sql
+  CREATE TABLE articels(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title VARCHAR(100) NOT NULL,
+    content VARCHAR(200) NOT NULL,
+    created DATE NOT NULL
+  )
+  ```
+
+- INSERT 활용
+  1. articles 테이블에 다음과 같은 데이터 입력
+    ```sql
+    INSERT INTO
+      articles (title, content, createdAt)
+    VALUES
+      ('hello', 'world', '2000-01-01')
+    ```
+      - ![17](sql2/pict17.png)
+
+  2. articles 테이블에 다음과 같은 데이터 추가 입력
+    ```sql
+    INSERT INTO
+      articles (title, content, createdAt)
+    VALUES
+      ('title1', 'content1', '1900-01-01'),
+      ('title2', 'content2', '1800-01-01'),
+      ('title3', 'content3', '1700-01-01'),
+    ```  
+    - ![18](sql2/pict18.png)
+
+  3. DATE 함수를 사용해 articles 테이블에 다음과 같은 데이터 추가 입력
+    ```sql
+    INSERT INTO
+      articles(title, content, createdAt)
+    VALUES
+      ('mytitle', 'mycontent', DATE());
+    ```
+    - ![19](sql2/pict19.png)
+
+### Update data
+#### UPDATE
+- UPDATE statement
+  - 테이블 레코드 수정
+
+- UPDATE syntax
+  -  SET 절 다음에 수정 할 필드와 새 값을 지정
+  -  WHERE 절에서 수정 할 레코드를 지정하는 조건 작성
+  -  WHERE 절을 작성하지 않으면 모든 레코드를 수정
+  ```sql
+  UPDATE table_name
+  SET column_name = expression,
+  [WHERE
+    condition];
+  ```
+
+- UPDATE 활용
+  1. articles 테이블 1번 레코드의 title 필드 값을 'upate Title'로 변경
+    ```sql
+    UPDATE
+      articles
+    SET
+      title = 'update Title'
+    WHERE
+      id = 1;
+    ```
+    - ![20](sql2/pict20.png)
+
+  2. articles 테이블 2번 레코드의 title, content 필드 값을 각각 'update Title', 'update Content'로 변경 
+    ```sql
+    UPDATE
+      articles
+    SET
+      title = 'update Title'
+      content = 'update Content'
+    WHERE
+      id = 2;
+    ```
+    - ![21](sql2/pict21.png)
+
+### Delete data
+#### DELETE
+- DELETE statement
+  - 테이블 레코드 삭제
+
+- DELETE syntax
+  - DELETE FROM 절 다음에 테이블 이름 작성
+  - WHERE 절에서 삭제한 레코드를 지정하는 조건 작성
+  - WHERE 절을 작성하지 않으면 모든 레코드를 삭제
+  ```sql
+  DELETE FROM table_name
+  [WHERE
+    condition];
+  ```
+  
+- DELETE 활용
+  1. articles 테이블의 1번 레코드 삭제
+    ```sql
+    DELETE FROM
+      articles
+    WHERE
+      id = 1;
+    ``` 
+    - ![22](sql2/pict22.png)
+
+  2. articles 테이블에서 작성일이 오래된 순으로 레코드 2개 삭제
+    ```sql
+    DELETE FROM
+      articles
+    WHERE id IN (
+      SELECT id FROM articles
+      ORDER BY createdAt
+      LIMIT 2
+    );
+    ``` 
+    - ![23](sql2/pict23.png)
+
+### 참고
+- SQLite의 날짜와 시간
+![24](sql2/pict24.png)
+
+## Multi table queries
+### JOIN
+- 관계
+  - 여러 테이블 간의 (논리적) 연결
+
+- 관계의 필요성
+  1. 커뮤니티 게시판에 필요한 데이터 생각해보기
+    - ![25](sql2/pict25.png)
+
+  2. 하석주가 작성한 모든 게시물 조회하기
+  - 어떤 문제점이 있을까?
+    - 동명이인이 있다면, 혹은 특정 데이터가 수정된다면
+  ```sql
+  SELECT *
+  FROM 테이블
+  WHERE writer = '하석주';
+  ``` 
+
+  3. 테이블을 나누어서 분류하자
+  - 각 게시글은 누가 작성했는지 알 수 있을까?
+  - 작성자들의 역할은 무엇인가?
+    - ![26](sql2/pict26.png)
+
+  4. articles와 users 테이블에 각각 userID, roleID 외래 키 필드 작성
+  - 관리자인 사람만 보고싶다면? -> roleID가 1인 데이터 조회
+  - 하석자라는 사람이 권미숙으로 개명한다면? -> users에서 한번만 변경하면 자동으로 모두 변경
+    - ![27](sql2/pict27.png)
+
+- JOIN이 필요한 순간
+  - 테이블을 분리하면 데이터관리는 용이해질 수 있으나 출력시에는 문제가 있음
+  - 테이블 한 개만을 출력할 수 밖에 없어 다른 테이블과 결합하여 출력하는 것이 필요해짐
+  - => 'JOIN'
+
+### Joining tables
+#### JOIN
+- JOIN clause 
+  - 둘 이상의 테이블에서 데이터를 검색하는 방법
+
+- JOIN의 종류
+  - INNER JOIN
+  - LEFT JOIN
+
+- 사전준비
+  1. users 및 articles 테이블 생성
+    ```sql
+    CREATE TABLE users(
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name VARCHAR(50) NOT NULL
+    );
+    ```  
+    ```sql
+    CREATE TABLE articles(
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      title VARCHAR(50) NOT NULL,
+      content VARCHAR(100) NOT NULL,
+      userID INTEGER NOT NULL,
+      FOREIGN KEY (user id)
+        REFERENCES users(id)
+    );
+    ```  
+
+  2. 각 테이블에 실습 데이터 입력
+    ```sql
+    INSERT INTO
+      users (name)
+    VALUES
+      ('하석주'),
+      ('송윤미'),
+      ('유하선');
+    
+    INSERT INTO
+      articles (title, content, userID)
+    VALUES
+      ('제목1', '내용1', 1),
+      ('제목2', '내용2', 2),
+      ('제목3', '내용3', 3),
+      ('제목4', '내용4', 4),
+      ('제목5', '내용5', 5);
+    ```  
+    - ![28](sql2/pict28.png)
+
+#### INNER JOIN
+- INNER JOIN claues
+  - 두 테이블에서 값이 일치하는 레코드에 대해서만 결과를 반환
+  - ![29](sql2/pict29.png)
+
+- INNER JOIN syntax
+  - FROM 절 이후 메인 테이블 지정 (table_a)
+  - INNER JOIN 절 이후 메인 테이블과 조인할 테이블을 지정 (table_b)
+  - ON 키워드 이후 조인 조건을 작성
+  - 조인 조건은 table_a와 table_b 간의 레코드를 일치시키는 규칙을 지정
+  ```sql
+  SELECT 
+    select_list
+  FROM
+    table_a
+  INNER JOIN
+    table_b
+  ON
+    table_b.fk = table_a.pk;
+  ```
+
+- INNER JOIN 예시
+  ```sql
+  SELECT *
+  FROM articles
+  INNER JOIN users
+    ON users.id = articles.userID;
+  ```
+  - ![30](sql2/pict30.png)
+
+- INNER JOIN 활용
+  1. 1번 회원(하석주)가 작성한 모든 게시글의 제목과 작성자명을 조회 
+    ```sql
+    SELECT articles.title, users.name
+    FROM articles
+    INNER JOIN users
+      ON users.id = articles.userID
+    WHERE users.id = 1;
+    ``` 
+    - ![31](sql2/pict31.png)
+
+#### LEFT JOIN
+- LEFT JOIN claues
+  - 오른쪽 테이블의 일치하는 레코드와 함께 왼쪽 테이블의 모든 레코드 반환
+  - ![32](sql2/pict32.png)
+
+- LEFT JOIN syntax
+  - FROM 절 이후 왼쪽 테이블 지정 (table_a)
+  - LEFT JOIN 절 이후 오른쪽 테이블 지정 (table_b)
+  - ON 키워드 이후 조인 조건을 작성
+    - 왼쪽 테이블의 각 레코드를 오른쪽 테이블의 모든 레코드와 일치시킴
+  ```sql
+  SELECT
+    select_list
+  FROM 
+    table_a
+  LEFT JOIN table_b
+    ON table_b.fk = table_a.pk;
+  ```
+
+- LEFT JOIN 예시
+  ```sql
+  SELECT *
+  FROM articles
+  LEFT JOIN users
+    ON users.id = articles.userID;
+  ```
+  - ![33](sql2/pict33.png)
+
+- LEFT JOIN 특징
+  - 왼쪽은 테이블의 모든 레코드를 표기
+  - 오른쪽 테이블과 매칭되는 레코드가 없으면 NULL 표시
+
+- LEFT JOIN 활용
+  - 게시글을 작성한 이력이 없는 회원 정보 조회
+    ```sql
+    SELECT *
+    FROM users
+    LEFT JOIN articles
+      ON articles.userID = users.id
+    WHERE articles.userID IS NULL;
+    ``` 
+    - ![34](sql2/pict34.png)

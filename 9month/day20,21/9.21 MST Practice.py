@@ -18,7 +18,7 @@ def prim(start):
     # MST에 포함되었는 지 여부
     MST = [0] * V
 
-     # 가중치, 정점 정보
+    # 가중치, 정점 정보
     heapq.heappush(heap, (0, start))
     # 누적합 저장
     sum_weight = 0
