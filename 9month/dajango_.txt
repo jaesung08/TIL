@@ -101,7 +101,7 @@ url mapping(혹은 URL 리팩터링)은 URL 경로와 해당 경로를 처리할
 
 여러가지의 앱을 사용하기 위해 Urlmapping 하기!!!
 1. base.html을 앱에서 꺼내서 최상단폴더에서 templates으로 바꿔 여러 어플에 똑같이 적용시킨다면 
-기본 firstpjt의 setting 에서 TEMPLATES에서 DIRS에 BASE_DIR : 'temlplates'를 추가하여 firstpjt에 해당하는 모든 어플이 base를 저걸 참조하도록 만든다.
+기본 firstpjt의 setting 에서 TEMPLATES에서 DIRS에 BASE_DIR / 'temlplates'를 추가하여 firstpjt에 해당하는 모든 어플이 base를 저걸 참조하도록 만든다.
 
 2. 각 앱내에서 urls.py를 만들고
 앱 내에서 작성한 함수들을 가져올 수 있도록 기존 urls.py와 똑같이 작성하되
