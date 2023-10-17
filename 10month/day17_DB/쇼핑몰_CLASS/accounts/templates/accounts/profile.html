@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+
+{% block content %}
+<h1>{{user}}님 페이지</h1>
+<hr>
+<h3>장바구니</h3>
+{% for product in user.cart.all %}
+    <p>{{ forloop.counter }} : {{product.title}}</p>
+    <p class="card-text">가격 : \ {{product.price|intcomma}}</p>
+    <a href="{% url "shop:addcart" product.id %}"><button>제외하기</button></a>
+    <hr>
+    {% empty %}
+    <p>담긴 상품이 없습니다.</p>
+{% endfor %}
+    {% if user.cart.all %}
+
+        
+    총 가격 : \ {{ all_price|intcomma }}
+
+    {% else %}
+
+    총 가격 : \0
+    {% endif %}
+{% endblock content %}
+
+

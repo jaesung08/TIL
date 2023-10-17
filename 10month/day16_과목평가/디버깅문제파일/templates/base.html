@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div>
+        <a href="{% url "menus:index" %}">Home</a>
+      </div>
+      <div>
+        <!-- 
+          문제 01. 로그인 유무에 따른 메뉴 구분 하기
+          Todo : 
+            로그인 X : Home, Login, Sign up, 로그인 필요 안내 (글을 작성하려면 로그인이 필요함)
+            로그인 O : Home, Logout, Welcome 문구 (Welcome, OO!)
+        -->
+        <a href="{% url 'accounts:login' %}">Login</a>
+        <form action={% url "accounts:logout" %} method="POST">
+          {% csrf_token %}
+          <button>Logout</button>
+        </form>
+        <a href="{% url 'accounts:signup' %}">Sign up</a>
+        <p>Welcome, <a href="{% url 'accounts:profile' %}">{{ user }}!</a></p>
+        <div>
+          <a href="{% url 'menus:create' %}" class="new-link">New</a>
+        </div>
+        <div>
+          <p class="new-info">글을 작성하려면 로그인이 필요함</p>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <div>
+    {% block content %}
+    {% endblock content %}
+  </div>
+</body>
+</html>

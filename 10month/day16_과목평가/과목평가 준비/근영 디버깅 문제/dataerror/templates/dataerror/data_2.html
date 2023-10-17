@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>여기는 data_2.html</h1>
+<p>잘 나오나?</p>
+<p>제목 : {{ information.title }}</p>
+<p>내용 : {{ information.content }}</p>
+<p>장르 : {{ information.genre }}</p>
+<p>평점 : {{ information.score }}</p>
+<a href="{% url "dataerror:data3" information.pk %}">Data 3로 이동하기</a>
+
+{% endblock content %}

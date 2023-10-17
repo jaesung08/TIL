@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+<!-- 문제 10. Edit 페이지 Error 해결 -->
+{% block content %}
+  <h1>Edit</h1>
+  <hr>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div>
+      {{ form.as_p }}
+    </div>
+    <button>Edit</button>
+  </form>
+  <hr>
+  <a href="{% url 'menus:detail' menu.pk %}">BACK</a>
+{% endblock content %}

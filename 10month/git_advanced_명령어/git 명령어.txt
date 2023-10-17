@@ -1,0 +1,42 @@
+// 브랜치 확인하기
+$ git branch
+
+
+// first 브랜치 생성하기
+$ git branch first
+
+// 현재 브랜치를 first 브랜치로 이동
+$ git switch first
+
+// 현재 브랜치를 master 브랜치로 이동
+$ git switch master
+
+// first 브랜치를 현재 브랜치에 병합
+$ git merge first
+
+----------------------------------------------------
+
+두 브랜치 병합하기
+
+1. 정상적인 상황 눈으로 보기
+  - first 브랜치에서 test1.txt 생성 후 커밋까지
+  - second 브랜치에서 test2.txt 생성 후 커밋까지
+  - master 브랜치에서 둘 다 병합
+  - $ git branch -D first second
+
+2. 충돌 발생 상황 눈으로 보기
+  - first 브랜치에서 test3.txt 생성 후 커밋까지
+  - second 브랜치에서 test3.txt 생성 후 커밋까지
+  - master 브랜치에서 둘 다 병합
+
+3. 충돌 해결
+  - vi 에디터 or vscode 에서 개발자가 직접 해결해야 합니다.
+  - 해결 후 add, commit
+  - $ git branch -D first second
+
+----------------------------------------------------
+
+최신 commit 메세지 수정하기
+  - $ git commit --amend
+  - 명령어 입력 시 vi 에디터가 열립니다.
+  - 커밋 메세지 수정 후 저장 및 종료(:wq) 입력하면 가장 최근 커밋 메세지가 수정됩니다.

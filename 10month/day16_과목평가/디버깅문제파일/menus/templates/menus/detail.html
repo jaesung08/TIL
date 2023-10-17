@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+  <a href="{% url 'menus:edit' menu.pk %}"></a>
+  <div>
+    <h2>Menu Name : {{ menu.name }}</h2> 
+    <h3>Menu Price : ${{ menu.price }}</h3>
+  </div>
+  <hr>
+  <h4>Description</h4>
+  <div>
+    {{ menu.description }}
+  </div>
+  <hr>
+  <a href="{% url 'menus:edit' menu.pk %}">EDIT</a> / 
+  <a href="{% url 'menus:index' %}">BACK</a>
+
+  <hr>
+  <div>
+    <form action="{% url 'menus:review_create' menu.pk %}" method="POST">
+      {% csrf_token %}
+      {{ review_form.as_p }}
+      <button>댓글 달기</button>
+    </form>
+  </div>
+  <div>
+    <ul>
+      {% for review in review_list %}
+        <li> {{ review.content }} - {{ review.author }} <a href="{% url 'menus:review_delete' menu.pk review.pk %}">[댓글 삭제]</a></li>
+      {% empty %}
+        <li>댓글이 없습니다.</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}

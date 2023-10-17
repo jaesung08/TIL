@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<!-- 
+  문제 09. Edit 페이지 Error 해결 
+  Todo : 정상적으로 수정 페이지가 나타날 수 있도록 에러 해결 필요
+-->
+{% block content %}
+  <h1>Menu Edit</h1>
+  <hr>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div>
+      {{ form.as_p }}
+    </div>
+    <button>Edit</button>
+  </form>
+  <hr>
+  <a href="{% url 'menus:detail' , menus.pk %}">BACK</a>
+{% endblock content %}

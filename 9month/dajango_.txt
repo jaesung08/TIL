@@ -27,7 +27,7 @@ python -m venv venv
 가상환경 실행
 source venv/Scripts/activate or  . venv/Scripts/activate
 가상환경 멈춤
-deactivated
+deactivate
 
 pip list 확인해서 장고가 없으면 설치
 pip install Django
