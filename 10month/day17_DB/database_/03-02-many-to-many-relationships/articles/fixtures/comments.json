@@ -1,0 +1,24 @@
+[
+{
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+        "article": 1,
+        "user": 2,
+        "content": "댓글11",
+        "created_at": "2023-10-17T01:24:17.728Z",
+        "updated_at": "2023-10-17T01:24:17.728Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+        "article": 1,
+        "user": 2,
+        "content": "댓글 22",
+        "created_at": "2023-10-17T01:24:21.461Z",
+        "updated_at": "2023-10-17T01:24:21.461Z"
+    }
+}
+]
