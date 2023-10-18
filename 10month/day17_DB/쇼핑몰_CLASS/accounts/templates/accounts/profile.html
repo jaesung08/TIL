@@ -9,7 +9,10 @@
 {% for product in user.cart.all %}
     <p>{{ forloop.counter }} : {{product.title}}</p>
     <p class="card-text">가격 : \ {{product.price|intcomma}}</p>
-    <a href="{% url "shop:addcart" product.id %}"><button>제외하기</button></a>
+    <form action="">
+        <a href="{% url "shop:addcart" product.id %}"><button>제외하기</button></a>
+    </form>
+    
     <hr>
     {% empty %}
     <p>담긴 상품이 없습니다.</p>

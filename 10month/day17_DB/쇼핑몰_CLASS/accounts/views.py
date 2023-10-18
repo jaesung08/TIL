@@ -43,10 +43,8 @@ def logout(request):
     auth_logout(request)
     return redirect("shop:index")
 
-from shop.models import Product
+
 from django.db.models import Sum
-
-
 def profile(request, user_pk):
     user = request.user
     all_price = user.cart.all().aggregate(Sum("price"))
