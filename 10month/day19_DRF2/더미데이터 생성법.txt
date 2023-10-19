@@ -1,0 +1,13 @@
+더미 데이터 생성
+https://github.com/Brobin/django-seed
+
+pip install django-seed.
+
+INSTALLED_APPS = (
+    ...
+    'django_seed',
+)
+
+pip install psycopg2
+
+python manage.py seed api --number=원하는값
