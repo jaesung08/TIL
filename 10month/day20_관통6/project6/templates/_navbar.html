@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100">
+        <div class="d-flex justify-content-between w-100">
+        <li class="nav-item" style="width: 10%">
+          <a class="nav-link" aria-current="page" href="{% url 'boards:index' %}">메인 페이지</a>
+        </li>
+        
+        {% if request.user.is_authenticated %}
+          <ul class="navbar-nav d-flex justify-content-between" style="width:90%">
+              <a class="nav-link" href="{% url "accounts:profile" user.pk %}"> 프로필 페이지 </a>
+            <div class="d-flex">
+                <form action="{% url "accounts:logout"  %}" method = 'POST' style="display: inline;">
+                  {% csrf_token %}
+                  <input type="submit" class="btn btn-link text-black" value = "로그아웃" style="text-decoration: none;">
+                </form> 
+            </div>
+
+            {% comment %} <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'accounts:logout' %}">로그아웃</a>
+            </li> {% endcomment %}
+          {% else %}
+          <ul class="navbar-nav d-flex justify-content-end" style="width:90%">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'accounts:signup' %}">회원가입</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'accounts:login' %}">로그인</a>
+            </li>
+            {% endif %}
+          </ul> 
+      </div>
+      </ul>
+    </div>
+  </div>
+</nav>

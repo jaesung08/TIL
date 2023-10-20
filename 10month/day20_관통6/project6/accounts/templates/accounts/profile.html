@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>{{person.username}}님의 프로필</h1>
+<hr>
+<div>
+    팔로잉 : {{person.followings.count}}  |  팔로워 : {{person.followers.count}}
+</div>
+<hr>
+{% if request.user.is_authenticated %}
+    {% if request.user != person %}
+    <form action="{% url "accounts:follow" person.pk %}" method = "POST">
+        {% csrf_token %}
+        {% if request.user in person.followers.all %}
+            <button type="submit" class = "btn btn-primary">언팔로우</button>
+        {% else %}
+            <button type="submit" class = "btn btn-primary">팔로우</button>
+            {% endif %}
+        {% endif %}
+{% endif %}
+</form>
+<h3>{{ person.username }}님이 작성한 게시글</h3>
+{% for board in person.board_set.all %}
+    <div class = "card">
+        <div class = "card-body">
+            <h5 class = "card-title">제목 : {{board.title}} </h5>
+            <p class = "card-text">내용 : {{board.content}} </p>
+            <a href="{% url "boards:detail" board.pk%}" class = "btn btn-light">자세히 보기</a>
+        </div>
+    </div>
+    
+    <hr>
+    {% empty %}
+    <p>작성한 게시글이 없습니다.</p>
+{% endfor %}
+<h4>{{ person.username }}님이 작성한 댓글</h4>
+{% for comment in person.comment_set.all %}
+    <div class = "card">
+        <div class = "card-body">
+            <h5 class = "card-title">글 제목 : {{comment.board.title}} </h5>
+            <p class = "card-text">댓글 내용 : {{comment.content}} </p>
+            <a href="{% url "boards:detail" comment.board.pk %}" class = "btn btn-light">자세히 보기</a>
+        </div>
+    </div>
+    
+    <hr>
+    {% empty %}
+    <p>작성한 댓글이 없습니다.</p>
+{% endfor %}
+
+{% endblock content %}
+
+
