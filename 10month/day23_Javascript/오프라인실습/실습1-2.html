@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘 할 일</h1>
+    <hr>
+    <ul>
+        <li>수업 복습 하기</li>
+        <li>실습 문제 풀기</li>
+        <li>스터디 참여하기</li>
+        <li>1 일 1 커밋하기</li>
+        <li id="game">게임 하기</li>
+    </ul>
+    <script>
+        // h1 태그 이름 바꾸기
+        const title = document.querySelector('h1');
+        title.textContent = '오늘 공부 목록';
+        console.log(title);
+
+        // ul태그 class 추가해주기
+        const studyList = document.querySelector('ul');
+        // classname은 class 명이 없을 때 사용하면 오류는 나지 않으나 빈값이 출력
+        // studyList.classname = 'study';
+        // console.log(studyList);
+        studyList.classList.add('study');
+        console.log(studyList.classList);
+
+        // id = game 인 요소 없애주기
+        const itemgame = document.querySelector('#game')
+        studyList.removeChild(itemgame)
+    </script>
+    </body>
+</html>

@@ -576,7 +576,7 @@ https://gist.github.com/yts0275/33692ef95e622b7d5cfd02cd77a4b7e6
 # SQL2
 ## Managing Tables
 - SQL Statements 유형
-![1](sql2/sql1/pict1.png)
+![1](sql2/pict1.png)
 ### Create a table
 - CREATE TABLE statement
   - 테이블 생성
@@ -584,7 +584,7 @@ https://gist.github.com/yts0275/33692ef95e622b7d5cfd02cd77a4b7e6
 - CREATE TABLE syntax
   - 각 필드에 적용할 데이터 타입 작성
   - 테이블 및 필드에 대한 제약조건(constraints)작성
-  - ![2](sql2/sql1/pict2.png)
+  - ![2](sql2/pict2.png)
 
 + CREATE TABLE 활용
   1. examples 테이블 생성 및 확인
@@ -797,7 +797,7 @@ https://gist.github.com/yts0275/33692ef95e622b7d5cfd02cd77a4b7e6
     VALUES
       ('hello', 'world', '2000-01-01')
     ```
-      - ![17](sql2/pict17.png)
+    - ![17](sql2/pict17.png)
 
   2. articles 테이블에 다음과 같은 데이터 추가 입력
     ```sql
