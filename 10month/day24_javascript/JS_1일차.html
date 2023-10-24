@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 헷갈리는 문법들
+        // 1. null 과 undefined
+        // let data = 서버로부터 데이터를 받아오는 함수
+        // console.log(data) 결과가
+        // undefined ?
+        // -> 서버로부터 데이터를 못 받아왔다!
+        // null ?
+        // -> 서버에 데이터가 없다 라고 명시한 것!
+        let a
+        console.log(a)      // undefined
+        console.log(a == undefined) // true
+        console.log(a == null)      // true
+        console.log(a === undefined) // true
+        console.log(a === null) // false
+
+        console.log('------------------------')
+
+        // 2. 문자열 비교
+        // JS에서 문자열은
+        // "원시 타입 문자열"과
+        // "객체처럼 쓰는 문자열"이 따로 있다!
+        let str = "test"
+        // new: 새로운 객체를 만들겠다!
+        let str2 = new String("test")
+        
+        console.log(typeof(str))
+        console.log(typeof(str2))
+        
+        // "test"는 원시값인데,
+        // toUpperCase 메서드를 어떻게 가지고 있을까 ?
+        // JS 는 내부적으로 원시타입에 대해
+        //        내장 객체를 가지고 있다
+        //  -> 원시 타입 사용 시에 내장 객체로 해석
+        // 아래 코드가 버그가 안난다!
+        console.log("test".toUpperCase())
+        console.log(str2.toUpperCase())
+
+        console.log(`1 = ${str == str2}`)   // true
+        console.log(`2 = ${str === str2}`)   // false
+        // 객체끼리의 비교: 주소값이 다르므로 false
+        console.log(`3 = ${str2 == new String("test")}`)   // false
+        console.log(`4 = ${str2 === new String("test")}`)   // false
+
+        // 3. 문자열로 이루어진 숫자
+        console.log('---------------')
+        console.log(`1. = ${1 + 2}`)  // 3
+
+        // 정수 -> 문자열로 형변환됨
+        console.log(`2. = ${'1' + 2}`)  // 12
+        console.log(`3. = ${1 + '2'}`)  // 12
+        
+        // 덧셈을 제외한 연산: 문자열 -> 숫자로 형변환됨
+        console.log(`4. = ${5 - '2'}`)  // 3
+        console.log(`4. = ${5 * '2'}`)  // 10
+        console.log(`4. = ${5 / '2'}`)  // 2.5
+        
+        // 이런 문제 헷갈림
+        console.log("10" * 3 + "10" - 2)    // 3008
+        console.log("10" * 3 + "10" / 2)    // 35
+        
+        // 4. Boolean 형변환
+        let str3 = "hello"
+        let bool = true
+
+        // 문자열로 형변환 되어서 계산
+        // 덧셈은 문자열이 우선순위가 높은편이다!
+        console.log(str3 + bool)  // hellotrue
+        console.log(str3 - bool)  // NaN(Not-a-Number)
+        console.log(str3 * bool)  // NaN(Not-a-Number)
+        console.log(str3 / bool)  // NaN(Not-a-Number)
+
+        // true: 1, false: 0 으로 계산됨
+        console.log(3 + false)      // 3
+        console.log(3 - true)      // 2
+        console.log(3 / 0)      // Infinity
+
+        // 스코프
+        // 함수, 변수에 접근할 수 있는 범위
+        // 변수, 함수 호출 or 참조 시
+        // 1. 내가 현재 있는 스코프를 가장 먼저 탐색
+        // 2. 없다면, 상위 스코프를 탐색
+        // 스코프 종류
+        //      전역, 로컬(블록, 함수)
+
+        let scope1 = 10
+        let scope2 = 30
+        // 블록 스코프
+        // 중괄호로 둘러쌓인 범위
+        {
+            // console.log(scope1) // let 사용 시 버그
+                                // var 사용 시 밖에서 찾아옴
+            let scope1 = 20
+            console.log(scope1)
+            console.log(scope2) // 30
+        }
+
+        // 버그가 나는 이유를 명확하게 알아야 한다!
+        if (true) {
+            let inner_data = 10
+        }
+
+        {
+            console.log(inner_data)
+        }
+
+
+
+        let number = 13
+        number++
+        console.log(number++)
+        console.log(++number)
+        console.log(10 + ++number + 10)
+        console.log(10 + number++ + 10)
+        console.log(10 + number++ + '10')
+        console.log(number)
+        
+    </script>
+</body>
+</html>
+
+
