@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Input: <input id="userInput" type="text" autofocus>
+    </div>
+    <div>
+        Output: <span id="output"></span>
+    </div>
+
+    <script>
+        /* 
+        현재 코드에서는 input#userInput에 입력한 내용이 그대로 span#output에 출력된다.
+        아래 이미지를 참고하여 badWords에 포함된 단어가 사용자 입력에 포함되어 있을 경우,
+        span#output에서 해당 단어를 **로 바꿔 출력하도록 filterMessage 함수를 완성하시오.
+      */
+        const badWords = ['바보', '멍청', '메롱', ]
+        const userInput = document.querySelector('#userInput')    
+        const output = document.querySelector('#output')
+
+        // function filterMessage(event) {
+        // // badWords에 포함된 단어가 입력될 경우, '**'으로 변환하여 output에 출력
+        // if (badWords.find((element)=>{
+        //     return element === userInput.value
+        // })) {
+        //     console.log("bad word 발견");
+        //     output.innerText = '*'.repeat(userInput.value.length)
+        // } else{
+        //     output.innerText = userInput.value
+        // }
+        
+        // }
+
+        function filterMessage() {
+            const text = userInput.value;
+            let filteredInput = text;
+            
+            // badWords 배열에 있는 모든 나쁜 단어를 '**'로 바꾸기
+            badWords.forEach(badWord => {
+                // gi 플래그를 사용하는 경우, g는 문자열 전체, i는 대소문자 구분 
+                // 대소문자를 구분하지 않고 전체 문자열에서 모든 일치 항목을 찾는다/
+                const regex = new RegExp(badWord, 'gi');
+                filteredInput = filteredInput.replace(regex, '*'.repeat(badWord.length));
+            });
+
+            output.innerText = filteredInput;
+        }
+
+        // function filterMessage() {
+        // let text = userInput.value
+        // for (const badWord of badWords) {
+            // const regex = new RegExp(badWords, 'gi')
+        //     text = text.replace(badWord, '*'.repeat(badWord.length))
+        // }
+        // output.innerText = text
+        // }
+
+        userInput.addEventListener('input', filterMessage)   
+    </script>
+</body>

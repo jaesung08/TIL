@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .done {
+        text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <form action="/todos/">
+        <input type="text">
+        <button>Todo</button>
+    </form>
+    <ul></ul>
+
+<script>
+    const form = document.querySelector('form')
+    
+    
+
+    function addTodo (event) {
+        // 이벤트를 취소한다.
+        // form태그의 경우 action쪽으로 요청을 보내지 않음
+        event.preventDefault();
+
+        // 입력 element를 찾고 해당 입력 element의 value 값을 저장한다.
+        const inputData = document.querySelector('input')
+        const inputValue = inputData.value
+
+        // 아무것도 입력하 않았다면, 이벤트 종료! 
+        if (inputValue.trim().length === 0) {
+            alert('입력 값이 비었습니다.')
+            return
+        }
+
+        // li element를 생성 후 input element의 value 값을 데이터로 저장한다
+        const liTag = document.createElement('li')
+        liTag.textContent = inputValue
+
+        // ul 태그의 자식 태그로 위에서 생성한 li element를 넣는다.
+        const ulTag = document.querySelector('ul')
+        ulTag.appendChild(liTag)
+
+        // 입력 받은 후 입력 값 지우기
+        inputData.value = "";
+        // inputValue.value = ""; // 그냥 변수값만 바뀌고 DOM에는 반영 되지 않음.
+
+
+        // 삭제 버튼을 생성 후 li 태그의 자식 태그로 넣는다.
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = 'X'
+        // 삭제 버튼에 margin-left : 10px 추가하기
+        // 요소.style.CSS이름 : CSS이름에 style을 조작할 수 있는 많은 property가 있음
+        deleteBtn.style.marginLeft = '10px'
+        liTag.appendChild(deleteBtn);
+        
+            
+        // 삭제 버튼을 클릭하면 해당 li element를 삭제한다
+        deleteBtn.addEventListener('click', (event) => {
+            // liTag.remove()
+            // li element를 클릭하면 취소선이 토글된다.
+            if (liTag.style.textDecoration == 'line-through') {
+                liTag.style.textDecoration = 'none'
+            } else{
+                liTag.style.textDecoration = 'line-through'
+            }
+        })
+
+        
+        
+
+    }
+    form.addEventListener('submit', addTodo)
+</script>
+</body>
+</html>

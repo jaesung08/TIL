@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warning-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign up</h1>
+    <form>
+        <div>
+            <label for="username">username: </label>
+            <input type="text" id="username">
+        </div>
+
+        <div>
+            <label for="password1">password: </label>
+            <input type="password" id="password1">
+            <span id="warning1" class="warning-message"></span>
+        </div>
+
+        <div>
+            <label for="password2">password confirmation: </label>
+            <input type="password" id="password2">
+            <span id="warning2" class="warning-message"></span>
+        </div>
+        
+        <button>Signup</button>
+    </form>
+
+    <script>
+        const password1 = document.querySelector("#password1");
+        const password2 = document.querySelector("#password2");
+        const warning1 = document.querySelector("#warning1");
+        const warning2 = document.querySelector("#warning2");
+
+        // 비밀번호 유효성 검사 함수
+        function validatePassword() {
+            const password1Value = password1.value;
+            const password2Value = password2.value;
+
+            // 에러 메시지 초기화
+            warning1.textContent = "";
+            warning2.textContent = "";
+
+            // 조건 1: password1이 8자를 넘지 않으면 에러 메시지 출력
+            if (password1Value.length < 8) {
+                warning1.textContent = "비밀번호는 8자 이상이어야 합니다.";
+            }
+
+            // 조건 2: password2가 password1과 같지 않으면 에러 메시지 출력
+            if (password1Value !== password2Value) {
+                warning2.textContent = "비밀번호가 일치하지 않습니다.";
+            }
+        }
+
+        // 비밀번호 입력 시 유효성 검사 수행
+        password1.addEventListener("input", validatePassword);
+        password2.addEventListener("input", validatePassword);
+    </script>
+</body>
+</html>
