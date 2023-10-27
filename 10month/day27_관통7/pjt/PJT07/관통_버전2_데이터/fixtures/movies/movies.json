@@ -1,0 +1,143 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 1,
+    "fields": {
+        "title": "The Super Mario Bros. Movie",
+        "overview": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+        "release_date": "2023-04-05T00:00:00Z",
+        "poster_path": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        "actors": [
+            6
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 2,
+    "fields": {
+        "title": "Shazam! Fury of the Gods",
+        "overview": "Billy Batson and his foster siblings, who transform into superheroes by saying \"Shazam!\", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
+        "release_date": "2023-03-15T00:00:00Z",
+        "poster_path": "/3GrRgt6CiLIUXUtoktcv1g2iwT5.jpg",
+        "actors": [
+            6,
+            9
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 3,
+    "fields": {
+        "title": "Avatar: The Way of Water",
+        "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+        "release_date": "2022-12-14T00:00:00Z",
+        "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+        "actors": [
+            1,
+            9
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 4,
+    "fields": {
+        "title": "Creed III",
+        "overview": "After dominating the boxing world, Adonis Creed has been thriving in both his career and family life. When a childhood friend and former boxing prodigy, Damien Anderson, resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face-off between former friends is more than just a fight. To settle the score, Adonis must put his future on the line to battle Damien — a fighter who has nothing to lose.",
+        "release_date": "2023-03-01T00:00:00Z",
+        "poster_path": "/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+        "actors": [
+            7,
+            8
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 5,
+    "fields": {
+        "title": "Murder Mystery 2",
+        "overview": "After starting their own detective agency, Nick and Audrey Spitz land a career-making case when their billionaire pal is kidnapped from his wedding.",
+        "release_date": "2023-03-28T00:00:00Z",
+        "poster_path": "/s1VzVhXlqsevi8zeCMG9A16nEUf.jpg",
+        "actors": [
+            1,
+            8,
+            10
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 6,
+    "fields": {
+        "title": "Ant-Man and the Wasp: Quantumania",
+        "overview": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+        "release_date": "2023-02-15T00:00:00Z",
+        "poster_path": "/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg",
+        "actors": [
+            2,
+            5,
+            7
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 7,
+    "fields": {
+        "title": "65",
+        "overview": "65 million years ago, the only 2 survivors of a spaceship from Somaris that crash-landed on Earth must fend off dinosaurs and reach the escape vessel in time before an imminent asteroid strike threatens to destroy the planet.",
+        "release_date": "2023-03-02T00:00:00Z",
+        "poster_path": "/rzRb63TldOKdKydCvWJM8B6EkPM.jpg",
+        "actors": [
+            5,
+            9,
+            10
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 8,
+    "fields": {
+        "title": "Chupa",
+        "overview": "While visiting family in Mexico, a lonely boy befriends a mythical creature hiding on his grandfather's ranch and embarks on the adventure of a lifetime.",
+        "release_date": "2023-04-07T00:00:00Z",
+        "poster_path": "/ra3xm8KFAkwK0CdbPRkfYADJYTB.jpg",
+        "actors": [
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 9,
+    "fields": {
+        "title": "Puss in Boots: The Last Wish",
+        "overview": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+        "release_date": "2022-12-07T00:00:00Z",
+        "poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+        "actors": [
+            6
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 10,
+    "fields": {
+        "title": "John Wick: Chapter 4",
+        "overview": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+        "release_date": "2023-03-22T00:00:00Z",
+        "poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+        "actors": [
+            1,
+            5
+        ]
+    }
+}
+]
