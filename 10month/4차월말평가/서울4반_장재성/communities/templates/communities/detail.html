@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>리뷰 정보 페이지</h1>
+  <hr>
+  <div>
+    <h2>작성한 리뷰</h2>
+    <div>{{ review.comment }}</div>
+  </div>
+  <div>
+    <h3>댓글 단 책 정보</h3>
+    <div>title : {{ review.book.title }}</div>
+    <div>저자 : {{ review.book.author }}</div>
+    <div>책 가격 : {{ review.book.price }}</div>
+    <div>책 소개 : {{ review.book.description }}</div>
+  </div>
+</body>
+</html>
