@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>{{message}}</h1>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.min.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+        const app = createApp({
+            setup() {
+                const message = ref("hello Vue")
+
+                return{
+                    message,
+                }
+            }
+        })
+
+        app.mount('#app');
+    </script>
+</body>
+</html>
