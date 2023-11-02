@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .completed {
+            text-decoration : line-through;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div id ="app">
+        <h1>할 일 목록</h1>
+        <div>
+            <input type="text" v-model.trim = "newTodo" @keyup.enter="addTodo">
+            <button v-on:click = "addTodo"> 추가</button>
+        </div>
+        <!-- {{ newTodo }}
+        <p>{{ todos }}</p> -->
+        <!-- 할일 목록을 나열 -->
+        <ul>
+            <!-- vue는 렌더링 시 "변경되 부분만" 최소한으로 재렌더링함-->
+            <!-- 즉, 내가 지금 당장 필요없는 부분은 신경쓰지 않는다. -->
+            <!-- ex) 3번째 todo를 삭제 -->
+            <!-- deleteTodo(현재 기준 3번째) -->
+            <!-- toggleTodoStatus(현재 기준 3번째 => 사실은 4번째 todo) -->
+            <!-- 내부적으로 효율적인 구조로 인해 우리가 신경써야할 부분이 많다! -->
+            <!-- 내부적인 구조 : virtual DOM 검색해보기 -->
+            <li v-for="(todo, index) in todos" :key="todo.id" @click="toggleTodoStatus(todo)" :class="{ 'completed': todo.completed }" >
+                {{ index + 1}} : {{ todo.text }}
+                <button @click="deleteTodo(index)">삭제</button>
+            </li>
+        </ul>
+        <!-- computed 활용 (v-if) : 요소 자체가 안보임  -->
+        <!-- 처음에 없다: 눈에 보이지 않아도 되는 상황이 많다면 유리 -->
+        <!-- 즉 자주 변경 되거나 보여야 한다면 비효율적 -->
+        <!-- <button v-if="todoCount()"  @click="deleteCompletedTodos"> 완료된 할 일 삭제</button> -->
+        <button v-if="todoCount"  @click="deleteCompletedTodos"> 완료된 할 일 삭제</button>
+
+        <!-- v-show : display none 상태 - 우리 눈에만 안보임 -->
+        <!-- 우리눈에 보이진 않지만 DOM에는 존재  -->
+        <!-- 즉, 안보이는 상황이 많다면 비효율적 -->
+        <button v-show="todoCount"  @click="deleteCompletedTodos"> 완료된 할 일 삭제</button>
+        
+    </div>
+    
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref, computed } = Vue;
+        
+        // 앱 만들기
+        const app = createApp({
+            // 앱 생성될 때 호출되는 메서드 setup()
+            setup() {
+                // 할 일 목록
+                const todos = ref([]);
+                // 사용자의 입력을 받을 변수
+                const newTodo = ref('');
+
+                let todoId = 1;
+
+                // 새로운 할 일을 추가하는 메서드
+                const addTodo = () => {
+                    // 사용자의 입력 값 공백 제거
+                    const trimmedInput = newTodo.value.trim();
+                    if (trimmedInput === "") {
+                        // 입력이 공백이면 아무 작업도 수행하지 않음
+                        return;
+                    }
+
+                    const tmp = {
+                        id: todoId++,
+                        text: newTodo.value,
+                        completed: false,
+                    }
+                    // todos 안에 newTodo를 추가
+                    todos.value.push(tmp)
+                    newTodo.value = '' // 입력필드 초기화
+                }
+
+                const deleteTodo = (index) => {
+                    todos.value.splice(index, 1)
+                }
+
+                const toggleTodoStatus = (todo) => {
+                    todo.completed = !todo.completed
+                }
+
+                const deleteCompletedTodos = () => {
+                    // todo.completed 가 true 인 것만 삭제
+                    // == todo.completed 가 false 인것만 배열에서 남기기
+                    todos.value = todos.value.filter((todo) => {
+                        // return todo.completed === false
+                        return !todo.completed
+                    })
+                }
+                
+                // computed : 계산된 속성
+                // 기존 변수를 수정하지 않고, 계산된 값만 가지고 새로운 변수를 만들고 싶을때
+                const todoCount = computed(() => {
+                    return todos.value.filter((todo) => todo.completed).length > 0
+                }) 
+                    
+
+                return {
+                    todos,
+                    newTodo,
+                    addTodo,
+                    deleteTodo,
+                    toggleTodoStatus,
+                    deleteCompletedTodos,
+                    todoCount,
+
+                }
+            }
+        })
+        // app을 동기화 시킨다
+        app.mount('#app')
+    </script>
+</body>
+</html>
