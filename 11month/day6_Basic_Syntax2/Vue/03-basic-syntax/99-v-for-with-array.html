@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- v-for와 배열 "원본 데이터를 수정하거나 교체하지 않고 사용하기"-->
+
+    <!-- 1. computed -->
+    <ul>
+      <li v-for="number in evenNumbers">
+        {{ number }}
+      </li>
+    </ul>
+
+    <hr>
+
+    <!-- 2. method (computed가 불가능한 중첩된 v-for) -->
+    <ul v-for="numbers in numberSets">
+      <li v-for="num in evenNumberSets(numbers)">
+        {{ num }}
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref, computed } = Vue
+
+    const app = createApp({
+      setup() {
+        const numbers = ref([1, 2, 3, 4, 5])
+        const numberSets = ref([
+          [1, 2, 3, 4, 5],
+          [6, 7, 8, 9, 10],
+        ])
+
+        const evenNumbers = computed(() => {
+          return numbers.value.filter((number) => number % 2 === 0)
+        })
+
+        const evenNumberSets = function (numbers) {
+          return numbers.filter((number) => number % 2 === 0)
+        }
+
+        return {
+          numberSets,
+          evenNumbers,
+          evenNumberSets
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

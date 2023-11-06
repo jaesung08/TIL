@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전시 정보</title>
+</head>
+<body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <div id="app">
+    <h1>다양한 전시 정보</h1>
+    <label for="isActive">전시 중인 정보만 보기</label>
+    <input type="checkbox" id="isActive" v-model="isActive">
+    <ul>
+      <li v-for="exhibition in filteredExhibitions">
+        <h3>{{ exhibition.name }}</h3>
+        <hr>
+        <p>전시 장소: {{ exhibition.location }}</p>
+        <p>가격: {{ exhibition.price }}</p>
+        <hr>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    /*
+	1. 주어진 전시 정보를 객체에 담고, 모든 객체를 하나의 배열에 할당하시오.
+    2. 전시 정보가 True인 경우만 filtering한 배열을 반환하는 isActiveExhibition computed 함수를 작성한다.
+    3. 전시 중인 정보만 볼 것인지 체크하는 변수 isActive를 작성한다.
+		- checkBox의 값과 양방향 바인딩 되어야 한다.
+        - isActive가 True인 경우, isActiveExhibition 배열을 화면에 렌더링한다.
+        - 아닌경우, 모든 객체 정보를 담고 있는 배열을 화면에 렌더링한다.
+    */
+    // Vue 인스턴스 생성 및 전시 정보 데이터 정의
+    const { createApp, ref, computed } = Vue;
+    const app = createApp({
+      setup() {
+        // 전시 정보 배열을 ref로 정의
+        const exhibitions = ref([
+          {
+            name: "무라카미 다카시 : 무라카시좀비",
+            location: "부산 시립 미술관",
+            price: "1000",
+            isActive: true,
+          },
+          {
+            name: "마우라치오 카텔란 개인전",
+            location: "리움 미술관",
+            price: "30000",
+            isActive: true,
+          },
+          {
+            name: "조선백자전",
+            location: "리움 미술관",
+            price: "30000",
+            isActive: true,
+          },
+          {
+            name: "한국 실험미술 1960 - 1970",
+            location: "국립현대미술관",
+            price: "0",
+            isActive: true,
+          },
+          {
+            name: "에드워드 호퍼 : 길 위에서",
+            location: "서울 시립 미술관",
+            price: "1000",
+            isActive: false,
+          },
+          {
+            name: "알렉산더 칼더 x 이우환",
+            location: "국제갤러리 서울점",
+            price: "15000",
+            isActive: false,
+          }
+        ]);
+
+        // isActive 변수를 정의하고 체크박스와 양방향 바인딩
+        const isActive = ref(false);
+
+        // isActiveExhibition을 계산된 속성으로 정의하여 필터링된 전시 정보를 반환
+        const filteredExhibitions = computed(() => {
+          if (isActive.value) {
+            return exhibitions.value.filter((exhibition) => exhibition.isActive);
+          } else {
+            return exhibitions.value;
+          }
+        });
+
+        return {
+          exhibitions,
+          isActive,
+          filteredExhibitions,
+        };
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전시 정보</title>
+  <style>
+    li {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      background-color: #f5f5f5;
+    }
+    .cheap {
+      background-color: #e1f7e1;
+    }
+    .expensive {
+      background-color: #f7e1e1;
+    }
+    .selected {
+      background-color: #ffc;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <div id="app">
+    <h1>다양한 전시 정보</h1>
+    <label for="isActive">전시 중인 정보만 보기</label>
+    <input type="checkbox" id="isActive" v-model="isActive">
+    <ul>
+      <li v-for="exhibition in filteredExhibitions" :class="{'normal': exhibition.price > 5000 && exhibition.price < 20000, 'cheap': exhibition.price <= 5000, 'expensive': exhibition.price >= 20000}">
+        <h3>{{ exhibition.name }}</h3>
+        <hr>
+        <p>전시 장소: {{ exhibition.location }}</p>
+        <p>가격: {{ exhibition.price }} 원</p>
+        <p v-if="exhibition.price === 0">무료 전시입니다.</p>
+        <hr>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    /*
+    1. 주어진 전시 정보를 객체에 담고, 모든 객체를 하나의 배열에 할당하시오.
+    2. li태그에 조건부 클래스 바인딩을 활용하여 적절한 클래스를 부여하시오.
+        - 전시 가격이 5000 이하이면 cheap 클래스를 부여한다.
+        - 전시 가격이 20000 이상이면 expensive 클래스를 부여한다.
+    3. 전시 가격이 0원인 경우, 가격 표시 아래에 "무료 전시입니다." 문구를 보여준다.
+    */
+    // Vue 인스턴스 생성 및 전시 정보 데이터 정의
+    const { createApp, ref, computed } = Vue;
+    const app = createApp({
+      setup() {
+        // 전시 정보 배열을 ref로 정의
+        const exhibitions = ref([
+          {
+            name: "무라카미 다카시 : 무라카시좀비",
+            location: "부산 시립 미술관",
+            price: 1000,
+            isActive: true,
+          },
+          {
+            name: "마우라치오 카텔란 개인전",
+            location: "리움 미술관",
+            price: 30000,
+            isActive: true,
+          },
+          {
+            name: "조선백자전",
+            location: "리움 미술관",
+            price: 30000,
+            isActive: true,
+          },
+          {
+            name: "한국 실험미술 1960 - 1970",
+            location: "국립현대미술관",
+            price: 0,
+            isActive: true,
+          },
+          {
+            name: "에드워드 호퍼 : 길 위에서",
+            location: "서울 시립 미술관",
+            price: 1000,
+            isActive: false,
+          },
+          {
+            name: "알렉산더 칼더 x 이우환",
+            location: "국제갤러리 서울점",
+            price: 15000,
+            isActive: false,
+          }
+        ]);
+
+        // isActive 변수를 정의하고 체크박스와 양방향 바인딩
+        const isActive = ref(false);
+
+        // isActiveExhibition을 계산된 속성으로 정의하여 필터링된 전시 정보를 반환
+        const filteredExhibitions = computed(() => {
+          if (isActive.value) {
+            return exhibitions.value.filter((exhibition) => exhibition.isActive);
+          } else {
+            return exhibitions.value;
+          }
+        });
+
+        return {
+          exhibitions,
+          isActive,
+          filteredExhibitions,
+        };
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전시 정보</title>
+  <style>
+    li {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      background-color: #f5f5f5;
+    }
+    .cheap {
+      background-color: #e1f7e1;
+    }
+    .expensive {
+      background-color: #f7e1e1;
+    }
+    .selected {
+      background-color: #ffc;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <div id="app">
+    <h1>다양한 전시 정보</h1>
+    <label for="isActive">전시 중인 정보만 보기</label>
+    <input type="checkbox" id="isActive" v-model="isActive">
+    <ul>
+      <li v-for="exhibition in filteredExhibitions" :class="{'normal': exhibition.price > 5000 && exhibition.price < 20000, 'cheap': exhibition.price <= 5000, 'expensive': exhibition.price >= 20000}">
+        <div v-if="exhibition.isActive">
+            <label for="isSelected">전시 관람 하기</label>
+            <input type="checkbox" id="isSelected" v-model="exhibition.isSelected">
+        </div>
+        <div v-else style="color: red;">
+            <p>전시가 종료되어 관람 할 수 없습니다.</p>
+        </div>
+        <h3>{{ exhibition.name }}</h3>
+        <hr>
+        <p>전시 장소: {{ exhibition.location }}</p>
+        <p>가격: {{ exhibition.price }} 원</p>
+        <p v-if="exhibition.price === 0">무료 전시입니다.</p>
+        <hr>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    /*
+    1. 주어진 전시 정보를 객체에 담고, 모든 객체를 하나의 배열에 할당하시오.
+        - 각 전시마다 선택되었는지를 확인할 수 있는 isSelected 속성을 추가한다.
+    2. 각 전시 관람하기 버튼은 해당 전시 정보의 isSelected 정보와 양방향 바인딩 되어야 한다.
+        - 단, isActive 가 '전시 중'인 경우에만 전시 관람하기 버튼이 렌더링되어야 한다.
+        - '전시 종료'인 경우, '전시가 종료되어 관람할 수 없습니다' 문구가 렌더링 되어야 한다.
+    */
+    // Vue 인스턴스 생성 및 전시 정보 데이터 정의
+    const { createApp, ref, computed } = Vue;
+    const app = createApp({
+      setup() {
+        // 전시 정보 배열을 ref로 정의
+        const exhibitions = ref([
+          {
+            name: "무라카미 다카시 : 무라카시좀비",
+            location: "부산 시립 미술관",
+            price: 1000,
+            isActive: true,
+            isSelected: false,
+          },
+          {
+            name: "마우라치오 카텔란 개인전",
+            location: "리움 미술관",
+            price: 30000,
+            isActive: true,
+            isSelected: false,
+          },
+          {
+            name: "조선백자전",
+            location: "리움 미술관",
+            price: 30000,
+            isActive: true,
+            isSelected: false,
+          },
+          {
+            name: "한국 실험미술 1960 - 1970",
+            location: "국립현대미술관",
+            price: 0,
+            isActive: true,
+            isSelected: false,
+          },
+          {
+            name: "에드워드 호퍼 : 길 위에서",
+            location: "서울 시립 미술관",
+            price: 1000,
+            isActive: false,
+            isSelected: false,
+          },
+          {
+            name: "알렉산더 칼더 x 이우환",
+            location: "국제갤러리 서울점",
+            price: 15000,
+            isActive: false,
+            isSelected: false,
+          }
+        ]);
+
+        // isActive 변수를 정의하고 체크박스와 양방향 바인딩
+        const isActive = ref(false);
+
+        // isActiveExhibition을 계산된 속성으로 정의하여 필터링된 전시 정보를 반환
+        const filteredExhibitions = computed(() => {
+          if (isActive.value) {
+            return exhibitions.value.filter((exhibition) => exhibition.isActive);
+          } else {
+            return exhibitions.value;
+          }
+        });
+
+        return {
+          exhibitions,
+          isActive,
+          filteredExhibitions,
+        };
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
