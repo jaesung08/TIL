@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app1">텍스트를 변경</div>
+  <div id="app2">DOM 직접 조작</div>
+  <div id="app3">{{ message }}</div>
+  <!-- 
+  Vue 를 왜 쓸까?
+  성능이 좋다던데, 비교를 해보자
+  JS DOM 조작: DOM 트리를 전부 다시 그린다
+  Virtual DOM : 변경이 끝난 후, 변경된 부분만 다시 변경 
+-->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const app1 = document.querySelector('#app1')
+    const updateFunc1 = function() {
+      for(let i = 0 ; i < 100000 ; i++) {
+        app1.textContent = '변경하기'
+      }
+    }
+
+    const start = performance.now()
+    updateFunc1()
+    const end = performance.now()
+
+    console.log(`textContent 변경 = ${end - start}`)
+
+    const app2 = document.querySelector('#app2')
+    const updateFunc2 = function() {
+      for(let i = 0 ; i < 100000 ; i++) {
+        app2.innerHTML = '변경'
+      }
+    }
+
+    const start2 = performance.now()
+    updateFunc2()
+    const end2 = performance.now()
+
+    console.log(`innerHTML 변경 = ${end2 - start2}`)
+
+    const { createApp, ref } = Vue
+
+    const app3 = createApp({
+        setup() {
+            const message = ref('뷰로 조작')
+
+            function updateFunc3() {
+                for(let i = 0 ; i < 100000 ; i++) {
+                    message.value = 'Vue 에서 변경'
+                }
+            }
+
+            const start3 = performance.now()
+            updateFunc3()
+            const end3 = performance.now()
+
+            console.log(`Vue 로 변경 = ${end3 - start3}`)
+
+            return {
+              message
+            }
+        }
+    })
+    app3.mount('#app3')
+
+    
+  </script>
+</body>
+</html>
