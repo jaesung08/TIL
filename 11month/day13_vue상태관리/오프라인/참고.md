@@ -1,0 +1,45 @@
+# vue 6일차
+
+## JS 모듈 가져오기
+
+```javascript
+// 내보내는쪽
+// export { sayT1, sayDongHyeon }
+module.exports = { sayT1, sayDongHyeon }
+
+// 가져오는쪽
+// import { sayT1 } from './test.js'
+const { sayT1 } = require('./test.js')
+```
+
+- `export, import, from` 문법은 ES6 부터 모듈 시스템에서 지원하는 기능
+  - 내가 쓰는 자바스크립트 파일들이 모듈 시스템이 관리해야만 쓸 수 있는 문법
+  - vue 에서는 한 번에 여러 자바스크립트 파일을 관리하므로
+      주석처리된 문법이 사용가능하다.
+
+- 다른 버전의 JS 코드를 쓰는데, 왜 문제가 없었을까?
+  - babel 의 역할
+  - JS 컴파일러
+    - 다른 버전의 JS 를 최신버전으로 해석해주는 역할
+
+- 정리
+  - vite
+    - 코드 빌드 도구 (코드 기본 세팅, 개발 서버 시작 등)
+  - bundler
+    - 여러 개의 자바스크립트 파일을 하나로 합쳐주는 도구
+    - vite 는 rollup 을 defalut 로 사용
+  - babel
+    - JS 버전 충돌을 해결해주는 도구
+
+- pinia 왜 쓰는가 ?
+  - props, emit 만으로 다 해결할 수 있는데 ?
+  - 컴포넌트끼리 관계가 복잡해지거나, 규모가 커졌을 때 쓰는 것!!!
+    - 할아버지의 9촌 동생의 손자
+      - 12촌 ?
+        - 11번의 emit, 12번의 props 가 발생해야 데이터를 전달할 수 있음
+      - 이럴 때 관리가 안됨
+      - 전역변수처럼써서 관리하자!
+
+- Pinia
+  - flux 패턴을 기반으로 만들어짐
+    - 용어들과 구성이 모두 flux 패턴 기반으로 만들어짐
