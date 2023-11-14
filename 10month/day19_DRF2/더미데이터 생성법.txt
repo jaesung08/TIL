@@ -10,4 +10,4 @@ INSTALLED_APPS = (
 
 pip install psycopg2
 
-python manage.py seed api --number=원하는값
+python manage.py seed 앱이름 --number=원하는값
