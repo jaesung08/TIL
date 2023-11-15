@@ -1,3 +1,4 @@
+# 로그아웃을 생활화 하자
 # SSAFY Today I Learned
 
 ## 7/12
