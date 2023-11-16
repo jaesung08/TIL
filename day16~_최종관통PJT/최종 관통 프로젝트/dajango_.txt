@@ -1,0 +1,205 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+기본적인 설정 세팅 / 개발환경 세팅!! 
+1. venv venv 생성 + 
+python -m venv venv
+가상환경 실행
+source venv/Scripts/activate or  . venv/Scripts/activate
+가상환경 멈춤
+deactivate
+
+pip list 확인해서 장고가 없으면 설치
+pip install Django
+
+pip freeze > requirements.txt ( 이건 필수는 아니고 다른 곳에서도 할 때 txt파일로 사용한 장고 및 프로젝트 들의 버전을 작성하게 하는 명령)
+pip install -r requirements.txt ( 그 작성한 txt파일 실행해서 파일을 설치하는 명령)
+
+2. 프로젝트 생성 django-admin startproject (프로젝트이름) (경로(현재면 .)
+
+3. 앱 생성 python manage.py startapp (이름)
+
+4. 프로젝트 세팅 파일에 앱 등록 ( installed_apps 밑에 이름 추가)
+
+5. 앱내에 Templates 생성 후 홈페이지내 기능에 맞는 폴더 생성
+
+6. 생성한 폴더 내에 html 파일 생성
+
+7. view파일에 생성한 html 파일 실행 함수 생성
+def index(request):
+    return render(request, "action/index.html")
+
+8. 프로젝트 폴더내 urls에 경로 생성
+
+9. urlpatterns 안에 path 추가
+path("index/", views.index)
+
+10. 만든 html 파일 실행
+python manage.py runserver
+후에 주소 뒤에 만든 html 이름 추가
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/index/
+( gitignore 해야 하기때문에 인터넷에 gitignore을 검색해서 사이트에서 python, django를 검색해서 나온 파일을 .gitignore이라는 파일을 만들어서 생성
+
+
+----------------------------------------------------------------------------------------------------------
+여러가지의 앱을 사용하기 위해 Urlmapping 하기!!!
+1. base.html을 앱에서 꺼내서 최상단폴더에서 templates으로 바꿔 여러 어플에 똑같이 적용시킨다면 
+기본 firstpjt의 setting 에서 TEMPLATES에서 DIRS에 BASE_DIR / 'temlplates'를 추가하여 firstpjt에 해당하는 모든 어플이 base를 저걸 참조하도록 만든다.
+
+2. 각 앱내에서 urls.py를 만들고
+앱 내에서 작성한 함수들을 가져올 수 있도록 기존 urls.py와 똑같이 작성하되
+name을 지정하여 간편하게 참조할 수 있도록 한다.
+from django.urls import path 
+from . import views  (== from app1 import views)
+
+app_name = "practice1"
+
+urlpatterns = [
+    # path("입력하게 만들 주소명", views.(보여줄 html명), name="별칭명") 
+    path("throw/", views.calculation, name="throw"), 
+    path("catch/", views.result, name="catch"),
+]
+과 같이 작성해주어야한다.
+
+
+3. 프로젝트내 urls.py에서는 앱 내의 urls를 참조할 수 있도록 import에 include를 추가하고 
+기존에 불러오듯이 path를 아래와 같이 작성해준다.
+from django.contrib import admin
+from django.urls import path, include
+from app1 import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("articles/", include("app1.urls")),
+]
+
+4. templates 내 articles 등 각 지정한 html내에서 다른 html을 참조할 때
+/articles/catch/ 라고 쓰던것을 {%url 'articles:catch' %} 로 바꿀 수 있다.
+
+
+5. 최종적으로 firstpjt 가 실행되면
+app1 과 pages 등 각각의 앱내에서 지정한 곳들로 간편하게 연결
+
+
+----------------------------------------------------------------------------------------------------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+model을 이용해 DB Field 만들기!!!
+1. 생성된 프로젝트내에서 앱의 models.py에서 class를 선언하여 
+class Article(models.Model):
+    # 데이터 베이스에서 열(column) => 필드, 행(row) => 레코드
+    # 엑셀도 DB? 스키마구조, 테이블구조로 형식은 같으나 보안성이 없기때문에 DB라 할수 없다.
+    # CharField: 길이 제한이 있는 문자열을 저장하는 필드를 생성 
+    # TextField: 글자수가 많을 때 사용 = > 긴 텍스트 정보를 저장하는 필드를 생성
+    title = models.CharField(max_length=10)
+    content = models.TextField()
+    # DateTimeField: 날짜와 시간정보를 함께 저장하는 필드를 생성
+    # auto_now_add: 처음 데이터가 생성될 때의 날짜와 시간을 자동으로 저장
+    # auto_now: 데이터가 수정될 때 마다 날짜와 시간을 자동으로 업데이트하여 저장
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+다음과 비슷하게 작성
+2. 작성 후 저장이 완료되었다면
+python manage.py makemigrations 하여 migrations가 생성되는 것을 확인 
+
+3. 확인 되었다면
+python manage.py migrate 하여 db.sqlite3에 생성한 DB Field가 생성되었는지 확인!
+
+admin슈퍼유저 계정 만들기!!!
+1. $ python manage.py createsuperuser 입력하면 밑에 내용 나타나면 작성
+Username (leave blank to use 'ssafy'): 
+Email address:  
+Password: 
+Password (again):
+# 비밀번호는 입력해도 보이지 않으니 주의
+
+2. admin페이지에서 DB를 보기위해 하는 작업
+admin.py에서 
+from .models import Article 을 통해 Article이라고 명명한 DB 필드를 모델에서 불러온 후
+admin.site.register(Article) 을 밑에 작성하여 Article을 등록한다.
+
+OMR API 사용하기
+1. pip install ipython 설치
+
+2. pip install django-extensions 설치
+
+3. pip freeze > requirements.txt 로 설치한 앱 버전들 저장
+
+4. 프로젝트 settings.py에서 INSTALLED_APPS 리스트에 django_extensions 추가
+	# apps 리스트 저장 권장 순서
+	ㄱ. 개발자가 직접 설치한 일반앱 (normal app) 
+	ex) articles 등
+	ㄴ. 외부적으로 설치한 앱
+	ex) django_extensions
+	ㄷ. django app
+
+5. python manage.py shell_plus 로 실행 
+
+6.  3가지 방법으로 DB에 데이터 추가
+CRUD Create
+(1) 각각의 필드를 지정하여 인스턴스 생성 후 save
+article = Article() # model.py 의 Article 이라는 형식을 article이라는 변수에 인스턴스생성
+article.title = 'second'
+article.content = 'django!'
+aritcle.save()
+Article.objects.all() # read 조회
+
+(2) 필드를 한번에 모두 지정하여 인스턴스 생성 후 save
+article = Article(title='second', content= 'django!' )
+article.save()
+Article.objects.all() # read 조회
+
+(3) 인스턴스를 생성하지 않고 바로 저장
+ Article.objects.create(title = 'forth', content = 'django!')
+Article.objects.all() # read 조회
+
+7. 
+CRUD read
+(0) 전체 데이터 조회 all( )
+Article.objects.all( )
+
+(1) 단일 데이터 조회 get 사용
+Article.objects.get(pk=3)
+*pk = primary key 로 생성한 DB순서 
+
+Article.objects.get(content = 'django!')
+# 단일 데이터 조회 이기때문에 두개 이상일 경우 오류가 발생
+
+(2) 다중 데이터 조회 filter사용
+Article.objects.filter(content = 'django!')
+# 다중이기 때문에 두개 이상여도 오류가 발생하지 않음
+
+(3) 직접 다중 값을 모두 출력하는 방법
+articles = Article.objects.all()
+for article in articles:
+    ...:     print(article.title)
+
+8.
+CRUD read
+항상 조회가 먼저 이루어져야한다!
+조회 => 인스턴스에서 수정 => save()
+article= Articles.objects.jet(pk=4)	# 조회
+article.title = '10th' 	# 10th로 제목을 바꾼다
+article.save() 	# 저장 
+
+9. 
+CRUD Delete
+항상 조회가 먼저 이루어져야한다!
+조회 => 인스턴스 삭제 
+article= Articles.objects.jet(pk=4)	# 조회
+article.delete()
+
+https://docs.djangoproject.com/en/4.2/ref/models/querysets/
+장고 라이브러리로 여기서 이외의 함수 확인 
+
+10. exit()으로 shell 종료 
+
+@@html 명령어 사용 세팅 @@
+파일 우클릭 settings
+emmet가서 
+include languages에서
+django-html의 value를 html로 변경해서 사용
+다른방법2
+https://integer-ji.tistory.com/358 
+
+
+
