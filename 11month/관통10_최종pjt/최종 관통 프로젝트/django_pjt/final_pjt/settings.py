@@ -15,6 +15,17 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# 내 PC파일안에 저장된 API_KEY 변수를 가져옴
+import environ
+import os
+env = environ.Env(
+    # set casting, default value
+    DEBUG = (bool, False)
+)
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+API_KEY = env('API_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -25,13 +36,37 @@ SECRET_KEY = 'django-insecure-c(3_nvpnv)=(g_z3+o-9hq%k2k=3a*jr5vbn19+&i!5q30_8)u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
+    'articles',
     'financial',
+    # 'exchange',
+    
+    'rest_framework',
+    'rest_framework.authtoken',
+    
+    # allauth를 DRF에서 쓸 수 있도록 해놓은 라이브러리
+    'dj_rest_auth',
+    
+    'corsheaders',
+    # 'django.contrib.sites',
+    # 사용시 SITE_ID 가 꼭 필요함
+    
+    # 장고의 인증 시스템을 구현해놓은 라이브러리
+    'allauth',
+    
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+    
+
+    
+    'django_seed',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,14 +75,45 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# SITE_ID = 1
+
+REST_FRAMEWORK = {
+    # Authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    # permission
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+        # 'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:5173',
+    'http://localhost:5173',
 ]
 
 ROOT_URLCONF = 'final_pjt.urls'
@@ -122,3 +188,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.User'
+
+REST_AUTH = {
+    'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',
+    'USER_DETAILS_SERIALIZER' : 'accounts.serializers.CustomUserDetailsSerializer'
+}
+
+ACCOUNT_ADAPTER = 'accounts.models.CustomAccountAdapter'
+
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = None
