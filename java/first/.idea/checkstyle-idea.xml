@@ -6,14 +6,14 @@
     <copyLibs>true</copyLibs>
     <option name="thirdPartyClasspath" />
     <option name="activeLocationIds">
-      <option value="d5f87c6f-6622-498a-9946-8f6c4c3a89e2" />
+      <option value="e844bfed-8342-47c7-beeb-43b9f8c6c641" />
     </option>
     <option name="locations">
       <list>
         <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
         <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
-        <ConfigurationLocation id="d5f87c6f-6622-498a-9946-8f6c4c3a89e2" type="PROJECT_RELATIVE" scope="All" description="Ssafy Checks">
-          $PROJECT_DIR$/../../Downloads/ssafy-check.xml
+        <ConfigurationLocation id="e844bfed-8342-47c7-beeb-43b9f8c6c641" type="LOCAL_FILE" scope="All" description="Ssafy Checks">
+          $PROJECT_DIR$/../ssafy-check.xml
           <option name="properties">
             <map>
               <entry key="org.checkstyle.google.suppressionfilter.config" value="" />
