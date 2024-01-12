@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+#data base 연동
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 각자 피씨에 만든 database이름
+    url: jdbc:mysql://localhost:3306/js?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    # mysql 계정 정보
+    username: root
+    password: 1077
+
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update # create 후에는 update로 변경
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      dialect: org.hibernate.dialect.MySQL8InnoDBDialectl
+
+
+  logging:
+    level:
+      org.hibernate.SQL: debug
+
