@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class MemberService {
@@ -67,7 +69,9 @@ public class MemberService {
     }
 
     public MemberDTO updateForm(String myEmail) {
+//        log.info(myEmail);
         Optional<MemberEntity> optionalMemberEntity = memberRepository.findByMemberEmail(myEmail);
+//        log.info(optionalMemberEntity.toString());
         if (optionalMemberEntity.isPresent()) {
             return MemberDTO.toMemberDTO(optionalMemberEntity.get());
         } else {

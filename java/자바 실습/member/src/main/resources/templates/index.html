@@ -8,6 +8,13 @@
     <h2>hello Spring Boot!!</h2>
     <a href="/member/save">회원가입</a>
     <a href="/member/login">로그인</a>
-    <a href="/member/">회원목록</a>
+    <a href="/member/list">회원목록</a>
+    <button onclick="saveReq()">글작성</button>
+    <a href="/board/save">글작성(링크)</a>
 </body>
+<script>
+    const saveReq = () => {
+        location.href = "/board/save"
+    }
+</script>
 </html>

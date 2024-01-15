@@ -9,7 +9,7 @@ spring:
     url: jdbc:mysql://localhost:3306/js?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     # mysql 계정 정보
     username: root
-    password: lancer98!@ # 1077
+    password: 1077 # lancer98!@
 
 
   jpa:
